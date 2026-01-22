@@ -1,0 +1,235 @@
+import React, { useState } from "react";
+import Image from "next/image";
+import Slider from "react-slick";
+import { Link } from "@/i18n/routing";
+import "slick-carousel/slick/slick.css";
+import { DownArrow } from "../../svg";
+import { SlickNextArrow, SlickPrevArrow } from "@/components/slick-arrow";
+import project_data from "@/data/project-data";
+import { useTranslations } from 'next-intl';
+
+// Get all projects for slider
+const slider_projects = project_data;
+
+// slider setting one - will be created with disabled state
+const getSliderSettingOne = (isDisabled: boolean) => ({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  fade: true,
+  speed: 1000,
+  infinite: true,
+  nextArrow: <SlickNextArrow disabled={isDisabled} />,
+  prevArrow: <SlickPrevArrow disabled={isDisabled} />,
+});
+
+// slider setting two - will be created with disabled state
+const getSliderSettingTwo = (isDisabled: boolean) => ({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  dots: false,
+  arrows: true,
+  focusOnSelect: true,
+  centerPadding: "0",
+  speed: 600,
+  infinite: true,
+  nextArrow: <SlickNextArrow disabled={isDisabled} />,
+  prevArrow: <SlickPrevArrow disabled={isDisabled} />,
+  responsive: [
+    {
+      breakpoint: 1600,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 1400,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        arrows: false,
+        slidesToShow: 4,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        slidesToShow: 4,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        slidesToShow: 4,
+      },
+    },
+  ],
+});
+
+// Slider component with proper typing
+const TypedSlider = Slider as React.ComponentType<any>;
+
+export default function PortfolioSliderHomeTen() {
+  const [slider1, setSlider1] = useState<any>(null);
+  const [slider2, setSlider2] = useState<any>(null);
+  const [sliderIndex, setSliderIndex] = useState<number>(1);
+  const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
+  const t = useTranslations('projectData');
+
+  // Preload all images on mount
+  React.useEffect(() => {
+    slider_projects.forEach((project) => {
+      const img = document.createElement('img');
+      img.src = project.heroImage;
+    });
+  }, []);
+
+  const handleBeforeChange = (current: number, next: number) => {
+    setIsTransitioning(true);
+    if (slider1) {
+      slider1.slickGoTo(next);
+    }
+    setTimeout(() => {
+      setIsTransitioning(false);
+    }, 1000);
+  };
+
+  return (
+    <div className="tp-portfolio-11-area fix">
+      <div className="tp-portfolio-11-slider-wrap p-relative" style={{ height: '100vh', minHeight: '600px' }}>
+        <TypedSlider
+          {...getSliderSettingOne(isTransitioning)}
+          asNavFor={slider2}
+          ref={(slider: any) => setSlider1(slider)}
+          className="tp-portfolio-11-slider-active"
+        >
+          {slider_projects.map((project) => (
+            <div key={project.id}>
+              <div
+                className="tp-portfolio-11-slider-bg d-flex align-items-end"
+                style={{
+                  position: 'relative',
+                  height: '100vh',
+                  minHeight: '600px',
+                  paddingTop: '170px',
+                  paddingBottom: '150px',
+                  overflow: 'hidden'
+                }}
+              >
+                <Image
+                  src={project.heroImage}
+                  alt={t(`${project.titleKey}.title`)}
+                  fill
+                  priority
+                  sizes="100vw"
+                  style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center',
+                    zIndex: 0
+                  }}
+                />
+                <div className="tp-portfolio-11-slider-content" style={{ position: 'relative', zIndex: 1 }}>
+                  <div className="tp-portfolio-11-slider-link">
+                    <DownArrow />
+                  </div>
+                  <span
+                    className="tp-portfolio-11-slider-subtitle"
+                    style={{
+                      textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8), -1px -1px 2px rgba(0, 0, 0, 0.8), 1px -1px 2px rgba(0, 0, 0, 0.8), -1px 1px 2px rgba(0, 0, 0, 0.8)'
+                    }}
+                  >
+                    {project.category}
+                  </span>
+                  <h3
+                    className="tp-portfolio-11-slider-title"
+                    style={{
+                      textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), -2px -2px 4px rgba(0, 0, 0, 0.8), 2px -2px 4px rgba(0, 0, 0, 0.8), -2px 2px 4px rgba(0, 0, 0, 0.8)'
+                    }}
+                  >
+                    {t(`${project.titleKey}.title`)}
+                  </h3>
+                </div>
+              </div>
+            </div>
+          ))}
+        </TypedSlider>
+
+        <div className="dddd"></div>
+
+        <div className="tp-portfolio-11-slider-nav-wrap z-index-5">
+          <div
+            className="slides-numbers d-none d-lg-flex d-flex align-items-center"
+            style={{ display: "inline-block" }}
+          >
+            <div className="slider-line"></div>
+            <span className="active">
+              {sliderIndex < 10 ? `0${sliderIndex}` : sliderIndex}
+            </span>
+          </div>
+          <TypedSlider
+            {...getSliderSettingTwo(isTransitioning)}
+            asNavFor={slider1}
+            ref={(slider: any) => setSlider2(slider)}
+            beforeChange={handleBeforeChange}
+            afterChange={(index: number) => setSliderIndex(index + 1)}
+            className="tp-portfolio-11-slider-nav-active d-none d-lg-block"
+          >
+            {slider_projects.map((project, index) => (
+              <div
+                key={project.id}
+                className="tp-portfolio-11-slider-nav-item p-relative"
+              >
+                <Link href={`/study-cases/${project.slug}`} style={{ display: 'block', cursor: 'pointer' }}>
+                  <div className="tp-portfolio-11-slider-nav-thumb">
+                    <Image
+                      src={project.heroImage}
+                      alt={t(`${project.titleKey}.title`)}
+                      width={300}
+                      height={200}
+                      style={{ height: "auto" }}
+                    />
+                  </div>
+                  <div className="tp-portfolio-11-slider-nav-content-wrap">
+                    <div className="tp-portfolio-11-slider-nav-content d-flex flex-column justify-content-between">
+                      <div className="tp-portfolio-11-slider-nav-year">
+                        <span
+                          style={{
+                            textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8), -1px -1px 2px rgba(0, 0, 0, 0.8), 1px -1px 2px rgba(0, 0, 0, 0.8), -1px 1px 2px rgba(0, 0, 0, 0.8)'
+                          }}
+                        >
+                          {project.category}
+                        </span>
+                      </div>
+                      <div className="tp-portfolio-11-slider-nav-tittle-box">
+                        <h4 className="tp-portfolio-11-slider-nav-tittle">
+                          <span
+                            style={{
+                              textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8), -1px -1px 2px rgba(0, 0, 0, 0.8), 1px -1px 2px rgba(0, 0, 0, 0.8), -1px 1px 2px rgba(0, 0, 0, 0.8)'
+                            }}
+                          >
+                            {t(`${project.titleKey}.title`)}
+                          </span>
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </TypedSlider>
+        </div>
+      </div>
+    </div>
+  );
+}

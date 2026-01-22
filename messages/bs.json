@@ -1,0 +1,227 @@
+{
+  "nav": {
+    "home": "Početna",
+    "portfolio": "Portfolio",
+    "studyCases": "Rezultati",
+    "ourTeam": "Naš tim",
+    "contact": "Kontakt"
+  },
+  "team": {
+    "zlatan": "Sve ostalo"
+  },
+  "hero": {
+    "title": {
+      "line1": "Next-gen",
+      "line2": "digital agency"
+    },
+    "services": "video marketing / performance marketing / web development / ai integrations"
+  },
+  "about": {
+    "subtitle": "Šta radimo",
+    "title": "Pretvaramo Kreativu U Mjerljive Rezultate.",
+    "description1": "Mi smo digital agencija fokusirana na performance creative, growth marketing i web plus AI integracije. Naš posao nije da napravimo \"lijep\" sadržaj, nego solucije i sisteme koji donose leadove i prodaju.",
+    "description2": "Imamo 10 godina iskustva kroz različite industrije. Radimo sa jasnim procesom: research, strategija, produkcija, iteracije i reporting, bez generičnih paketa i bez praznih obećanja.",
+    "button": "O nama"
+  },
+  "projects": {
+    "title": "Najnoviji",
+    "titleHighlight": "Projekti",
+    "seeProject": "Pogledaj Projekat"
+  },
+  "services": {
+    "subtitle": "Naš pristup",
+    "title": "Performance-Driven Creative Agency",
+    "items": [
+      {
+        "title": "Video Production",
+        "desc": "Od istraživanja tržišta i razrade koncepta, do kompletnog plana realizacije i produkcije. Strategiju ne baziramo na prolaznim trendovima i skečevima nego na jasnoj poruci i identitetu brenda, kako bi sadržaj bio autentičan, dugoročno upotrebljiv i usmjeren na rezultat.",
+        "category": [
+          "Research",
+          "Video Scripts",
+          "Videography",
+          "Video Production"
+        ]
+      },
+      {
+        "title": "Performance Marketing",
+        "desc": "Kampanje koje se vode podacima, ne \"savjetu malog rođaka\". Test plan, optimizacija i reporting koji se vežu na stvarne ciljeve biznisa, ne na \"engagement\" i \"trash traffic\".",
+        "category": ["Istraživanje", "Plan", "Realizacija i Reporting"]
+      },
+      {
+        "title": "Graphic Design",
+        "desc": "Ne radimo dekoraciju i \"uljepšavanje\". Svaki dizajn ima svoje \"zašto\" - vođen psihologijom pažnje, čitljivosti i donošenja odluke. Dizajn nije tu da bude komplikovan, nego da riješi problem i jasno prenese poruku.",
+        "category": [
+          "Brand Identity",
+          "Visual Communication",
+          "Psychology-Driven"
+        ]
+      },
+      {
+        "title": "Web Development",
+        "desc": "Web i landing stranice koje imaju jednu svrhu: pretvoriti posjetu u upit ili kupovinu. Struktura ponude, brzina, tracking spremnost i jasni CTA flow.",
+        "category": ["Landing Pages", "CRO", "Tracking Ready"]
+      },
+      {
+        "title": "AI Integrations",
+        "desc": "AI i automatizacije koje skraćuju put od upita do prodaje. Kvalifikacija leadova, routing, follow up i povezivanje sa CRM-om i internim alatima.",
+        "category": ["Automation", "Lead Routing", "CRM Sync"]
+      },
+      {
+        "title": "Strategy & Consulting",
+        "desc": "Ne dajemo mišljenja napamet. Radimo audit postojećeg stanja, definišemo prioritete i jasan plan izvedbe. Dobijaš konkretne preporuke, creative direction i sistem mjerenja koji tim može odmah provesti.",
+        "category": ["Audit", "Creative Direction", "Execution Plan"]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Prvo slušamo,",
+    "titleHighlight": "onda radimo",
+    "description": "Najbolje bi bilo da nas kontaktirate, saslušamo vaše bolne tačke i zajedno pronađemo zajednički put do unapređenja vašeg biznisa.",
+    "button": "Kontakt",
+    "modal": {
+      "title": "Dođi U Kontakt",
+      "firstName": "Ime",
+      "lastName": "Prezime",
+      "email": "Email",
+      "phone": "Telefon (Opciono)",
+      "message": "Poruka",
+      "placeholders": {
+        "firstName": "Niko",
+        "lastName": "Nikic",
+        "email": "vas@email.com",
+        "phone": "+387 (62) 000-0000",
+        "message": "Recite nam o vašem projektu..."
+      },
+      "submit": "Pošalji Poruku",
+      "sending": "Šalje se...",
+      "success": "Poruka uspješno poslana! Odgovorićemo vam uskoro.",
+      "error": "Neuspješno slanje poruke. Pokušajte ponovo ili nas kontaktirajte direktno na office@fulkrums.com"
+    }
+  },
+  "footer": {
+    "description": "Digitalna agencija koja pretvara kreativnost u mjerljive rezultate.",
+    "links": {
+      "home": "Početna",
+      "about": "O nama",
+      "services": "Usluge",
+      "portfolio": "Portfolio",
+      "contact": "Kontakt"
+    },
+    "social": {
+      "title": "Pratite nas",
+      "marketing": "Marketing",
+      "development": "Razvoj softvera"
+    },
+    "copyright": "© 2025 Fulkrums. Sva prava zadržana."
+  },
+  "projectDetails": {
+    "overview": "Pregled",
+    "challenge": "Izazov",
+    "client": "Klijent",
+    "goal": "Cilj",
+    "services": "Usluge",
+    "market": "Tržište",
+    "period": "Period",
+    "delivery": "Isporuka",
+    "result": "Rezultat",
+    "funnel": "Funnel",
+    "geoTargeting": "Geo Targeting",
+    "industry": "Industrija",
+    "audience": "Publika"
+  },
+  "projectData": {
+    "quickieLiga": {
+      "title": "Quickie Liga",
+      "client": "Quickie Liga",
+      "goal": "Popuniti kvotu prijava (djeca 5-13)",
+      "services": "Strategija - Kreativa - Kampanja - Event sadržaj",
+      "period": "Nepuna 2 mjeseca",
+      "delivery": "6 videa, 10 staticsa, 1 YouTube video, 2 short-form, foto",
+      "result": "Kvota popunjena + 21 prijava",
+      "overview": "Quickie Liga je trebala popuniti kvotu prijava djece uzrasta 5-13 godina. Preuzeli smo kompletnu marketing strategiju i realizaciju, od analize i pozicioniranja poruke do produkcije kreative i optimizacije kampanje. U nepuna dva mjeseca kvota je ostvarena i premašena za 21 prijavu.",
+      "challenge": "Kreativu smo izgradili kroz 6 videa: 3 talking head videa (trener, direktor, dijete) sa različitim hookovima i varijacijama, te 3 videa koji objašnjavaju benefite, strukturu takmičenja i prezentaciju. Uz to smo isporučili 10 statičnih vizuala kroz više uglova. Tokom svakog kola ispratili smo događaj sadržajem: 1 YouTube video, 2 short-form videa i bonus fotografije."
+    },
+    "bestdriveMaja": {
+      "title": "Bestdrive Maja",
+      "client": "Bestdrive Maja Gume",
+      "goal": "Prodaja zimskih guma putem webshopa",
+      "services": "Tracking setup - Katalog - Meta kampanje - Kreativa",
+      "market": "BiH",
+      "period": "30 dana (zimska sezona)",
+      "delivery": "Integracija webshopa sa Meta Business, Pixel (Purchase, Initiate Checkout), katalog, kampanje, 10 staticsa",
+      "result": "222 web kupovine, $241.85 potrošnje, CPA $0.37 do $8.60",
+      "overview": "Za zimsku sezonu Bestdrive Maja Gume cilj je bio pokrenuti prodaju zimskih guma putem webshopa kroz Meta kampanje. Analizom smo utvrdili da webshop nije bio pravilno povezan sa Meta Business sistemom, što je onemogućavalo pouzdano mjerenje i optimizaciju prema prodaji. Zbog toga smo prvo integrisali webshop sa Meta Business računom, postavili Pixel i ključne događaje Purchase i Initiate Checkout, kako bismo omogućili algoritmu učenje i donijeli realne rezultate.",
+      "challenge": "Zbog kratkog roka za realizaciju, u paraleli smo povezali katalog proizvoda i postavili setove u Meta Ads, te izradili 10 statičnih vizuala sa različitim uglovima prilagođenih ciljnoj skupini. Fokus komunikacije bio je na jednostavnoj kupovini na webshopu, brzoj isporuci i jasnom procesu narudžbe. U periodu od 30 dana kampanja je ostvarila 222 web kupovine uz ukupnu potrošnju $241.85, sa troškom po kupovini u rasponu $0.37 do $8.60 po setu."
+    },
+    "itWorksMarketing": {
+      "title": "It Works Marketing",
+      "client": "It Works Marketing",
+      "industry": "Health & Wellness (E-commerce)",
+      "market": "USA",
+      "audience": "Žene 25-45",
+      "goal": "Website purchases (prodaja na webshopu)",
+      "services": "Kreativna strategija, skripte, video montaža, graphic design, Meta Ads management",
+      "period": "Oct 1, 2025 - Dec 9, 2025",
+      "result": "2,049 website purchases, CPA $3.83 - $5.17",
+      "overview": "It Works je health and wellness e-commerce brend koji prodaje putem webshopa u SAD-u, sa targetom žena 25-45. Glavni cilj kampanje bio je pretvoriti korisnike sa društvenih mreža u kupce, uz specifičan izazov kategorije: skepticizam prema nutritivnim proizvodima i oglasima koji zvuče 'previše dobro da bi bilo istina'.",
+      "challenge": "Preuzeli smo kompletnu realizaciju: kreativni pristup, skripte, dizajn i montažu videa, te vođenje Meta Ads kampanja prema prodaji. Umjesto generičnih oglasa, izgradili smo kreativu koja gradi povjerenje i jasno komunicira vrijednost ponude, a zatim testirali performanse kroz odvojene setove po tipu kreative (statics i videos) kako bismo imali čisto učenje i brže optimizacije. U periodu Oct 1, 2025 - Dec 9, 2025 kampanja je ostvarila 2,049 website purchases, uz trošak po kupovini u rasponu $3.83 do $5.17 po setu, sa ukupno 753,213 impresija na prikazanim ad setovima."
+    },
+    "carKeyCentral": {
+      "title": "Car Key Central",
+      "client": "Car Key Central (Thomas Borre)",
+      "industry": "Automotive - Car Key Duplication Store",
+      "market": "Chicago, IL (lokalno)",
+      "geoTargeting": "5 milja oko 2125 N Cicero Ave, Chicago, IL 60639",
+      "goal": "Više zakazanih posjeta radnji, CAC do $20",
+      "services": "Meta Ads setup, Pixel i tracking, kampanja i optimizacija, kreativa i copy",
+      "period": "30 dana (Oct 7, 2025 - Nov 5, 2025)",
+      "result": "141 Meta lead, $3.73 CPL, $525.76 spend, 26,225 impresija, 13,783 reach",
+      "overview": "Car Key Central je fizička radnja za dupliranje ključeva i car fobova u Chicagu. Klijent nije imao Meta Ads račun, a cilj je bio jasan: povećati broj zakazanih dolazaka u radnju uz akviziciju od $20 ili manje po kupcu, u vrlo uskom radijusu od 5 milja oko lokacije.",
+      "challenge": "Preuzeli smo kompletan setup i realizaciju kampanje, od otvaranja i povezivanja Meta Ads sistema, do postavljanja Pixela i trackinga, zatim kreiranja ponude i kreativa za lokalnu publiku. Fokus poruke je bio na glavnom 'pain pointu' kupaca: potreba za dodatnim ključem po pristupačnoj cijeni zbog mira, dotrajalog ključa ili povećanja vrijednosti vozila. Kampanju smo postavili kao lokalni funnel koji brzo pretvara pažnju u upit i konkretan dolazak u radnju. U prvih 30 dana kampanja je ostvarila 141 Meta lead uz prosječan trošak $3.73 po leadu, sa ukupnom potrošnjom $525.76."
+    },
+    "atleta": {
+      "title": "Atleta",
+      "client": "Atleta",
+      "goal": "10-15 novih prijava djece",
+      "services": "Kreativa, Meta lead kampanja, Kvalifikacija leadova, Optimizacija",
+      "funnel": "Lead forma + verifikacija broja + 2 kvalifikaciona pitanja",
+      "delivery": "3 videa (2 talking head + 1 faceless) + 5 staticsa",
+      "period": "12 dana",
+      "result": "105 kvalifikovanih leadova, kampanja pauzirana zbog kapaciteta",
+      "overview": "Cilj kampanje za Atletsku Kondiciju bio je akvizirati 10 do 15 novih prijava djece, a za 12 dana ostvarili 105 leadova… Postavili smo lead funnel sa obaveznom verifikacijom mobilnog broja i dva osnovna kvalifikaciona pitanja, kako bismo podigli kvalitet leadova i olakšali inicijalni razgovor.",
+      "challenge": "Kreativu smo izgradili kroz 3 videa: 2 talking head videa (direktor kluba i poznata mlada sportašica koja trenira u sklopu kluba) i jedan faceless video sa specifikacijama i benefitima programa, te 5 statičnih vizuala sa različitim pristupima za testiranje i bolje učenje Meta Andromeda algoritma. U roku od 12 dana kampanja je generisala 105 kvalifikovanih leadova, nakon čega je klijent zatražio pauziranje kampanje zbog nedostatka kapaciteta za obradu prijava i upis."
+    },
+    "igny": {
+      "title": "IGNY",
+      "client": "IGNY",
+      "goal": "App downloads (roditelji djece 8-14)",
+      "market": "BiH",
+      "services": "Strategija - Kreativa - Meta Ads kampanja - Optimizacija",
+      "funnel": "Meta Ads -> Landing page -> App download",
+      "delivery": "7 staticsa + 4 videa",
+      "period": "30 dana",
+      "result": "190 downloads (nizak budžet)",
+      "overview": "Cilj kampanje za IGNY bio je ostvariti skidanja aplikacije u prvoj fazi lansiranja, uz vrlo nizak budžet i usku ciljnu skupinu: roditelji djece uzrasta 8-14 godina. Pošto se radi o novoj aplikaciji, koristili smo landing stranicu kao međukorak prije preuzimanja, kako bi se roditelji mogli jasno upoznati s projektom i benefitima prije odluke.",
+      "challenge": "Kreirali smo strategiju, plan i kompletnu realizaciju Meta Ads kampanje, te izgradili kreativu koja jasno komunicira svrhu aplikacije i vrijednost za roditelje. Isporučili smo 7 statičnih vizuala i 4 video oglasa sa različitim uglovima i varijacijama, kako bismo dobili stabilno učenje i optimizaciju. U prvih 30 dana kampanja je ostvarila 190 preuzimanja aplikacije.",
+      "videos": [
+        "https://drive.google.com/file/d/1pEKG6o-XXiCTSdROzaOfcpKLkMHJnjn6/view?usp=drive_link",
+        "https://drive.google.com/file/d/1m8QjVV851dDu2C1adBV09LAiLgiSg3Tj/view?usp=drive_link",
+        "https://drive.google.com/file/d/1pWFTN3u8DNteTNuDaK8nV5adGicbUOR3/view?usp=drive_link",
+        "https://drive.google.com/file/d/1glUPWZ526suRY2z7xAZtA1lYoAJcoqFM/view?usp=drive_link"
+      ],
+      "photo": "https://drive.google.com/file/d/1GJFDqeu8T8wQkYqPmIkTOkiTTt80LcLP/view?usp=drive_link"
+    },
+    "sommerhagene": {
+      "title": "Sommerhagene",
+      "client": "Sommerhagene",
+      "services": "Formulacija početne strategije, performance marketing (kreiranje kataloga i pitch videa), komunikacija na društvenim mrežama",
+      "overview": "Sommerhagene - formulacija početne strategije, performance marketing(kreiranje kataloga i pitch videa), te početak komunikacije na društvenim mrežama. Takođe, planovi za sljedeću godinu.",
+      "challenge": "Preuzeli smo kompletnu početnu fazu projekta, od formulacije strategije do realizacije performance marketing materijala. Kreirali smo katalog i pitch video, te postavili osnovu za komunikaciju na društvenim mrežama."
+    },
+    "atraktiv": {
+      "title": "Atraktiv",
+      "overview": "Kreiranje video sadržaja za Atraktiv Magazin",
+      "challenge": "Dinamična video produkcija za angažman na društvenim mrežama"
+    }
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "studyCases": "Results",
+    "ourTeam": "Our Team",
+    "contact": "Contact"
+  },
+  "team": {
+    "zlatan": "Everything else"
+  },
+  "hero": {
+    "title": {
+      "line1": "Next-gen",
+      "line2": "digital agency"
+    },
+    "services": "video marketing / performance marketing / web development / ai integrations"
+  },
+  "about": {
+    "subtitle": "What we do",
+    "title": "We Turn Creativity Into Measurable Results.",
+    "description1": "We are a digital agency focused on performance creative, growth marketing, and web plus AI integrations. Our job isn't to make \"pretty\" content, but solutions and systems that generate leads and sales.",
+    "description2": "We have 10 years of experience across various industries. We work with a clear process: research, strategy, production, iterations, and reporting. No generic packages and no empty promises.",
+    "button": "About Us"
+  },
+  "projects": {
+    "title": "Latest",
+    "titleHighlight": "Projects",
+    "seeProject": "See Project"
+  },
+  "services": {
+    "subtitle": "Our approach",
+    "title": "Performance-Driven Creative Agency",
+    "items": [
+      {
+        "title": "Video Production",
+        "desc": "From market research and concept development to complete production planning and execution. We don't base our strategy on fleeting trends and sketches, but on clear messaging and brand identity to ensure content is authentic, long-term usable, and result-oriented.",
+        "category": ["Research", "Video Scripts", "Videography", "Video Production"]
+      },
+      {
+        "title": "Performance Marketing",
+        "desc": "Data-driven campaigns, not your \"cousin's advice\". Test plans, optimization, and reporting tied to real business goals, not \"engagement\" and \"trash traffic\".",
+        "category": ["Research", "Plan", "Execution & Reporting"]
+      },
+      {
+        "title": "Graphic Design",
+        "desc": "We don't do decoration and \"prettifying\". Every design has its \"why\" - driven by the psychology of attention, readability, and decision-making. Design isn't meant to be complicated, but to solve problems and clearly convey the message.",
+        "category": ["Brand Identity", "Visual Communication", "Psychology-Driven"]
+      },
+      {
+        "title": "Web Development",
+        "desc": "Websites and landing pages with one purpose: convert visits into inquiries or purchases. Offer structure, speed, tracking readiness, and clear CTA flow.",
+        "category": ["Landing Pages", "CRO", "Tracking Ready"]
+      },
+      {
+        "title": "AI Integrations",
+        "desc": "AI and automation that shorten the path from inquiry to sale. Lead qualification, routing, follow-up, and integration with CRM and internal tools.",
+        "category": ["Automation", "Lead Routing", "CRM Sync"]
+      },
+      {
+        "title": "Strategy & Consulting",
+        "desc": "We don't give opinions off the cuff. We audit the current state, define priorities, and create a clear execution plan. You get concrete recommendations, creative direction, and a measurement system your team can implement immediately.",
+        "category": ["Audit", "Creative Direction", "Execution Plan"]
+      }
+    ]
+  },
+  "contact": {
+    "title": "First we listen,",
+    "titleHighlight": "then we work",
+    "description": "The best approach is to contact us, let us hear your pain points, and together we'll find a path to improve your business.",
+    "button": "Contact",
+    "modal": {
+      "title": "Get In Touch",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone (Optional)",
+      "message": "Message",
+      "placeholders": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "your@email.com",
+        "phone": "+1 (555) 000-0000",
+        "message": "Tell us about your project..."
+      },
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! We'll get back to you soon.",
+      "error": "Failed to send message. Please try again or contact us directly at office@fulkrums.com"
+    }
+  },
+  "footer": {
+    "description": "Digital agency that turns creativity into measurable results.",
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    },
+    "social": {
+      "title": "Follow us",
+      "marketing": "Marketing",
+      "development": "Software development"
+    },
+    "copyright": "© 2025 Fulkrums. All rights reserved."
+  },
+  "projectDetails": {
+    "overview": "Overview",
+    "challenge": "Challenge",
+    "client": "Client",
+    "goal": "Goal",
+    "services": "Services",
+    "market": "Market",
+    "period": "Period",
+    "delivery": "Delivery",
+    "result": "Result",
+    "funnel": "Funnel",
+    "geoTargeting": "Geo Targeting",
+    "industry": "Industry",
+    "audience": "Audience"
+  },
+  "projectData": {
+    "quickieLiga": {
+      "title": "Quickie Liga",
+      "client": "Quickie Liga",
+      "goal": "Fill registration quota (children 5-13)",
+      "services": "Strategy - Creative - Campaign - Event content",
+      "period": "Less than 2 months",
+      "delivery": "6 videos, 10 statics, 1 YouTube video, 2 short-form, photos",
+      "result": "Quota filled + 21 registrations",
+      "overview": "Quickie Liga needed to fill the registration quota for children aged 5-13. We took over the complete marketing strategy and execution, from analysis and message positioning to creative production and campaign optimization. In less than two months, the quota was achieved and exceeded by 21 registrations.",
+      "challenge": "We built the creative through 6 videos: 3 talking head videos (coach, director, child) with different hooks and variations, and 3 videos explaining benefits, competition structure, and presentation. In addition, we delivered 10 static visuals through multiple angles. During each round, we covered the event with content: 1 YouTube video, 2 short-form videos, and bonus photos."
+    },
+    "bestdriveMaja": {
+      "title": "Bestdrive Maja",
+      "client": "Bestdrive Maja Gume",
+      "goal": "Winter tire sales through webshop",
+      "services": "Tracking setup - Catalog - Meta campaigns - Creative",
+      "market": "Bosnia and Herzegovina",
+      "period": "30 days (winter season)",
+      "delivery": "Webshop integration with Meta Business, Pixel (Purchase, Initiate Checkout), catalog, campaigns, 10 statics",
+      "result": "222 web purchases, $241.85 spent, CPA $0.37 to $8.60",
+      "overview": "For the winter season, Bestdrive Maja Gume's goal was to launch winter tire sales through the webshop via Meta campaigns. Through analysis, we determined that the webshop was not properly connected to the Meta Business system, which prevented reliable measurement and optimization towards sales. Therefore, we first integrated the webshop with the Meta Business account, set up Pixel and key Purchase and Initiate Checkout events to enable algorithm learning and deliver real results.",
+      "challenge": "Due to the short deadline for implementation, we connected the product catalog in parallel and set up sets in Meta Ads, and created 10 static visuals with different angles tailored to the target group. The communication focus was on simple webshop purchasing, fast delivery, and a clear ordering process. Over a 30-day period, the campaign achieved 222 web purchases with a total spend of $241.85, with a cost per purchase ranging from $0.37 to $8.60 per set."
+    },
+    "itWorksMarketing": {
+      "title": "It Works Marketing",
+      "client": "It Works Marketing",
+      "industry": "Health & Wellness (E-commerce)",
+      "market": "USA",
+      "audience": "Women 25-45",
+      "goal": "Website purchases (webshop sales)",
+      "services": "Creative strategy, scripts, video editing, graphic design, Meta Ads management",
+      "period": "Oct 1, 2025 - Dec 9, 2025",
+      "result": "2,049 website purchases, CPA $3.83 - $5.17",
+      "overview": "It Works is a health and wellness e-commerce brand that sells through a webshop in the USA, targeting women 25-45. The main campaign goal was to convert social media users into customers, with a specific category challenge: skepticism towards nutritional products and ads that sound 'too good to be true'.",
+      "challenge": "We took over the complete execution: creative approach, scripts, video design and editing, and running Meta Ads campaigns towards sales. Instead of generic ads, we built creative that builds trust and clearly communicates the value proposition, then tested performance through separate sets by creative type (statics and videos) to get clean learning and faster optimizations. In the period Oct 1, 2025 - Dec 9, 2025, the campaign achieved 2,049 website purchases, with a cost per purchase ranging from $3.83 to $5.17 per set, with a total of 753,213 impressions on displayed ad sets."
+    },
+    "carKeyCentral": {
+      "title": "Car Key Central",
+      "client": "Car Key Central (Thomas Borre)",
+      "industry": "Automotive - Car Key Duplication Store",
+      "market": "Chicago, IL (local)",
+      "geoTargeting": "5 miles around 2125 N Cicero Ave, Chicago, IL 60639",
+      "goal": "More scheduled store visits, CAC up to $20",
+      "services": "Meta Ads setup, Pixel and tracking, campaign and optimization, creative and copy",
+      "period": "30 days (Oct 7, 2025 - Nov 5, 2025)",
+      "result": "141 Meta leads, $3.73 CPL, $525.76 spend, 26,225 impressions, 13,783 reach",
+      "overview": "Car Key Central is a physical store for duplicating keys and car fobs in Chicago. The client did not have a Meta Ads account, and the goal was clear: increase the number of scheduled store visits with an acquisition of $20 or less per customer, within a very narrow radius of 5 miles around the location.",
+      "challenge": "We took over the complete setup and campaign execution, from opening and connecting the Meta Ads system, to setting up Pixel and tracking, then creating offers and creative for the local audience. The message focus was on the main customer pain point: the need for an additional key at an affordable price for peace of mind, worn-out keys, or increasing vehicle value. We set up the campaign as a local funnel that quickly converts attention into inquiry and concrete store visits. In the first 30 days, the campaign achieved 141 Meta leads with an average cost of $3.73 per lead, with a total spend of $525.76."
+    },
+    "atleta": {
+      "title": "Atleta",
+      "client": "Atleta",
+      "goal": "10-15 new child registrations",
+      "services": "Creative, Meta lead campaign, Lead qualification, Optimization",
+      "funnel": "Lead form + phone verification + 2 qualification questions",
+      "delivery": "3 videos (2 talking head + 1 faceless) + 5 statics",
+      "period": "12 days",
+      "result": "105 qualified leads, campaign paused due to capacity",
+      "overview": "The campaign goal for Athletic Conditioning was to acquire 10 to 15 new child registrations, and in 12 days we achieved 105 leads... We set up a lead funnel with mandatory mobile number verification and two basic qualification questions to improve lead quality and facilitate initial conversation.",
+      "challenge": "We built the creative through 3 videos: 2 talking head videos (club director and a famous young athlete training at the club) and one faceless video with program specifications and benefits, plus 5 static visuals with different approaches for testing and better Meta Andromeda algorithm learning. Within 12 days, the campaign generated 105 qualified leads, after which the client requested pausing the campaign due to lack of capacity to process applications and enrollment."
+    },
+    "igny": {
+      "title": "IGNY",
+      "client": "IGNY",
+      "goal": "App downloads (parents of children 8-14)",
+      "market": "Bosnia and Herzegovina",
+      "services": "Strategy - Creative - Meta Ads campaign - Optimization",
+      "funnel": "Meta Ads -> Landing page -> App download",
+      "delivery": "7 statics + 4 videos",
+      "period": "30 days",
+      "result": "190 downloads (low budget)",
+      "overview": "The campaign goal for IGNY was to achieve app downloads in the first launch phase, with a very low budget and narrow target group: parents of children aged 8-14. Since this is a new app, we used a landing page as an intermediate step before download, so parents could clearly familiarize themselves with the project and benefits before making a decision.",
+      "challenge": "We created the strategy, plan, and complete Meta Ads campaign execution, and built creative that clearly communicates the app's purpose and value for parents. We delivered 7 static visuals and 4 video ads with different angles and variations to get stable learning and optimization. In the first 30 days, the campaign achieved 190 app downloads.",
+      "videos": [
+        "https://drive.google.com/file/d/1pEKG6o-XXiCTSdROzaOfcpKLkMHJnjn6/view?usp=drive_link",
+        "https://drive.google.com/file/d/1m8QjVV851dDu2C1adBV09LAiLgiSg3Tj/view?usp=drive_link",
+        "https://drive.google.com/file/d/1pWFTN3u8DNteTNuDaK8nV5adGicbUOR3/view?usp=drive_link",
+        "https://drive.google.com/file/d/1glUPWZ526suRY2z7xAZtA1lYoAJcoqFM/view?usp=drive_link"
+      ],
+      "photo": "https://drive.google.com/file/d/1GJFDqeu8T8wQkYqPmIkTOkiTTt80LcLP/view?usp=drive_link"
+    },
+    "sommerhagene": {
+      "title": "Sommerhagene",
+      "client": "Sommerhagene",
+      "services": "Initial strategy formulation, performance marketing (catalog and pitch video creation), social media communication",
+      "overview": "Sommerhagene - formulation of initial strategy, performance marketing (creation of catalog and pitch video), and start of communication on social networks. Also, plans for next year.",
+      "challenge": "We took over the complete initial phase of the project, from strategy formulation to realization of performance marketing materials. We created a catalog and pitch video, and established the foundation for social media communication."
+    },
+    "atraktiv": {
+      "title": "Atraktiv",
+      "overview": "Video content creation for Atraktiv Magazine",
+      "challenge": "Dynamic video production for social media engagement"
+    }
+  }
+}
