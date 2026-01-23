@@ -1,10 +1,6 @@
 import React from 'react';
-import Image from 'next/image';
 
 // images
-import team_1 from '@/assets/img/home-01/team/team-1-2.jpg';
-import team_2 from '@/assets/img/home-01/team/team-1-3.jpg';
-import team_3 from '@/assets/img/home-01/team/team-1-4.jpg';
 import Link from 'next/link';
 
 

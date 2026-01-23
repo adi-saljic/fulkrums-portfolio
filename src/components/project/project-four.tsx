@@ -1,26 +1,14 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from 'next-intl';
 
 import { ProjectShape, RightArrow } from "../svg";
-// images
-import port_1 from "@/assets/img/home-10/porfolio/port-1.jpg";
-import port_2 from "@/assets/img/home-10/porfolio/port-2.jpg";
-import port_3 from "@/assets/img/home-10/porfolio/port-3.jpg";
-import port_4 from "@/assets/img/home-10/porfolio/port-4.jpg";
-import port_5 from "@/assets/img/home-10/porfolio/port-5.jpg";
-import port_6 from "@/assets/img/home-10/porfolio/port-6.jpg";
-import port_7 from "@/assets/img/home-10/porfolio/port-7.jpg";
-import port_8 from "@/assets/img/home-10/porfolio/port-1.jpg";
 
 // portfolio data
 const project_data = [
   {
     id: 1,
-    img_1: port_1,
-    img_2: port_2,
     meta_1: "DEC 2024 . Creative",
     title_1: "Cheyf",
     description_1: "Brief description of Cheyf project",
@@ -30,8 +18,6 @@ const project_data = [
   },
   {
     id: 2,
-    img_1: port_3,
-    img_2: port_4,
     meta_1: "OCT 2024 . Creative",
     title_1: "Cera",
     description_1: "Brief description of Cera project",
@@ -41,8 +27,6 @@ const project_data = [
   },
   {
     id: 3,
-    img_1: port_5,
-    img_2: port_6,
     meta_1: "AUG 2024 . Development",
     title_1: "TechFlow",
     description_1: "Modern web application with AI integration",
@@ -52,8 +36,6 @@ const project_data = [
   },
   {
     id: 4,
-    img_1: port_7,
-    img_2: port_8,
     meta_1: "JUN 2024 . Creative",
     title_1: "VisualWorks",
     description_1: "Creative video production for social media",
@@ -63,8 +45,6 @@ const project_data = [
   },
   {
     id: 5,
-    img_1: port_1,
-    img_2: port_3,
     meta_1: "APR 2024 . Marketing",
     title_1: "GrowthPath",
     description_1: "Lead generation campaign with automation",
@@ -106,16 +86,7 @@ export default function ProjectFour({ style_2 = false, showTitle = true }: IProp
             {project_data.map((item, i) => (
               <div key={item.id} className="tp-project-3-wrap">
                 <div className="row">
-                  <div className="col-xl-4 col-lg-4">
-                    <div className="tp-project-3-thumb pro-img-1">
-                      <Image
-                        src={item.img_1}
-                        alt="port-img"
-                        style={{ height: "auto" }}
-                      />
-                    </div>
-                  </div>
-                  <div className="col-xl-4 col-lg-4">
+                  <div className="col-xl-6 col-lg-6">
                     <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%" }}>
                       <div className="tp-project-3-content text-start">
                         <h4 className="tp-project-3-title-sm" style={{ fontSize: "32px" }}>
@@ -135,14 +106,7 @@ export default function ProjectFour({ style_2 = false, showTitle = true }: IProp
                       </div>
                     </div>
                   </div>
-                  <div className="col-xl-4 col-lg-4">
-                    <div className="tp-project-3-thumb pro-img-2">
-                      <Image
-                        src={item.img_2}
-                        alt="port-img"
-                        style={{ height: "auto" }}
-                      />
-                    </div>
+                  <div className="col-xl-6 col-lg-6">
                   </div>
                 </div>
               </div>

@@ -3,13 +3,8 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Mousewheel, Autoplay } from "swiper/modules";
 import { SwiperOptions } from "swiper/types";
-import Image from "next/image";
 import { Link } from "@/i18n/routing";
 // images
-import showcase_1 from "@/assets/img/home-10/porfolio/port-1.jpg";
-import showcase_2 from "@/assets/img/home-10/porfolio/port-2.jpg";
-import showcase_3 from "@/assets/img/home-10/porfolio/port-3.jpg";
-import showcase_4 from "@/assets/img/home-10/porfolio/port-4.jpg";
 
 import project_data from "@/data/project-data";
 import { useTranslations } from 'next-intl';

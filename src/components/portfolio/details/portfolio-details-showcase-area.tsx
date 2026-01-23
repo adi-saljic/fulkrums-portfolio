@@ -1,9 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
 import { scroller } from 'react-scroll';
-import details_thumb_1 from '@/assets/img/inner-project/showcase/showcase-details-1.jpg';
-import details_thumb_2 from '@/assets/img/inner-project/showcase/showcase-details-2.jpg';
-import details_thumb_3 from '@/assets/img/inner-project/showcase/showcase-details-3.jpg';
 import Link from 'next/link';
 
 export default function PortfolioDetailsShowcaseArea() {

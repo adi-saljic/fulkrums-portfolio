@@ -1,0 +1,15 @@
+node_modules
+/.next/
+/out/
+.DS_Store
+*.log
+.env*.local
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+
+# Videos - too large for git
+public/assets/videos/
+
+# Images - host on CDN instead
+public/assets/img/

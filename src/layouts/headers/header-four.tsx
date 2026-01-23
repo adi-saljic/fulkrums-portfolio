@@ -1,9 +1,7 @@
 'use client';
 import React, { useEffect } from "react";
-import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import HeaderMenus from "./header-menus";
-import fulkrumsLogo from '../../../public/assets/img/logo/logo-transparent.png';
 import MobileOffcanvas from "@/components/offcanvas/mobile-offcanvas";
 import useStickyHeader from "@/hooks/use-sticky-header";
 import LanguageSwitcher from "@/components/language-switcher";
@@ -27,7 +25,7 @@ const {isSticky, headerFullWidth, adjustMenuBackground} = useStickyHeader(20);
               <div className="col-xl-2 col-lg-6 col-md-6 col-6">
                 <div className="tp-header-logo tp-header-3-logo">
                   <Link href="/">
-                    <Image src={fulkrumsLogo} alt="Fulkrums Logo" width={440} height={160} style={{width: 'auto', height: '45px', maxWidth: '100%'}} />
+                    <span style={{fontSize: '28px', fontWeight: 'bold'}}>Fulkrums</span>
                   </Link>
                 </div>
               </div>

@@ -1,10 +1,8 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 // internal imports
-import shape from "@/assets/img/home-03/about/ab-shape-img.png";
 import { ArrowBg, RightArrowTwo, FirstBracket, FirstBracketTwo } from "../svg";
 
 export default function AboutThree() {

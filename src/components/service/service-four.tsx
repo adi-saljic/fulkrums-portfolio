@@ -1,10 +1,8 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from 'next-intl';
 import { FirstBracket, FirstBracketTwo, RightArrow, SvgBg } from "../svg";
-import icon from "@/assets/img/home-03/service/sv-icon-1.png";
 
 export default function ServiceFour() {
   const t = useTranslations('services');

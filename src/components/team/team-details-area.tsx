@@ -1,10 +1,6 @@
 import React from "react";
-import Image from "next/image";
 
 // images
-import shape_1 from "@/assets/img/home-01/team/team-details-shape-1.png";
-import shape_2 from "@/assets/img/home-01/team/team-details-shape-2.png";
-import t_details from "@/assets/img/home-01/team/team-details-1.png";
 import { IdProps } from "@/types/custom-d-t";
 import team_data from "@/data/team-data";
 import Link from "next/link";

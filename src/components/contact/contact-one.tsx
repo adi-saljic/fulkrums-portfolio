@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { useTranslations } from 'next-intl';
 import { ProjectShape, RightArrow } from "../svg";
-import cta from "@/assets/img/home-03/cta/cta-1.png";
 import ContactModal from "../modal/contact-modal";
 import { useContactModal } from '@/context/contact-modal-context';
 

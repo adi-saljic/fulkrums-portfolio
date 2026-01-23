@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from 'next-intl';
-import fulkrumsLogo from '../../../public/assets/img/logo/logo-transparent.png';
 
 export default function FooterFour() {
   const t = useTranslations('footer');
