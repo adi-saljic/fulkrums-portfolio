@@ -1,9 +1,16 @@
 import React from "react";
+import Image from 'next/image';
 
 // images
 import { IdProps } from "@/types/custom-d-t";
 import team_data from "@/data/team-data";
 import Link from "next/link";
+
+const shape_1 = "https://drive.google.com/thumbnail?id=1P2cm97dtcE97ZgQDJih7zKdCUPKNTsmE&sz=w1000";
+const shape_2 = "https://drive.google.com/thumbnail?id=1P2cm97dtcE97ZgQDJih7zKdCUPKNTsmE&sz=w1000";
+const tm_details_thumb = "https://drive.google.com/thumbnail?id=1P2cm97dtcE97ZgQDJih7zKdCUPKNTsmE&sz=w1000";
+const tm_details_thumb_2 = "https://drive.google.com/thumbnail?id=1P2cm97dtcE97ZgQDJih7zKdCUPKNTsmE&sz=w1000";
+const t_details = "https://drive.google.com/thumbnail?id=1P2cm97dtcE97ZgQDJih7zKdCUPKNTsmE&sz=w1000";
 
 export default function TeamDetailsArea({ id }: IdProps) {
 // Find the team that matches the given ID
@@ -12,10 +19,10 @@ export default function TeamDetailsArea({ id }: IdProps) {
   return (
     <div className="tm-details-wrapper p-relative">
       <div className="tm-details-shape-1">
-        <Image src={shape_1} alt="shape" />
+        <Image src={shape_1} alt="shape" width={200} height={200} />
       </div>
       <div className="tm-details-shape-2">
-        <Image src={shape_2} alt="shape" />
+        <Image src={shape_2} alt="shape" width={200} height={200} />
       </div>
       <div className="container">
         <div className="row align-items-center align-items-xxl-end">
@@ -59,7 +66,7 @@ export default function TeamDetailsArea({ id }: IdProps) {
           </div>
           <div className="col-xl-6 col-lg-6 col-md-5">
             <div className="tm-details-thumb">
-              <Image src={t_details} alt="team-details-img" style={{height:"auto"}} />
+              <Image src={t_details} alt="team-details-img" style={{height:"auto"}} width={800} height={600} />
             </div>
           </div>
         </div>

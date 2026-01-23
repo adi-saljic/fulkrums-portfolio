@@ -2,6 +2,9 @@
 import React from "react";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+
+const fulkrumsLogo = "https://drive.google.com/thumbnail?id=1P2cm97dtcE97ZgQDJih7zKdCUPKNTsmE&sz=w1000";
 
 export default function FooterFour() {
   const t = useTranslations('footer');

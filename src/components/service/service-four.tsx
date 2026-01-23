@@ -3,6 +3,9 @@ import React from "react";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from 'next-intl';
 import { FirstBracket, FirstBracketTwo, RightArrow, SvgBg } from "../svg";
+import Image from 'next/image';
+
+const icon = "https://drive.google.com/thumbnail?id=1P2cm97dtcE97ZgQDJih7zKdCUPKNTsmE&sz=w1000";
 
 export default function ServiceFour() {
   const t = useTranslations('services');
@@ -13,7 +16,7 @@ export default function ServiceFour() {
           <div className="col-xl-9">
             <div className="tp-service-3-title-box mb-60 p-relative">
               <div className="tp-service-3-icon">
-                <Image src={icon} alt="icon" />
+                <Image src={icon} alt="icon" width={100} height={100} />
               </div>
               <span className="tp-section-subtitle-2 tp_fade_bottom">
                 <span>

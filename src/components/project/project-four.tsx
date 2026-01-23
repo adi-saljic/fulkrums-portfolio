@@ -2,10 +2,13 @@
 import React from "react";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 import { ProjectShape, RightArrow } from "../svg";
 
 // portfolio data
+const placeholder_img = "https://drive.google.com/thumbnail?id=1P2cm97dtcE97ZgQDJih7zKdCUPKNTsmE&sz=w1000";
+
 const project_data = [
   {
     id: 1,
@@ -15,6 +18,8 @@ const project_data = [
     meta_2: "NOV 2024 . Creative",
     title_2: "AISpecify",
     description_2: "Brief description of AISpecify project",
+    img_1: placeholder_img,
+    img_2: placeholder_img,
   },
   {
     id: 2,
@@ -24,6 +29,8 @@ const project_data = [
     meta_2: "SEP 2024 . Creative",
     title_2: "Kera",
     description_2: "Brief description of Kera project",
+    img_1: placeholder_img,
+    img_2: placeholder_img,
   },
   {
     id: 3,
@@ -33,6 +40,8 @@ const project_data = [
     meta_2: "JUL 2024 . Marketing",
     title_2: "BrandBoost",
     description_2: "Performance marketing campaign for local business",
+    img_1: placeholder_img,
+    img_2: placeholder_img,
   },
   {
     id: 4,
@@ -42,6 +51,8 @@ const project_data = [
     meta_2: "MAY 2024 . Development",
     title_2: "DataSync",
     description_2: "Custom CRM integration solution",
+    img_1: placeholder_img,
+    img_2: placeholder_img,
   },
   {
     id: 5,
@@ -51,6 +62,8 @@ const project_data = [
     meta_2: "MAR 2024 . Creative",
     title_2: "StudioPro",
     description_2: "Brand identity and design system",
+    img_1: placeholder_img,
+    img_2: placeholder_img,
   },
 ];
 
@@ -125,6 +138,8 @@ export default function ProjectFour({ style_2 = false, showTitle = true }: IProp
                     src={item.img_1}
                     alt="port-img"
                     style={{ height: "auto" }}
+                    width={800}
+                    height={600}
                   />
                 </div>
 
@@ -154,6 +169,8 @@ export default function ProjectFour({ style_2 = false, showTitle = true }: IProp
                     src={item.img_2}
                     alt="port-img"
                     style={{ height: "auto" }}
+                    width={800}
+                    height={600}
                   />
                 </div>
               </div>

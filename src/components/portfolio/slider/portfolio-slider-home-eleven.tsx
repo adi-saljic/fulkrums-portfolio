@@ -35,6 +35,10 @@ const slider_setting: SwiperOptions = {
 };
 
 // slider images
+const showcase_1 = "https://drive.google.com/thumbnail?id=1P2cm97dtcE97ZgQDJih7zKdCUPKNTsmE&sz=w1000";
+const showcase_2 = "https://drive.google.com/thumbnail?id=1P2cm97dtcE97ZgQDJih7zKdCUPKNTsmE&sz=w1000";
+const showcase_3 = "https://drive.google.com/thumbnail?id=1P2cm97dtcE97ZgQDJih7zKdCUPKNTsmE&sz=w1000";
+const showcase_4 = "https://drive.google.com/thumbnail?id=1P2cm97dtcE97ZgQDJih7zKdCUPKNTsmE&sz=w1000";
 const slider_images = [showcase_1, showcase_2, showcase_3, showcase_4];
 export default function PortfolioSliderHomeEleven() {
   const t = useTranslations('projects');

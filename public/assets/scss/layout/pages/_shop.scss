@@ -490,7 +490,7 @@
                     }
                     &::before{
                         position: absolute;
-                        content: url('../../../img/inner-shop/check.svg');
+                        /* content: url('../../../img/inner-shop/check.svg'); */
                         top: 6px;
                         left: 0;
                         width: 16px;
@@ -661,7 +661,7 @@
             &::before{
                 position: absolute;
                 // content: url('../../../img/product/icons/check-2.svg');
-                content: url('../../../img/inner-shop/check.svg');
+                /* content: url('../../../img/inner-shop/check.svg'); */
                 top: 3px;
                 left: 0;
                 width: 18px;
@@ -1532,7 +1532,7 @@
                 }
                 &::before{
                     position: absolute;
-                    content: url('../../../img/inner-shop/check.svg');
+                    /* content: url('../../../img/inner-shop/check.svg'); */
                     top: 4px;
                     left: 0;
                     width: 18px;
