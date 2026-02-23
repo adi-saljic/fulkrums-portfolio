@@ -69,7 +69,7 @@ export default function PortfolioDetailsShowcaseArea() {
                               </div>
                               <div className="col-6">
                                   <div className="showcase-details-overview-info-right">
-                                    <span>LikoTheme</span>
+                                    <span>Fulkrums</span>
                                   </div>
                               </div>
                             </div>
