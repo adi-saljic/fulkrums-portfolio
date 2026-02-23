@@ -21,7 +21,7 @@
     "title": "We Turn Creativity Into Measurable Results.",
     "description1": "We are a digital agency focused on performance creative, growth marketing, and web plus AI integrations. Our job isn't to make \"pretty\" content, but solutions and systems that generate leads and sales.",
     "description2": "We have 10 years of experience across various industries. We work with a clear process: research, strategy, production, iterations, and reporting. No generic packages and no empty promises.",
-    "button": "About Us"
+    "button": "Our Team"
   },
   "projects": {
     "title": "Latest",
@@ -109,8 +109,10 @@
     "overview": "Overview",
     "challenge": "Challenge",
     "client": "Client",
+    "date": "Date",
     "goal": "Goal",
     "services": "Services",
+    "deliverables": "Deliverables",
     "market": "Market",
     "period": "Period",
     "delivery": "Delivery",
@@ -194,13 +196,8 @@
       "result": "190 downloads (low budget)",
       "overview": "The campaign goal for IGNY was to achieve app downloads in the first launch phase, with a very low budget and narrow target group: parents of children aged 8-14. Since this is a new app, we used a landing page as an intermediate step before download, so parents could clearly familiarize themselves with the project and benefits before making a decision.",
       "challenge": "We created the strategy, plan, and complete Meta Ads campaign execution, and built creative that clearly communicates the app's purpose and value for parents. We delivered 7 static visuals and 4 video ads with different angles and variations to get stable learning and optimization. In the first 30 days, the campaign achieved 190 app downloads.",
-      "videos": [
-        "https://drive.google.com/file/d/1pEKG6o-XXiCTSdROzaOfcpKLkMHJnjn6/view?usp=drive_link",
-        "https://drive.google.com/file/d/1m8QjVV851dDu2C1adBV09LAiLgiSg3Tj/view?usp=drive_link",
-        "https://drive.google.com/file/d/1pWFTN3u8DNteTNuDaK8nV5adGicbUOR3/view?usp=drive_link",
-        "https://drive.google.com/file/d/1glUPWZ526suRY2z7xAZtA1lYoAJcoqFM/view?usp=drive_link"
-      ],
-      "photo": "https://drive.google.com/file/d/1GJFDqeu8T8wQkYqPmIkTOkiTTt80LcLP/view?usp=drive_link"
+      "videos": [],
+      "photo": ""
     },
     "sommerhagene": {
       "title": "Sommerhagene",
@@ -209,10 +206,109 @@
       "overview": "Sommerhagene - formulation of initial strategy, performance marketing (creation of catalog and pitch video), and start of communication on social networks. Also, plans for next year.",
       "challenge": "We took over the complete initial phase of the project, from strategy formulation to realization of performance marketing materials. We created a catalog and pitch video, and established the foundation for social media communication."
     },
+    "wonderflle": {
+      "title": "Wonderflle",
+      "client": "Wonderflle",
+      "services": "Brand identity, social media content, creative campaigns",
+      "overview": "Wonderflle - a food and beverage brand focused on creating engaging social media content and building brand awareness through creative campaigns.",
+      "challenge": "We developed a comprehensive creative strategy that highlighted the brand's unique offerings and created compelling visual content for social media engagement."
+    },
     "atraktiv": {
       "title": "Atraktiv",
       "overview": "Video content creation for Atraktiv Magazine",
       "challenge": "Dynamic video production for social media engagement"
+    }
+  },
+  "portfolio": {
+    "atleta": {
+      "description": "Atleta entrusted us with complete social media and ads management. Since 2024, we've been building a consistent visual system through video, statics, and print design, aligned with goals and performance.",
+      "client": "Atleta",
+      "services": "Social Media + Ads Management",
+      "deliverables": "Video, Statics, Print Design"
+    },
+    "atraktiv": {
+      "description": "In collaboration with DigitalSpotted marketing agency, we produced 2 videos for Facebook and Instagram for Atraktiv. Our team handled filming and editing (video production).",
+      "client": "Atraktiv",
+      "services": "Video Production",
+      "deliverables": "Filming + Editing (2 videos for FB and Instagram)"
+    },
+    "bestdrive": {
+      "description": "We handled video production and design for BestDrive, including web banners and social media visuals. In 2025, we covered creative, production, and Meta Ads as a complete package.",
+      "client": "BestDrive",
+      "services": "Video Production + Design + Meta Ads",
+      "deliverables": "Video, Web Banners, Social Media Visuals"
+    },
+    "cheyf": {
+      "description": "Since June 2025, we've been delivering long-form and short-form video production for CHEYF, along with vehicle branding and sponsor brand placement videos that accompany partnerships.",
+      "client": "CHEYF",
+      "services": "Video Production + Branding",
+      "deliverables": "Long-form, Short-form, Vehicle Branding, Sponsor Brand Placement Videos"
+    },
+    "cheyf-accommodations": {
+      "description": "In April 2025, we produced a real estate video and a set of 360 photographs for CHEYF Accommodation to showcase properties and spaces.",
+      "client": "CHEYF Accommodation",
+      "services": "Video Production + 360 Photography",
+      "deliverables": "Real Estate Video, 360 Photography"
+    },
+    "eureka-filaments": {
+      "description": "For Eureka Filaments, we delivered social media design in a package of 10 posts per month during 2024-2025, tailored for Facebook and Instagram placements.",
+      "client": "Eureka Filaments",
+      "services": "Social Media Design",
+      "deliverables": "10 Posts Monthly (Facebook and Instagram)"
+    },
+    "garagepulse": {
+      "description": "GaragePulse received complete social media design and a developed concept for a giveaway campaign aimed at increasing brand awareness and follower growth, including street art poster production.",
+      "client": "GaragePulse",
+      "services": "Design + Strategy",
+      "deliverables": "Social Media Design, Giveaway Campaign Concept, Street Art Poster"
+    },
+    "get-energy-canada": {
+      "description": "GetEnergy (Canada) received a social media package of 10 static visuals in 2024, prepared for regular posts and consistent visual identity.",
+      "client": "GetEnergy",
+      "services": "Social Media Design",
+      "deliverables": "10 Static Visuals/Monthly"
+    },
+    "igny": {
+      "description": "Since 2024, IGNY has had seasonal campaigns for app promotion and brand awareness, covered by static posts and video editing.",
+      "client": "IGNY",
+      "services": "App Promotion + Brand Awareness",
+      "deliverables": "Static Posts, Video Editing"
+    },
+    "green-concept": {
+      "description": "Since 2025, Green Concept Houses received a complete creative and marketing package: social media posts, print design, video production, and marketing strategy and plan for Meta Ads management.",
+      "client": "Green Concept Houses",
+      "services": "Creative + Strategy",
+      "deliverables": "Social Media Posts, Print Design, Video Production, Meta Ads Management Plan"
+    },
+    "ibm": {
+      "description": "In 2024, Integrated Body Movement had a social media management package of 15 posts per month, focused on education, brand awareness, and sales.",
+      "client": "Integrated Body Movement",
+      "services": "Social Media Management",
+      "deliverables": "15 Posts Monthly"
+    },
+    "legacy-vacations": {
+      "description": "Legacy Vacation Resorts had a social media package of 10 static posts per month, aimed at brand building through a playful tone and promoting hospitality services and booking accommodations in the USA.",
+      "client": "Legacy Vacations",
+      "services": "Social Media Design",
+      "deliverables": "10 Static Posts Monthly"
+    },
+    "rusticmens": {
+      "description": "Rustimens received a set of static ads to increase webshop sales, and we handled video ads through AI production to get lifestyle footage and realistic product placement without the possibility of on-location filming.",
+      "client": "Rustimens",
+      "services": "Design + Video Ads",
+      "deliverables": "Static Ads, AI Lifestyle Video Ads"
+    },
+    "sommerhagen": {
+      "description": "In 2025, Sommerhagene received video production and social media content as a foundation for advertising and strategy implementation in 2026. The focus was on raising awareness of Bosnia and Herzegovina as a geographical area and preparing the ground for final sales of properties to investors, including project catalog creation.",
+      "client": "Sommerhagene",
+      "services": "Video Production + Social Media Design",
+      "deliverables": "Video Content, Social Media Posts, Project Catalog"
+    },
+    "zamzam": {
+      "description": "The Zamzam project was realized as a long-form series of 30 episodes, combining talking head segments, animations, B-roll, and Quranic verse recitations with explanations. Besides the series, a trailer was delivered that completed the entire project.",
+      "client": "Zamzam Project",
+      "services": "Video Production",
+      "deliverables": "Long-form Series (30 Episodes), Trailer"
     }
   }
 }

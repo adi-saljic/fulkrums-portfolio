@@ -32,9 +32,9 @@ export default function MobileMenus() {
           <li>
             <Link href="/study-cases">{t('studyCases')}</Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/our-team">{t('ourTeam')}</Link>
-          </li>
+          </li> */}
           <li>
             <a href="#contact" onClick={handleContactClick}>{t('contact')}</a>
           </li>

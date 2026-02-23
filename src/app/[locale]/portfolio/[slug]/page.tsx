@@ -9,8 +9,9 @@ gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother, SplitText);
 import HeaderFour from "@/layouts/headers/header-four";
 import FooterFour from "@/layouts/footers/footer-four";
 import PortfolioDetailsSimple from "@/components/portfolio/details/portfolio-details-simple";
+import PortfolioDetailsSection from "@/components/portfolio/portfolio-details-section";
 import ContactOne from "@/components/contact/contact-one";
-import portfolio_data from "@/data/portfolio-data";
+import { getPortfolioData } from "@/data/portfolio-data";
 import { charAnimation, titleAnimation } from "@/utils/title-animation";
 import { hoverBtn } from "@/utils/hover-btn";
 
@@ -38,11 +39,20 @@ export default function PortfolioDetailPage({ params }: IProps) {
     return null;
   }
 
+  const portfolio_data = getPortfolioData();
   const portfolioItem = portfolio_data.find((p) => p.slug === slug);
 
   if (!portfolioItem) {
     notFound();
   }
+
+  // Get projects with videos for navigation
+  const projectsWithVideos = portfolio_data.filter(
+    (p) => p.detailVideos && p.detailVideos.length > 0
+  );
+  const currentIndex = projectsWithVideos.findIndex((p) => p.slug === slug);
+  const hasVideos =
+    portfolioItem.detailVideos && portfolioItem.detailVideos.length > 0;
 
   return (
     <>
@@ -53,8 +63,17 @@ export default function PortfolioDetailPage({ params }: IProps) {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            {/* portfolio details */}
-            <PortfolioDetailsSimple project={portfolioItem} />
+            {/* portfolio details section with video slider - FIRST if has videos */}
+            {hasVideos && (
+              <PortfolioDetailsSection
+                project={portfolioItem}
+                projectIndex={currentIndex}
+              />
+            )}
+            {/* portfolio details section end */}
+
+            {/* portfolio details - hero image and detail images */}
+            <PortfolioDetailsSimple project={portfolioItem} hasVideos={hasVideos} />
             {/* portfolio details */}
 
             {/* contact area */}

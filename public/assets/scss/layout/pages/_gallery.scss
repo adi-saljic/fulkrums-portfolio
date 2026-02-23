@@ -8,17 +8,32 @@
     &-slider-active{
         margin: 0px -15px;
     }
+    &-area {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+    }
     &-shape{
         &-1{
             position: absolute;
             top: 0;
             left: 0;
-            z-index: 999;
+            right: 0;
+            z-index: 1;
+            pointer-events: none;
+            width: 100%;
+            max-width: 100%;
             @media #{$xs}{
                 top: -6px;
             }
             @media #{$sm}{
                 top: 0px;
+            }
+            & img {
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+                display: block;
             }
             & .img-2{
                 display: none;
@@ -28,12 +43,22 @@
             position: absolute;
             bottom: -1px;
             left: 0;
-            z-index: 2;
+            right: 0;
+            z-index: 1;
+            pointer-events: none;
+            width: 100%;
+            max-width: 100%;
             @media #{$xs}{
                 bottom: -6px;
             }
             @media #{$sm}{
                 bottom: -1px;
+            }
+            & img {
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+                display: block;
             }
             & .img-2{
                 display: none;

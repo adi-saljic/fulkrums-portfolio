@@ -102,8 +102,15 @@
     }
 }
 .tp-about-3{
+    &-area {
+        & .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    }
     &-content{
-        padding-right: 230px;
+        padding-right: 0;
+        padding-left: 0;
         @media #{$lg,$md,$xs}{
             padding-right: 0;
         }

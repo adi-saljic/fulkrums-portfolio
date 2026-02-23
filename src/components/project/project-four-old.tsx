@@ -7,66 +7,55 @@ import { getClientDataSources } from "@/lib/client-helpers";
 
 import { ProjectShape, RightArrow } from "../svg";
 
-/**
- * Get homepage thumbnail from S3 media map
- * Falls back to original Google Drive URL if not found
- */
-function getHomepageThumbnail(slug: string, fallbackUrl: string): string {
-  try {
-    const mediaMap = require('@/data/generated/media-map.json');
-    const homepageThumbnails = mediaMap['homepage-thumbnails'];
-
-    if (homepageThumbnails && homepageThumbnails[slug]) {
-      return homepageThumbnails[slug];
-    }
-  } catch (error) {
-    // Media map not found, use fallback
-  }
-
-  return fallbackUrl;
-}
-
-// Client data with S3 images only - no fallback URLs
+// Client data with images
 const clientsData = [
   {
-    slug: "zamzam",
+    slug: "zamzam-project",
     title: "Zamzam Project",
-    image: getHomepageThumbnail("zamzam", ""),
+    image:
+      "https://lh3.googleusercontent.com/d/1wdltTWMil6MlFZkRR2JTskE0_6DtIdIJ",
   },
   {
     slug: "quickie-liga",
     title: "Quickie Liga",
-    image: getHomepageThumbnail("quickie-liga", ""),
+    image:
+      "https://lh3.googleusercontent.com/d/1Dagvblv3IaDb34ZrQoKxr8xYXb4TWxgS",
   },
   {
     slug: "it-works-marketing",
     title: "It Works",
-    image: getHomepageThumbnail("it-works-marketing", ""),
+    image:
+      "https://lh3.googleusercontent.com/d/19i6ZjuYoBgHOhFJw-bC2kcyCUoif7uhr",
   },
   {
-    slug: "green-concept",
+    slug: "green-concept-houses",
     title: "Green Concept Houses",
-    image: getHomepageThumbnail("green-concept-houses", ""),
+    image:
+      "https://lh3.googleusercontent.com/d/1gLBiiTUSgRbr7GdVv3-JghJQVJ97x_2F",
   },
   {
-    slug: "get-energy-canada",
+    slug: "getenergy",
     title: "Get Energy",
-    image: getHomepageThumbnail("getenergy", ""),
+    image:
+      "https://lh3.googleusercontent.com/d/1BukMDRuSppdwOwLoTs-IGPbhcEu33zHj",
   },
   {
     slug: "cheyf",
     title: "Cheyf",
-    image: getHomepageThumbnail("cheyf", ""),
+    image:
+      "https://lh3.googleusercontent.com/d/1GH5azLN2Ex4y25AStOHP-f-PA8lzoi93",
   },
   {
-    slug: "cheyf-accommodations",
+    slug: "cheyf-accommodation",
     title: "Cheyf Accommodations",
-    image: getHomepageThumbnail("cheyf-accommodation", ""),
+    image:
+      "https://lh3.googleusercontent.com/d/1GH5azLN2Ex4y25AStOHP-f-PA8lzoi93",
   },
   {
     slug: "atleta",
     title: "Atletska Kondicija",
-    image: getHomepageThumbnail("atleta", ""),
+    image:
+      "https://lh3.googleusercontent.com/d/1mEnrbZy5w0lAg-IwQAXbUvFMGVVhrgar",
   },
 ];
 
@@ -109,8 +98,8 @@ export default function ProjectFour({
       <div className="container container-1720">
         {!style_2 && showTitle && (
           <div className="row justify-content-center">
-            <div className="col-xl-12">
-              <div className="tp-project-3-title-box p-relative mb-60" style={{ textAlign: "center" }}>
+            <div className="col-xl-7">
+              <div className="tp-project-3-title-box p-relative mb-150">
                 <h4
                   className="tp-section-title-200 tp_reveal_anim"
                   style={{ fontSize: "80px" }}
@@ -133,7 +122,7 @@ export default function ProjectFour({
 
               return (
                 <div key={item.id} className="tp-project-3-wrap">
-                  <div className="row align-items-center">
+                  <div className="row">
                     {/* Left Image */}
                     <div className="col-xl-4 col-lg-4">
                       <div
@@ -142,7 +131,7 @@ export default function ProjectFour({
                           display: "flex",
                           justifyContent: "center",
                           alignItems: "center",
-                          minHeight: "400px",
+                          height: "400px",
                         }}
                       >
                         <Image
@@ -167,7 +156,7 @@ export default function ProjectFour({
                           flexDirection: "column",
                           justifyContent: "center",
                           alignItems: "center",
-                          minHeight: "400px",
+                          height: "100%",
                           gap: "50px",
                         }}
                       >
@@ -182,38 +171,39 @@ export default function ProjectFour({
                         >
                           <h4
                             className="tp-project-3-title-sm"
-                            style={{ fontSize: "32px", marginBottom: "10px" }}
+                            style={{ fontSize: "24px", marginBottom: "10px" }}
                           >
                             {item.client_1.title}
                           </h4>
                           <div
                             style={{
                               display: "flex",
-                              gap: "15px",
+                              gap: "10px",
                               justifyContent: "flex-start",
-                              marginTop: "20px",
                             }}
                           >
                             {dataSource1.hasPortfolio && (
                               <Link
                                 href={`/portfolio/${item.client_1.slug}`}
                                 className="tp-btn-border"
+                                style={{
+                                  fontSize: "14px",
+                                  padding: "8px 16px",
+                                }}
                               >
-                                <span className="tp-btn-border-wrap">
-                                  <span className="text-1">Portfolio</span>
-                                  <span className="text-2">Portfolio</span>
-                                </span>
+                                Portfolio
                               </Link>
                             )}
                             {dataSource1.hasStudyCase && (
                               <Link
                                 href={`/study-cases/${item.client_1.slug}`}
                                 className="tp-btn-border"
+                                style={{
+                                  fontSize: "14px",
+                                  padding: "8px 16px",
+                                }}
                               >
-                                <span className="tp-btn-border-wrap">
-                                  <span className="text-1">Case Study</span>
-                                  <span className="text-2">Case Study</span>
-                                </span>
+                                Case Study
                               </Link>
                             )}
                           </div>
@@ -231,38 +221,39 @@ export default function ProjectFour({
                           >
                             <h4
                               className="tp-project-3-title-sm"
-                              style={{ fontSize: "32px", marginBottom: "10px" }}
+                              style={{ fontSize: "24px", marginBottom: "10px" }}
                             >
                               {item.client_2.title}
                             </h4>
                             <div
                               style={{
                                 display: "flex",
-                                gap: "15px",
+                                gap: "10px",
                                 justifyContent: "flex-end",
-                                marginTop: "20px",
                               }}
                             >
                               {dataSource2.hasPortfolio && (
                                 <Link
                                   href={`/portfolio/${item.client_2.slug}`}
                                   className="tp-btn-border"
+                                  style={{
+                                    fontSize: "14px",
+                                    padding: "8px 16px",
+                                  }}
                                 >
-                                  <span className="tp-btn-border-wrap">
-                                    <span className="text-1">Portfolio</span>
-                                    <span className="text-2">Portfolio</span>
-                                  </span>
+                                  Portfolio
                                 </Link>
                               )}
                               {dataSource2.hasStudyCase && (
                                 <Link
                                   href={`/study-cases/${item.client_2.slug}`}
                                   className="tp-btn-border"
+                                  style={{
+                                    fontSize: "14px",
+                                    padding: "8px 16px",
+                                  }}
                                 >
-                                  <span className="tp-btn-border-wrap">
-                                    <span className="text-1">Case Study</span>
-                                    <span className="text-2">Case Study</span>
-                                  </span>
+                                  Case Study
                                 </Link>
                               )}
                             </div>
@@ -280,7 +271,7 @@ export default function ProjectFour({
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center",
-                            minHeight: "400px",
+                            height: "400px",
                           }}
                         >
                           <Image
@@ -339,12 +330,12 @@ export default function ProjectFour({
                         <Link
                           href={`/portfolio/${item.client_1.slug}`}
                           className="tp-btn-border"
-                          style={{ marginRight: "10px", display: "inline-block" }}
+                          style={{
+                            marginRight: "10px",
+                            display: "inline-block",
+                          }}
                         >
-                          <span className="tp-btn-border-wrap">
-                            <span className="text-1">Portfolio</span>
-                            <span className="text-2">Portfolio</span>
-                          </span>
+                          Portfolio
                         </Link>
                       )}
                       {dataSource1.hasStudyCase && (
@@ -353,10 +344,7 @@ export default function ProjectFour({
                           className="tp-btn-border"
                           style={{ display: "inline-block" }}
                         >
-                          <span className="tp-btn-border-wrap">
-                            <span className="text-1">Case Study</span>
-                            <span className="text-2">Case Study</span>
-                          </span>
+                          Case Study
                         </Link>
                       )}
                     </div>
@@ -382,10 +370,7 @@ export default function ProjectFour({
                                 display: "inline-block",
                               }}
                             >
-                              <span className="tp-btn-border-wrap">
-                                <span className="text-1">Portfolio</span>
-                                <span className="text-2">Portfolio</span>
-                              </span>
+                              Portfolio
                             </Link>
                           )}
                           {dataSource2.hasStudyCase && (
@@ -394,10 +379,7 @@ export default function ProjectFour({
                               className="tp-btn-border"
                               style={{ display: "inline-block" }}
                             >
-                              <span className="tp-btn-border-wrap">
-                                <span className="text-1">Case Study</span>
-                                <span className="text-2">Case Study</span>
-                              </span>
+                              Case Study
                             </Link>
                           )}
                         </div>

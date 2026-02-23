@@ -6,6 +6,7 @@ function projectThreeAnimation() {
   if (document.querySelectorAll(".tp-project-3-area").length > 0) {
     let pw = gsap.matchMedia();
     pw.add("(min-width: 1200px)", () => {
+      // Set initial positions for images
       gsap.set(".tp-project-3-wrap .pro-img-1 img", {
         x: "500",
       });
@@ -13,32 +14,51 @@ function projectThreeAnimation() {
         x: "-500",
       });
 
+      // Hide content initially
+      gsap.set(".tp-project-3-wrap .tp-project-3-content", {
+        opacity: 0,
+      });
+
       let projects: any = gsap.utils.toArray(".tp-project-3-wrap");
 
       projects.forEach((item: any) => {
         let $this: any = $(item);
 
+        // Animate left image
         gsap.to($this.find(".pro-img-1 img"), {
           x: "0",
           scrollTrigger: {
             trigger: $this,
-            start: "top 18%",
-            end: "bottom 10%",
+            start: "center center",
+            end: "bottom top",
             scrub: 1,
             pin: true,
+            pinSpacing: true,
             transformOrigin: "50% 50%" as any,
           } as any,
         });
 
+        // Animate right image
         gsap.to($this.find(".pro-img-2 img"), {
           x: "0",
           scrollTrigger: {
             trigger: $this,
-            start: "top 18%",
-            end: "bottom 10%",
+            start: "center center",
+            end: "bottom top",
             scrub: 1,
             pin: false,
             transformOrigin: "50% 50%" as any,
+          } as any,
+        });
+
+        // Fade in content
+        gsap.to($this.find(".tp-project-3-content"), {
+          opacity: 1,
+          scrollTrigger: {
+            trigger: $this,
+            start: "center center",
+            end: "bottom top",
+            scrub: 1,
           } as any,
         });
       });
@@ -49,17 +69,21 @@ function projectThreeAnimation() {
 function projectDetailsPin() {
   let pd = gsap.matchMedia();
   pd.add("(min-width: 1400px)", () => {
+    const sections = document.querySelectorAll('.project-details-1-area');
 
-    if ($('.project-details-1-area').length > 0) {
-      ScrollTrigger.create({
-        trigger: ".project-details-1-area",
-        start: "top top",
-        end: "bottom 100%",
-        pin: ".project-details-1-right-wrap",
-        pinSpacing: false,
-      });
-    }
+    sections.forEach((section) => {
+      const rightWrap = section.querySelector('.project-details-1-right-wrap');
 
+      if (rightWrap) {
+        ScrollTrigger.create({
+          trigger: section,
+          start: "top top",
+          end: "bottom 100%",
+          pin: rightWrap,
+          pinSpacing: false,
+        });
+      }
+    });
   });
 };
 

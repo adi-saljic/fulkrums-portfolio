@@ -1,9 +1,8 @@
 "use client";
 import React from "react";
-import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 // internal imports
-import { ArrowBg, RightArrowTwo, FirstBracket, FirstBracketTwo } from "../svg";
+import { FirstBracket, FirstBracketTwo } from "../svg";
 
 export default function AboutThree() {
   const t = useTranslations("about");
@@ -38,29 +37,11 @@ export default function AboutThree() {
             </div>
           </div>
         </div>
-        <div className="row align-items-center">
-          <div className="col-xl-6 col-lg-6 col-md-4"></div>
-          <div className="col-xl-6 col-lg-6 col-md-8">
-            <div className="tp-about-3-content">
+        <div className="row align-items-center justify-content-center">
+          <div className="col-xl-10 col-lg-10 col-md-12">
+            <div className="tp-about-3-content" style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto" }}>
               <p className="mb-30 tp_fade_bottom">{t("description1")}</p>
-              <p className="mb-45 tp_fade_bottom">{t("description2")}</p>
-              <Link
-                className="tp-btn-black-2 tp_fade_bottom"
-                href="/our-team"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  padding: "15px 30px",
-                  backgroundColor: "#fff",
-                  color: "#000",
-                  borderRadius: "50px",
-                  textDecoration: "none",
-                  fontWeight: "500",
-                  transition: "all 0.3s ease",
-                }}
-              >
-                {t("button")}
-              </Link>
+              <p className="tp_fade_bottom">{t("description2")}</p>
             </div>
           </div>
         </div>

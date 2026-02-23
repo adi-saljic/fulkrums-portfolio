@@ -118,8 +118,10 @@
     "overview": "Pregled",
     "challenge": "Izazov",
     "client": "Klijent",
+    "date": "Datum",
     "goal": "Cilj",
     "services": "Usluge",
+    "deliverables": "Isporuka",
     "market": "Tržište",
     "period": "Period",
     "delivery": "Isporuka",
@@ -203,13 +205,8 @@
       "result": "190 downloads (nizak budžet)",
       "overview": "Cilj kampanje za IGNY bio je ostvariti skidanja aplikacije u prvoj fazi lansiranja, uz vrlo nizak budžet i usku ciljnu skupinu: roditelji djece uzrasta 8-14 godina. Pošto se radi o novoj aplikaciji, koristili smo landing stranicu kao međukorak prije preuzimanja, kako bi se roditelji mogli jasno upoznati s projektom i benefitima prije odluke.",
       "challenge": "Kreirali smo strategiju, plan i kompletnu realizaciju Meta Ads kampanje, te izgradili kreativu koja jasno komunicira svrhu aplikacije i vrijednost za roditelje. Isporučili smo 7 statičnih vizuala i 4 video oglasa sa različitim uglovima i varijacijama, kako bismo dobili stabilno učenje i optimizaciju. U prvih 30 dana kampanja je ostvarila 190 preuzimanja aplikacije.",
-      "videos": [
-        "https://drive.google.com/file/d/1pEKG6o-XXiCTSdROzaOfcpKLkMHJnjn6/view?usp=drive_link",
-        "https://drive.google.com/file/d/1m8QjVV851dDu2C1adBV09LAiLgiSg3Tj/view?usp=drive_link",
-        "https://drive.google.com/file/d/1pWFTN3u8DNteTNuDaK8nV5adGicbUOR3/view?usp=drive_link",
-        "https://drive.google.com/file/d/1glUPWZ526suRY2z7xAZtA1lYoAJcoqFM/view?usp=drive_link"
-      ],
-      "photo": "https://drive.google.com/file/d/1GJFDqeu8T8wQkYqPmIkTOkiTTt80LcLP/view?usp=drive_link"
+      "videos": [],
+      "photo": ""
     },
     "sommerhagene": {
       "title": "Sommerhagene",
@@ -218,10 +215,109 @@
       "overview": "Sommerhagene - formulacija početne strategije, performance marketing(kreiranje kataloga i pitch videa), te početak komunikacije na društvenim mrežama. Takođe, planovi za sljedeću godinu.",
       "challenge": "Preuzeli smo kompletnu početnu fazu projekta, od formulacije strategije do realizacije performance marketing materijala. Kreirali smo katalog i pitch video, te postavili osnovu za komunikaciju na društvenim mrežama."
     },
+    "wonderflle": {
+      "title": "Wonderflle",
+      "client": "Wonderflle",
+      "services": "Brand identitet, sadržaj za društvene mreže, kreativne kampanje",
+      "overview": "Wonderflle - brend za hranu i piće fokusiran na kreiranje angažujućeg sadržaja za društvene mreže i izgradnju svijesti o brendu kroz kreativne kampanje.",
+      "challenge": "Razvili smo sveobuhvatnu kreativnu strategiju koja ističe jedinstvenu ponudu brenda i kreirali privlačan vizuelni sadržaj za angažman na društvenim mrežama."
+    },
     "atraktiv": {
       "title": "Atraktiv",
       "overview": "Kreiranje video sadržaja za Atraktiv Magazin",
       "challenge": "Dinamična video produkcija za angažman na društvenim mrežama"
+    }
+  },
+  "portfolio": {
+    "atleta": {
+      "description": "Atleta nam je povjerila kompletan social media i ads management. Od 2024. gradimo konzistentan vizuelni sistem kroz video, statics i print dizajn, usklađen sa ciljevima i performansom.",
+      "client": "Atleta",
+      "services": "Social Media + Ads Management",
+      "deliverables": "Video, Statics, Print Dizajn"
+    },
+    "atraktiv": {
+      "description": "U saradnji sa marketing agencijom DigitalSpotted, za Atraktiv smo realizovali 2 videa za Facebook i Instagram. Sa naše strane isporučeni su snimanje i montaža (video produkcija).",
+      "client": "Atraktiv",
+      "services": "Video Produkcija",
+      "deliverables": "Snimanje + Montaža (2 videa za FB i Instagram)"
+    },
+    "bestdrive": {
+      "description": "Radili smo video produkciju i dizajn za BestDrive, uključujući web banere i vizuale za društvene mreže. U 2025. pokrili smo kreativu, produkciju i Meta Ads kao cjelinu.",
+      "client": "BestDrive",
+      "services": "Video Produkcija + Dizajn + Meta Ads",
+      "deliverables": "Video, Web Baneri, Social Media Vizuali"
+    },
+    "cheyf": {
+      "description": "Od juna 2025. za CHEYF isporučujemo long-form i short-form video produkciju, uz branding vozila i sponsor brand placement videe koji prate saradnje sa partnerima.",
+      "client": "CHEYF",
+      "services": "Video Produkcija + Branding",
+      "deliverables": "Long-form, Short-form, Branding Vozila, Sponsor Brand Placement Videi"
+    },
+    "cheyf-accommodations": {
+      "description": "Za CHEYF Accomodation smo u aprilu 2025. realizovali real estate video i set 360 fotografija za prikaz smještaja i prostora.",
+      "client": "CHEYF Accomodation",
+      "services": "Video Produkcija + 360 Fotografija",
+      "deliverables": "Real Estate Video, 360 Fotografije"
+    },
+    "eureka-filaments": {
+      "description": "Za Eureka Filaments smo u periodu 2024-2025 isporučivali social media dizajn u paketu od 10 postova mjesečno, prilagođeno za Facebook i Instagram placementse.",
+      "client": "Eureka Filaments",
+      "services": "Social Media Dizajn",
+      "deliverables": "10 Postova Mjesečno (Facebook i Instagram)"
+    },
+    "garagepulse": {
+      "description": "GaragePulse je dobio kompletan social media dizajn i razrađen koncept nagradne igre s ciljem povećanja brand awarenessa i rasta broja pratilaca, uz izradu street art postera.",
+      "client": "GaragePulse",
+      "services": "Dizajn + Strategija",
+      "deliverables": "Social Media Dizajn, Koncept Nagradne Igre, Street Art Poster"
+    },
+    "get-energy-canada": {
+      "description": "GetEnergy (Kanada) je u 2024. dobio social media paket od 10 statičnih vizuala, pripremljenih za redovne objave i konzistentan vizuelni identitet.",
+      "client": "GetEnergy",
+      "services": "Social Media Dizajn",
+      "deliverables": "10 Statics vizuala/Mjesečno"
+    },
+    "igny": {
+      "description": "IGNY je od 2024. po sezoni imao kampanje za promociju aplikacije i brand awareness, pokrivene statics postovima i video editingom.",
+      "client": "IGNY",
+      "services": "App Promocija + Brand Awareness",
+      "deliverables": "Statics Postovi, Video Editing"
+    },
+    "green-concept": {
+      "description": "Green Concept Houses je od 2025. dobio kompletan kreativni i marketinški paket: social media postove, print dizajn, video produkciju, te marketing strategiju i plan za Meta Ads management.",
+      "client": "Green Concept Houses",
+      "services": "Kreativa + Strategija",
+      "deliverables": "Social Media Postovi, Print Dizajn, Video Produkcija, Plan za Meta Ads Management"
+    },
+    "ibm": {
+      "description": "Integrated Body Movement je u 2024. imao social media management paket od 15 postova mjesečno, sa fokusom na edukaciju, brand awareness i prodaju.",
+      "client": "Integrated Body Movement",
+      "services": "Social Media Management",
+      "deliverables": "15 Postova Mjesečno"
+    },
+    "legacy-vacations": {
+      "description": "Legacy Vacation Resorts je imao social media paket od 10 statičnih postova mjesečno, sa ciljem izgradnje brenda kroz šaljiv ton i promociju usluga hotelijerstva i booking smještaja u SAD-u.",
+      "client": "Legacy Vacations",
+      "services": "Social Media Dizajn",
+      "deliverables": "10 Statičnih Postova Mjesečno"
+    },
+    "rusticmens": {
+      "description": "Rustimens je dobio set statičnih oglasa za povećanje prodaje na webshopu, a video oglase smo riješili kroz AI produkciju kako bismo dobili lifestyle kadrove i realan product placement iako nismo imali mogućnost snimanja na lokaciji.",
+      "client": "Rustimens",
+      "services": "Dizajn + Video Oglasi",
+      "deliverables": "Statics Adovi, AI Lifestyle Video Ads"
+    },
+    "sommerhagen": {
+      "description": "Sommerhagene je u 2025. dobio video produkciju i social media sadržaj kao temelj za oglašavanje i realizaciju strategije u 2026. Fokus je bio na podizanju svijesti o Bosni i Hercegovini kao geo području i pripremi terena za finalnu prodaju objekata investitorima, uz izradu kataloga projekta.",
+      "client": "Sommerhagene",
+      "services": "Video Produkcija + Social Media Dizajn",
+      "deliverables": "Video Sadržaj, Social Media Postovi, Katalog Projekta"
+    },
+    "zamzam": {
+      "description": "Zamzam projekat je realizovan kao long-form serijal od 30 epizoda, kombinacija talking head segmenata, animacija, B-rolla i recitacije ajeta Kur'ana uz objašnjenja. Pored serijala, isporučen je i trailer koji je kompletirao cijeli projekat.",
+      "client": "Zamzam Projekat",
+      "services": "Video Produkcija",
+      "deliverables": "Long-form Serijal (30 Epizoda), Trailer"
     }
   }
 }

@@ -93,6 +93,7 @@
         letter-spacing: -4px;
         color: var(--tp-common-white);
         font-family: var(--tp-ff-marcellus);
+        text-align: center;
         @media #{$xxl}{
             font-size: 150px;
         }
@@ -109,9 +110,9 @@
             font-size: 90px;
         }
         & span{
-            padding-left: 175px;
+            padding-left: 30px;
             @media #{$lg,$xs}{
-                padding-left: 0;
+                padding-left: 20px;
             }
         }
     }
@@ -198,12 +199,12 @@
         font-family: var(--tp-ff-marcellus);
         margin-bottom: 25px;
         display: inline-block;
-        margin-left: 70px;
+        margin-left: 0;
         @media #{$xs}{
             margin-left: 0;
         }
         & .tp-subtitle-text{
-            padding: 0px 15px;  
+            padding: 0px 15px;
             display: inline-block;
         }
     }

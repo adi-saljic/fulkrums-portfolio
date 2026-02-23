@@ -4,9 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Mousewheel, Autoplay } from "swiper/modules";
 import { SwiperOptions } from "swiper/types";
 import { Link } from "@/i18n/routing";
+import Image from "next/image";
 // images
 
-import project_data from "@/data/project-data";
+import { portfolio_data } from "@/data/project-data";
 import { useTranslations } from 'next-intl';
 
 // slider setting
@@ -34,12 +35,6 @@ const slider_setting: SwiperOptions = {
   },
 };
 
-// slider images
-const showcase_1 = "https://drive.google.com/thumbnail?id=1P2cm97dtcE97ZgQDJih7zKdCUPKNTsmE&sz=w1000";
-const showcase_2 = "https://drive.google.com/thumbnail?id=1P2cm97dtcE97ZgQDJih7zKdCUPKNTsmE&sz=w1000";
-const showcase_3 = "https://drive.google.com/thumbnail?id=1P2cm97dtcE97ZgQDJih7zKdCUPKNTsmE&sz=w1000";
-const showcase_4 = "https://drive.google.com/thumbnail?id=1P2cm97dtcE97ZgQDJih7zKdCUPKNTsmE&sz=w1000";
-const slider_images = [showcase_1, showcase_2, showcase_3, showcase_4];
 export default function PortfolioSliderHomeEleven() {
   const t = useTranslations('projects');
   const tData = useTranslations('projectData');
@@ -75,9 +70,24 @@ export default function PortfolioSliderHomeEleven() {
               modules={[Navigation, Pagination, Autoplay, Mousewheel]}
               id="trigger-slides"
             >
-              {project_data.map((project,i) => (
+              {portfolio_data.map((project,i) => (
                 <SwiperSlide key={project.id}>
-                  <div className={`slide-wrap ${i === 0 ? 'active' : ''}`} data-slide={i}></div>
+                  <div className={`slide-wrap ${i === 0 ? 'active' : ''}`} data-slide={i} style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    zIndex: -1
+                  }}>
+                    <Image
+                      src={project.heroImage}
+                      alt={project.titleKey}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      priority={i === 0}
+                    />
+                  </div>
                   <div className="container">
                     <div className="row">
                       <div className="col-xl-8">
@@ -87,8 +97,8 @@ export default function PortfolioSliderHomeEleven() {
                               {project.category}
                             </span>
                             <h4 className="port-showcase-slider-title">
-                              <Link href={`/study-cases/${project.slug}`}>
-                                {tData(`${project.titleKey}.title`)}
+                              <Link href={`/portfolio/${project.slug}`}>
+                                {project.titleKey}
                               </Link>
                             </h4>
                           </div>

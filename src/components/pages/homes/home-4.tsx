@@ -14,7 +14,7 @@ import GalleryOne from "@/components/gallery/gallery-one";
 import AboutThree from "@/components/about/about-three";
 import BrandThree from "@/components/brand/brand-three";
 import ProjectFour from "@/components/project/project-four";
-import VideoThree from "@/components/video/video-three";
+// import VideoThree from "@/components/video/video-three";
 import ServiceFour from "@/components/service/service-four";
 import ContactOne from "@/components/contact/contact-one";
 import FooterFour from "@/layouts/footers/footer-four";
@@ -22,6 +22,7 @@ import { textInvert } from "@/utils/text-invert";
 import { fadeAnimation, revelAnimationOne } from "@/utils/title-animation";
 import { projectThreeAnimation } from "@/utils/project-anim";
 import { ctaAnimation } from "@/utils/cta-anim";
+import { generateLocalBusinessSchema, generateOrganizationSchema, generateWebSiteSchema } from "@/lib/seo/schemas";
 
 const HomeFourMain = () => {
   useScrollSmooth();
@@ -43,8 +44,26 @@ const HomeFourMain = () => {
     return () => clearTimeout(timer);
   });
 
+  // JSON-LD schemas for SEO
+  const localBusinessSchema = generateLocalBusinessSchema('bs');
+  const organizationSchema = generateOrganizationSchema('bs');
+  const websiteSchema = generateWebSiteSchema('bs');
+
   return (
     <Wrapper>
+      {/* JSON-LD Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
 
       {/* header area start */}
       <HeaderFour />
@@ -76,7 +95,7 @@ const HomeFourMain = () => {
             {/* project area end */}
 
             {/* video area start */}
-            <VideoThree />
+            {/* <VideoThree /> */}
             {/* video area end */}
 
             {/* service area start */}

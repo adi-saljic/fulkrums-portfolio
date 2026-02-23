@@ -3,9 +3,9 @@ import { scroller } from 'react-scroll';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const details_thumb_1 = "https://drive.google.com/thumbnail?id=1P2cm97dtcE97ZgQDJih7zKdCUPKNTsmE&sz=w1000";
-const details_thumb_2 = "https://drive.google.com/thumbnail?id=1P2cm97dtcE97ZgQDJih7zKdCUPKNTsmE&sz=w1000";
-const details_thumb_3 = "https://drive.google.com/thumbnail?id=1P2cm97dtcE97ZgQDJih7zKdCUPKNTsmE&sz=w1000";
+const details_thumb_1 = "";
+const details_thumb_2 = "";
+const details_thumb_3 = "";
 
 export default function PortfolioDetailsShowcaseArea() {
   const scrollTo = () => {
@@ -128,21 +128,27 @@ export default function PortfolioDetailsShowcaseArea() {
       <div className="showcase-details-thumb-wrap pb-40">
           <div className="container container-1430">
             <div className="row gx-80">
-                <div className="col-xl-6 col-lg-6">
-                  <div className="showcase-details-thumb mb-80">
-                      <Image data-speed=".8" src={details_thumb_1} alt="details-thumb" style={{height: "auto"}} width={800} height={600}/>
+                {details_thumb_1 && (
+                  <div className="col-xl-6 col-lg-6">
+                    <div className="showcase-details-thumb mb-80">
+                        <Image data-speed=".8" src={details_thumb_1} alt="details-thumb" style={{height: "auto"}} width={800} height={600}/>
+                    </div>
                   </div>
-                </div>
-                <div className="col-xl-6 col-lg-6">
-                  <div className="showcase-details-thumb mb-80">
-                  <Image data-speed=".8" src={details_thumb_2} alt="details-thumb" style={{height: "auto"}} width={800} height={600}/>
+                )}
+                {details_thumb_2 && (
+                  <div className="col-xl-6 col-lg-6">
+                    <div className="showcase-details-thumb mb-80">
+                    <Image data-speed=".8" src={details_thumb_2} alt="details-thumb" style={{height: "auto"}} width={800} height={600}/>
+                    </div>
                   </div>
-                </div>
-                <div className="col-xl-12">
-                  <div className="showcase-details-thumb mb-80">
-                  <Image data-speed=".8" src={details_thumb_3} alt="details-thumb" style={{height: "auto"}} width={1200} height={600}/>
+                )}
+                {details_thumb_3 && (
+                  <div className="col-xl-12">
+                    <div className="showcase-details-thumb mb-80">
+                    <Image data-speed=".8" src={details_thumb_3} alt="details-thumb" style={{height: "auto"}} width={1200} height={600}/>
+                    </div>
                   </div>
-                </div>
+                )}
             </div>
           </div>
       </div>

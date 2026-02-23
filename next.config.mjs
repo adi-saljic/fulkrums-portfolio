@@ -5,17 +5,19 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'drive.google.com',
+        hostname: '*.cloudfront.net',
+        pathname: '/**',
       },
       {
         protocol: 'https',
-        hostname: 'lh3.googleusercontent.com',
+        hostname: '*.s3.eu-central-1.amazonaws.com',
+        pathname: '/**',
       },
     ],
+    formats: ['image/avif', 'image/webp'],
   },
 };
 

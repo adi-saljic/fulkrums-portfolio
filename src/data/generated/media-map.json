@@ -1,0 +1,340 @@
+{
+  "atleta": {
+    "slug": "atleta",
+    "heroImage": "",
+    "detailImages": [],
+    "detailVideos": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Atleta/ATHLETIC-ALPHABET.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Atleta/ATHLETIC-MEETING.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Atleta/NOVOGRADSKI-DANI-MITING.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Atleta/Sequence-06.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Atleta/ZELJEZNICAR.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Atleta/novo/Atletska-kondicija-trening.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Atleta/novo/FINAL-3.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Atleta/novo/Masa---Trening---Atleta--captions.mp4"
+    ]
+  },
+  "atraktiv": {
+    "slug": "atraktiv",
+    "heroImage": "",
+    "detailImages": [],
+    "detailVideos": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Atraktiv/ATRAKTIV-MAGACIN.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Atraktiv/ATRAKTIV.mp4"
+    ]
+  },
+  "baneri-portfolio": {
+    "slug": "baneri-portfolio",
+    "heroImage": "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Baneri-Portfolio/Atleta.jpg",
+    "detailImages": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Baneri-Portfolio/Atleta.jpg",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Baneri-Portfolio/Atraktiv.jpg",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Baneri-Portfolio/Bestdrive-Maja.jpg",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Baneri-Portfolio/Cheyf-Accomodation.jpg",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Baneri-Portfolio/Cheyf.jpg",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Baneri-Portfolio/Eureka-Filaments.jpg",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Baneri-Portfolio/Garagepulse.jpg",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Baneri-Portfolio/GetEnergy.jpg",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Baneri-Portfolio/Green-Concept-Houses.jpg",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Baneri-Portfolio/Igny.jpg",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Baneri-Portfolio/Integrated-body.jpg",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Baneri-Portfolio/Legacy-Vacations.jpg",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Baneri-Portfolio/Rusticmens.jpg",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Baneri-Portfolio/Sommerhagene.jpg",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Baneri-Portfolio/Zamzam-Project.jpg"
+    ],
+    "detailVideos": []
+  },
+  "bestdrive": {
+    "slug": "bestdrive",
+    "heroImage": "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/BestDrive/1.png",
+    "detailImages": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/BestDrive/1.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/BestDrive/2.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/BestDrive/3.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/BestDrive/4.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/BestDrive/5.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/BestDrive/mockup-copy.png"
+    ],
+    "detailVideos": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/BestDrive/BESTDRIVE-AND-GARAGEPULSE.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/BestDrive/fin.mp4"
+    ]
+  },
+  "cheyf": {
+    "slug": "cheyf",
+    "heroImage": "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/CHEYF/new/BRANDING-CADDY/kompletan-min.png",
+    "detailImages": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/CHEYF/new/BRANDING-CADDY/kompletan-min.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/CHEYF/new/BRANDING-CADDY/prednji_dio-min.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/CHEYF/new/BRANDING-CADDY/zadnji_dio-min.png"
+    ],
+    "detailVideos": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/CHEYF/CheyfxNomad.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/CHEYF/Sequence-01.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/CHEYF/Sequence-02.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/CHEYF/UrbanHikeReels.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/CHEYF/sff-preparation.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/CHEYF/wtd-w-cc.mp4"
+    ]
+  },
+  "cheyf-accomodations": {
+    "slug": "cheyf-accomodations",
+    "heroImage": "",
+    "detailImages": [],
+    "detailVideos": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Cheyf-Accomodations/REAL-ESTATE-CHEYF-ACC.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Cheyf-Accomodations/REAL-ESTATE.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Cheyf-Accomodations/Sequence-01.mp4"
+    ]
+  },
+  "garagepulse": {
+    "slug": "garagepulse",
+    "heroImage": "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Garagepulse/Giveaway.png",
+    "detailImages": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Garagepulse/Giveaway.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Garagepulse/Giveaway3.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Garagepulse/giveaway_1.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Garagepulse/nagradna_igra_webbaner.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Garagepulse/poster.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Garagepulse/socialmedia_baner.png"
+    ],
+    "detailVideos": []
+  },
+  "get-energy-canada": {
+    "slug": "get-energy-canada",
+    "heroImage": "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Get-Energy-Canada/1.png",
+    "detailImages": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Get-Energy-Canada/1.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Get-Energy-Canada/10.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Get-Energy-Canada/6.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Get-Energy-Canada/8.png"
+    ],
+    "detailVideos": []
+  },
+  "green-concept": {
+    "slug": "green-concept",
+    "heroImage": "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/GreenConcept/kuca-iz-snova.png",
+    "detailImages": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/GreenConcept/kuca-iz-snova.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/GreenConcept/prefab-tip-br.1.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/GreenConcept/vikendica-do-ljeta.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/GreenConcept/zajedno-gradimo-bolju-buducnost.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/GreenConcept/zelis-prihvatljivu-cijenu-i-premium-kucu.png"
+    ],
+    "detailVideos": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/GreenConcept/Prije-zidanja-probaj-prefab.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/GreenConcept/Termowood-paneli-promo.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/GreenConcept/Timelapse-kuca.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/GreenConcept/volio-bih-da-sam-znao.mp4"
+    ]
+  },
+  "igny": {
+    "slug": "igny",
+    "heroImage": "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/IGNY/27.png",
+    "detailImages": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/IGNY/27.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/IGNY/28.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/IGNY/29.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/IGNY/30.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/IGNY/fin.png"
+    ],
+    "detailVideos": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/IGNY/Sequence-01.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/IGNY/final.mp4"
+    ]
+  },
+  "legacy-vacations": {
+    "slug": "legacy-vacations",
+    "heroImage": "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Legacy-Vacations/12.png",
+    "detailImages": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Legacy-Vacations/12.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Legacy-Vacations/5.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Legacy-Vacations/6.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Legacy-Vacations/7.png"
+    ],
+    "detailVideos": []
+  },
+  "oplant": {
+    "slug": "oplant",
+    "heroImage": "",
+    "detailImages": [],
+    "detailVideos": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/O'Plant/Bijele-Stijene-Final.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/O'Plant/PODRAVKA-LUKOMIR.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/O'Plant/PODRAVKA-O'PLANT.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/O'Plant/PODRAVKA-PROKOSKO.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/O'Plant/Trnovacko-jezero.mp4"
+    ]
+  },
+  "rusticmens": {
+    "slug": "rusticmens",
+    "heroImage": "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Rusticmens/Rusticmens_3.png",
+    "detailImages": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Rusticmens/Rusticmens_3.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Rusticmens/Rusticmens_4.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Rusticmens/rusticmens_1.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Rusticmens/rusticmens_2.png"
+    ],
+    "detailVideos": []
+  },
+  "sommerhagen": {
+    "slug": "sommerhagen",
+    "heroImage": "",
+    "detailImages": [],
+    "detailVideos": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Sommerhagene/CanueSafari.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Sommerhagene/Fall-Sommerhagene.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Sommerhagene/Herzegovina-vibes.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Sommerhagene/Secret-Spots.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Sommerhagene/hutovo.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Sommerhagene/smokvee.mp4"
+    ]
+  },
+  "zamzam-project": {
+    "slug": "zamzam-project",
+    "heroImage": "",
+    "detailImages": [],
+    "detailVideos": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Zamzam-Project/First-One-(-Seq-18).mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Zamzam-Project/Sequence-22_1.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Zamzam-Project/Sequence-23.mp4"
+    ]
+  },
+  "eureka-filaments": {
+    "slug": "eureka-filaments",
+    "heroImage": "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/eureka-filaments/51.png",
+    "detailImages": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/eureka-filaments/51.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/eureka-filaments/53.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/eureka-filaments/54.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/eureka-filaments/56.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/eureka-filaments/58.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/eureka-filaments/59.png"
+    ],
+    "detailVideos": []
+  },
+  "integrated-body-movement": {
+    "slug": "integrated-body-movement",
+    "heroImage": "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/integrated-body-movement-/14.png",
+    "detailImages": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/integrated-body-movement-/14.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/integrated-body-movement-/29.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/integrated-body-movement-/6.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/integrated-body-movement-/9.png"
+    ],
+    "detailVideos": []
+  },
+  "homepage-thumbnails": {
+    "zamzam": "https://d1hqd8vqu5a5q0.cloudfront.net/homepage/thmnls-home-page-fulkrums/Zamzam-Project.png",
+    "quickie-liga": "https://d1hqd8vqu5a5q0.cloudfront.net/homepage/thmnls-home-page-fulkrums/Quickie-liga.png",
+    "it-works-marketing": "https://d1hqd8vqu5a5q0.cloudfront.net/homepage/thmnls-home-page-fulkrums/It-works.png",
+    "green-concept-houses": "https://d1hqd8vqu5a5q0.cloudfront.net/homepage/thmnls-home-page-fulkrums/Green-Concept-Houses.png",
+    "getenergy": "https://d1hqd8vqu5a5q0.cloudfront.net/homepage/thmnls-home-page-fulkrums/Get-Energy.png",
+    "cheyf": "https://d1hqd8vqu5a5q0.cloudfront.net/homepage/thmnls-home-page-fulkrums/Cheyf.png",
+    "cheyf-accommodation": "https://d1hqd8vqu5a5q0.cloudfront.net/homepage/thmnls-home-page-fulkrums/Cheyf-Accomodations.png",
+    "atleta": "https://d1hqd8vqu5a5q0.cloudfront.net/homepage/thmnls-home-page-fulkrums/Atletska-kondicija.png"
+  },
+  "project-atleta": {
+    "slug": "atleta",
+    "heroImage": "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/ATLETSKA-KONDICIJA.png",
+    "detailImages": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Atletska-kondicija/31.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Atletska-kondicija/32.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Atletska-kondicija/33.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Atletska-kondicija/34.png"
+    ],
+    "detailVideos": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Atletska-kondicija/Sequence-03.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Atletska-kondicija/fin-rlls.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Atletska-kondicija/fin.mp4"
+    ]
+  },
+  "project-bestdrive-maja": {
+    "slug": "bestdrive-maja",
+    "heroImage": "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/BESTDRIVE-MAJA.png",
+    "detailImages": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Bestdrive-/52.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Bestdrive-/53.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Bestdrive-/54.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Bestdrive-/55.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Bestdrive-/fin3.jpg"
+    ],
+    "detailVideos": []
+  },
+  "project-igny": {
+    "slug": "igny",
+    "heroImage": "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/IGNY.png",
+    "detailImages": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/IGNY/26.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/IGNY/28.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/IGNY/29.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/IGNY/30.png"
+    ],
+    "detailVideos": []
+  },
+  "project-it-works-marketing": {
+    "slug": "it-works-marketing",
+    "heroImage": "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/IT-WORKS.png",
+    "detailImages": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/It-Works/1.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/It-Works/2.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/It-Works/3.png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/It-Works/5.png"
+    ],
+    "detailVideos": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/It-Works/Video-1---Month-2.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/It-Works/Video-2---Month-1.mp4"
+    ]
+  },
+  "project-quickie-liga": {
+    "slug": "quickie-liga",
+    "heroImage": "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/QUICKIE-LIGA.png",
+    "detailImages": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Quickie-liga/raspis-za-prvo-kolo.png"
+    ],
+    "detailVideos": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Quickie-liga/QUICKIE-NAJAVA.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Quickie-liga/quickie-event-recap.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Quickie-liga/quickie-event-video.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Quickie-liga/quickie-promo-video.mp4"
+    ]
+  },
+  "project-sommerhagene": {
+    "slug": "sommerhagene",
+    "heroImage": "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/SOMMERHAGENE.png",
+    "detailImages": [],
+    "detailVideos": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Sommerhagene/1.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Sommerhagene/CanueSafari.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Sommerhagene/Fall-Sommerhagene.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Sommerhagene/Final-video.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Sommerhagene/Herzegovina-vibes.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Sommerhagene/Pitch-Video-AlbaUniprom-and-Green-Concept-Houses.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Sommerhagene/Sequence-01.mp4",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Sommerhagene/Sequence-03.mp4"
+    ],
+    "detailPdf": "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Sommerhagene/KATALOG-FINAL.pdf"
+  },
+  "project-wonderflle": {
+    "slug": "wonderflle",
+    "heroImage": "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/WONDERWAFFLE.png",
+    "detailImages": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Wonderflle/2-(1).png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Wonderflle/5-(1).png",
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Wonderflle/7.png"
+    ],
+    "detailVideos": [
+      "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Wonderflle/REEL-2.mp4"
+    ]
+  },
+  "study-case-thumbnails": {
+    "atleta": "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/ATLETSKA-KONDICIJA.png",
+    "bestdrive-maja": "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/BESTDRIVE-MAJA.png",
+    "igny": "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/IGNY.png",
+    "it-works-marketing": "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/IT-WORKS.png",
+    "quickie-liga": "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/QUICKIE-LIGA.png",
+    "sommerhagene": "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/SOMMERHAGENE.png",
+    "wonderflle": "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/WONDERWAFFLE.png"
+  }
+}

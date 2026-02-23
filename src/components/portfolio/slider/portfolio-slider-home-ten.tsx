@@ -1,15 +1,12 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import Slider from "react-slick";
+import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import "slick-carousel/slick/slick.css";
 import { DownArrow } from "../../svg";
 import { SlickNextArrow, SlickPrevArrow } from "@/components/slick-arrow";
-import project_data from "@/data/project-data";
+import { getProjectData } from "@/data/project-data";
 import { useTranslations } from 'next-intl';
-
-// Get all projects for slider
-const slider_projects = project_data;
 
 // slider setting one - will be created with disabled state
 const getSliderSettingOne = (isDisabled: boolean) => ({
@@ -24,7 +21,7 @@ const getSliderSettingOne = (isDisabled: boolean) => ({
 
 // slider setting two - will be created with disabled state
 const getSliderSettingTwo = (isDisabled: boolean) => ({
-  slidesToShow: 4,
+  slidesToShow: 3,
   slidesToScroll: 1,
   dots: false,
   arrows: true,
@@ -87,6 +84,17 @@ export default function PortfolioSliderHomeTen() {
   const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
   const t = useTranslations('projectData');
 
+  // Get all projects for slider - called on every render to get fresh data
+  const slider_projects = getProjectData();
+
+  // Debug: Log the heroImage URLs
+  React.useEffect(() => {
+    console.log('Study Cases Projects:', slider_projects.map(p => ({
+      slug: p.slug,
+      heroImage: p.heroImage
+    })));
+  }, []);
+
   // Preload all images on mount
   React.useEffect(() => {
     slider_projects.forEach((project) => {
@@ -127,18 +135,20 @@ export default function PortfolioSliderHomeTen() {
                   overflow: 'hidden'
                 }}
               >
-                <Image
-                  src={project.heroImage}
-                  alt={t(`${project.titleKey}.title`)}
-                  fill
-                  priority
-                  sizes="100vw"
-                  style={{
-                    objectFit: 'cover',
-                    objectPosition: 'center',
-                    zIndex: 0
-                  }}
-                />
+                {project.heroImage && (
+                  <Image
+                    src={project.heroImage}
+                    alt={t(`${project.titleKey}.title`)}
+                    fill
+                    priority
+                    sizes="100vw"
+                    style={{
+                      objectFit: 'contain',
+                      objectPosition: 'center',
+                      zIndex: 0,
+                    }}
+                  />
+                )}
                 <div className="tp-portfolio-11-slider-content" style={{ position: 'relative', zIndex: 1 }}>
                   <div className="tp-portfolio-11-slider-link">
                     <DownArrow />
@@ -167,7 +177,7 @@ export default function PortfolioSliderHomeTen() {
 
         <div className="dddd"></div>
 
-        <div className="tp-portfolio-11-slider-nav-wrap z-index-5">
+        <div className="tp-portfolio-11-slider-nav-wrap z-index-5" style={{ paddingLeft: "10%", maxWidth: "90%" }}>
           <div
             className="slides-numbers d-none d-lg-flex d-flex align-items-center"
             style={{ display: "inline-block" }}
@@ -190,15 +200,20 @@ export default function PortfolioSliderHomeTen() {
                 key={project.id}
                 className="tp-portfolio-11-slider-nav-item p-relative"
               >
-                <Link href={`/study-cases/${project.slug}`} style={{ display: 'block', cursor: 'pointer' }}>
-                  <div className="tp-portfolio-11-slider-nav-thumb">
-                    <Image
-                      src={project.heroImage}
-                      alt={t(`${project.titleKey}.title`)}
-                      width={300}
-                      height={200}
-                      style={{ height: "auto" }}
-                    />
+                <Link
+                  href={`/study-cases/${project.slug}`}
+                  style={{ display: "block", cursor: "pointer", padding: "0 10px" }}
+                >
+                  <div className="tp-portfolio-11-slider-nav-thumb" style={{ position: "relative", width: "100%", height: "150px", overflow: "hidden", borderRadius: "8px", border: "2px solid rgba(255,255,255,0.1)" }}>
+                    {project.heroImage && (
+                      <Image
+                        src={project.heroImage}
+                        alt={t(`${project.titleKey}.title`)}
+                        fill
+                        sizes="300px"
+                        style={{ objectFit: "contain", objectPosition: "center" }}
+                      />
+                    )}
                   </div>
                   <div className="tp-portfolio-11-slider-nav-content-wrap">
                     <div className="tp-portfolio-11-slider-nav-content d-flex flex-column justify-content-between">
@@ -211,12 +226,18 @@ export default function PortfolioSliderHomeTen() {
                           {project.category}
                         </span>
                       </div>
-                      <div className="tp-portfolio-11-slider-nav-tittle-box">
+                      <div className="tp-portfolio-11-slider-nav-tittle-box" style={{ maxHeight: "3em", overflow: "hidden" }}>
                         <h4 className="tp-portfolio-11-slider-nav-tittle">
                           <span
                             style={{
-                              textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8), -1px -1px 2px rgba(0, 0, 0, 0.8), 1px -1px 2px rgba(0, 0, 0, 0.8), -1px 1px 2px rgba(0, 0, 0, 0.8)'
-                            }}
+                              textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8), -1px -1px 2px rgba(0, 0, 0, 0.8), 1px -1px 2px rgba(0, 0, 0, 0.8), -1px 1px 2px rgba(0, 0, 0, 0.8)',
+                              display: '-webkit-box',
+                              WebkitLineClamp: 2,
+                              WebkitBoxOrient: 'vertical',
+                              overflow: 'hidden',
+                              wordBreak: 'break-word',
+                              lineHeight: '1.5em'
+                            } as React.CSSProperties}
                           >
                             {t(`${project.titleKey}.title`)}
                           </span>

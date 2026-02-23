@@ -10,7 +10,7 @@ import HeaderFour from "@/layouts/headers/header-four";
 import FooterFour from "@/layouts/footers/footer-four";
 import ProjectDetailsArea from "@/components/portfolio/details/project-details-area";
 import ContactOne from "@/components/contact/contact-one";
-import project_data from "@/data/project-data";
+import { getProjectData } from "@/data/project-data";
 import { charAnimation, titleAnimation } from "@/utils/title-animation";
 import { hoverBtn } from "@/utils/hover-btn";
 
@@ -38,7 +38,7 @@ export default function ProjectPage({ params }: IProps) {
     return null;
   }
 
-  const project = project_data.find((p) => p.slug === slug);
+  const project = getProjectData().find((p) => p.slug === slug);
 
   if (!project) {
     notFound();

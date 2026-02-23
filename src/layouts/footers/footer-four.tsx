@@ -2,9 +2,6 @@
 import React from "react";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
-
-const fulkrumsLogo = "https://drive.google.com/thumbnail?id=1P2cm97dtcE97ZgQDJih7zKdCUPKNTsmE&sz=w1000";
 
 export default function FooterFour() {
   const t = useTranslations('footer');
@@ -16,8 +13,8 @@ export default function FooterFour() {
           <div className="row align-items-end">
             <div className="col-xl-4 col-lg-4 col-md-4 mb-30">
               <div className="tp-footer-3-widget text-center text-md-start">
-                <Link className="tp-footer-3-logo" href="/">
-                  <Image src={fulkrumsLogo} alt="Fulkrums Logo" width={440} height={160} style={{width: 'auto', height: '80px', maxWidth: '100%'}} />
+                <Link className="tp-footer-3-logo" href="/" style={{fontSize: '32px', fontWeight: 'bold', color: '#fff', textDecoration: 'none'}}>
+                  FULKRUMS
                 </Link>
               </div>
             </div>
@@ -53,7 +50,8 @@ export default function FooterFour() {
                       {t('social.marketing')}
                     </span>
                     <Link
-                      href="#"
+                      href="https://www.linkedin.com/in/zlatan-saljic-54334126a/"
+                      target="_blank"
                       title="Marketing Team"
                       className="linkedin-marketing"
                     >
@@ -65,7 +63,8 @@ export default function FooterFour() {
                       {t('social.development')}
                     </span>
                     <Link
-                      href="#"
+                      href="https://www.linkedin.com/in/adi-saljic-04169227b"
+                      target="_blank"
                       title="Development Team"
                       className="linkedin-dev"
                     >

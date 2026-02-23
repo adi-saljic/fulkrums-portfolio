@@ -4,7 +4,7 @@ import Image from 'next/image';
 // images
 import Link from 'next/link';
 
-const placeholder_img = "https://drive.google.com/thumbnail?id=1P2cm97dtcE97ZgQDJih7zKdCUPKNTsmE&sz=w1000";
+const placeholder_img = "";
 
 // team data
 const team_data = [
@@ -55,7 +55,7 @@ export default function TeamTwo() {
                 <div className="tp-team-4-item text-center tp_fade_bottom">
                     <div className="tp-hover-btn-wrapper fix">
                       <div className="tp-hover-btn-item">
-                          <Image style={{width:"100%", height:"auto"}} className="w-100" src={item.img} alt="team-img" width={400} height={500}/>
+                          {item.img && <Image style={{width:"100%", height:"auto"}} className="w-100" src={item.img} alt="team-img" width={400} height={500}/>}
                       </div>
                     </div>
                     <div className="tp-team-4-content">

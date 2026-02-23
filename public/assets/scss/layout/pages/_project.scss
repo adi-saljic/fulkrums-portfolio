@@ -343,9 +343,23 @@
     }
 }
 .tp-project-3 {
+    &-area {
+        position: relative;
+        z-index: 10;
+        & .container, & .container-1720 {
+            margin: 0 auto;
+        }
+        & .row {
+            justify-content: center;
+        }
+    }
     &-title-box {
+        position: relative;
+        z-index: 100;
         & .tp-section-title-200 {
             margin-bottom: 40px;
+            position: relative;
+            z-index: 100;
         }
     }
 
@@ -377,14 +391,19 @@
     }
 
     &-wrap {
-        margin-bottom: 220px;
+        margin: 110px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 400px;
 
         @media #{$md} {
-            margin-bottom: 130px;
+            margin: 65px 0;
         }
 
         @media #{$xs} {
-            margin-bottom: 100px;
+            margin: 50px 0;
+            min-height: auto;
         }
     }
 
@@ -2214,6 +2233,36 @@
                 }
             }
         }
+        &-thumb{
+            margin-bottom: 10px;
+            & img{
+                width: auto;
+                height: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                object-fit: cover;
+                @media #{$xs}{
+                    width: 100%;
+                }
+            }
+        }
+        &-video{
+            margin-bottom: 10px;
+            & video{
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+        &-right-wrap{
+            padding-left: 0px;
+            @media #{$lg}{
+                padding-left: 0px;
+            }
+            @media #{$md,$xs}{
+                padding-left: 0px;
+            }
+        }
         &-pt{
             padding-top: 107px;
         }
@@ -2260,12 +2309,8 @@
             }
         }
         &-right{
-            padding: 70px 90px;
-            height: 700px;
-            overflow: hidden;
-            overflow-y: scroll;
-            overscroll-behavior-y: contain;
-            scrollbar-width: thin;
+            padding: 70px 30px;
+            min-height: auto;
             @media #{$xs}{
                 padding: 70px 15px;
             }

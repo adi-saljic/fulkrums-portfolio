@@ -1,3 +1,6 @@
+// Import media map statically for client-side access
+import mediaMapData from './generated/media-map.json';
+
 export interface IProject {
   id: number;
   slug: string;
@@ -9,16 +12,15 @@ export interface IProject {
   detailPdf?: string;
 }
 
+// S3 media only - no fallback URLs
 const project_data: IProject[] = [
   {
     id: 1,
     slug: "quickie-liga",
     titleKey: "quickieLiga",
     category: "[ Sports Marketing ]",
-    heroImage: "https://lh3.googleusercontent.com/d/1SZ-uDbAmwPLmE8mFNGtgJJZDtVtRfg8H",
-    detailImages: [
-      "https://lh3.googleusercontent.com/d/1GJFDqeu8T8wQkYqPmIkTOkiTTt80LcLP=w2000",
-    ],
+    heroImage: "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/QUICKIE-LIGA.png",
+    detailImages: [],
     detailVideos: [
       "/assets/videos/quickieLiga/QUICKIENAJAVA.mp4",
       "/assets/videos/quickieLiga/quickieVideo.mp4",
@@ -29,27 +31,16 @@ const project_data: IProject[] = [
     slug: "bestdrive-maja",
     titleKey: "bestdriveMaja",
     category: "[ E-commerce ]",
-    heroImage: "https://lh3.googleusercontent.com/d/1rYgeIgd4UZvlvxTPD06B6GdfODCZIQ0g",
-    detailImages: [
-      "https://drive.google.com/thumbnail?id=1dPAwi5O7ya-MRAKsMydcfET_RxYkezcU&sz=w1000",
-      "https://drive.google.com/thumbnail?id=1O038yQ0SOJ53cxZwdVJ58jL-dqAKPYj-&sz=w1000",
-      "https://drive.google.com/thumbnail?id=1K9w7ylH2f-xYyZSYP_ZGMV8ALZ2r33rN&sz=w1000",
-      "https://drive.google.com/thumbnail?id=1trCApxtkCiDnF9DiQh3BlgPy4qpfLdHm&sz=w1000",
-      "https://drive.google.com/thumbnail?id=1a8n8bAIBMN2YVLk4_uI8x5-mFCv7ltuh&sz=w1000",
-    ],
+    heroImage: "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/BESTDRIVE-MAJA.png",
+    detailImages: [],
   },
   {
     id: 3,
     slug: "it-works-marketing",
     titleKey: "itWorksMarketing",
     category: "[ Health & Wellness ]",
-    heroImage: "https://lh3.googleusercontent.com/d/10KalGhBxjaGVZCWEGXbqIMRMl33pauN6",
-    detailImages: [
-      "https://drive.google.com/thumbnail?id=14Lc1JnbsL-rCAAjHvPfoVgyyoTOrYtZ5&sz=w1000",
-      "https://drive.google.com/thumbnail?id=1zHVw8bL7-J2hnEa6G67dXwbrEUlGtvpY&sz=w1000",
-      "https://drive.google.com/thumbnail?id=1yLfvrdAqYk6ayk2uDAOUUEB6QY0yRcsq&sz=w1000",
-      "https://drive.google.com/thumbnail?id=1JuT61AVw3KLFobPTtnQ04RUB7KRie7HE&sz=w1000",
-    ],
+    heroImage: "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/IT-WORKS.png",
+    detailImages: [],
     detailVideos: [
       "/assets/videos/itWorks/Video1.mp4",
       "/assets/videos/itWorks/Video2.mp4",
@@ -60,13 +51,8 @@ const project_data: IProject[] = [
     slug: "atleta",
     titleKey: "atleta",
     category: "[ Sports Marketing ]",
-    heroImage: "https://lh3.googleusercontent.com/d/1NkgyqBmo7a0WarDdd6KL3G_hVb42K1OS",
-    detailImages: [
-      "https://drive.google.com/thumbnail?id=183HKaZw0NJfdAj-PbliSFfhS-n2azPVe&sz=w1000",
-      "https://drive.google.com/thumbnail?id=1RMwAcwChgUDRPK5bPEHtGV3sTSMNkBcj&sz=w1000",
-      "https://drive.google.com/thumbnail?id=1UnCWg6KuC1dIoQsy8bCUdngsaIHyBNI_&sz=w1000",
-      "https://drive.google.com/thumbnail?id=15SxTcTfAqGR-YmfBug3-iD45Yo6R2PL8&sz=w1000",
-    ],
+    heroImage: "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/ATLETSKA-KONDICIJA.png",
+    detailImages: [],
     detailVideos: [
       "/assets/videos/atleta/fin.mp4",
       "/assets/videos/atleta/finRlls.mp4",
@@ -78,29 +64,79 @@ const project_data: IProject[] = [
     slug: "igny",
     titleKey: "igny",
     category: "[ App Development ]",
-    heroImage: "https://lh3.googleusercontent.com/d/1CHr3Vb3oANNh6XT1-6PEY-E1lJFfS_qd",
-    detailImages: [
-      "https://lh3.googleusercontent.com/d/1PMpq011paL2Q7GnqsmAZYna8LxPaHYiG=w2000",
-      "https://lh3.googleusercontent.com/d/1rhD5_OLunWLVmambAh-KQph2FmpJF4uK=w2000",
-      "https://lh3.googleusercontent.com/d/1Ed9u44p2IO6DOk4fj-vRRDA0HtFBJSQc=w2000",
-      "https://lh3.googleusercontent.com/d/1qJUyNkgK91VVAz4e0e3-hLAH7CfA3QA4=w2000",
-    ],
+    heroImage: "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/IGNY.png",
+    detailImages: [],
   },
   {
     id: 6,
     slug: "sommerhagene",
     titleKey: "sommerhagene",
     category: "[ Real Estate Marketing ]",
-    heroImage: "https://lh3.googleusercontent.com/d/1VlyHDZqEg2D0HnJGhL5CesYF3zo8VzGk",
+    heroImage: "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/SOMMERHAGENE.png",
     detailImages: [],
     detailVideos: [
       "/assets/videos/sommerhagen/1.mp4",
       "/assets/videos/sommerhagen/Sequence1.mp4",
       "/assets/videos/sommerhagen/Sequence3.mp4",
     ],
-    detailPdf: "https://drive.google.com/file/d/1oYBk1aXgk-St39hVDhoz-oGIJu5_u7Hl/preview",
+    detailPdf: "",
+  },
+  {
+    id: 7,
+    slug: "wonderflle",
+    titleKey: "wonderflle",
+    category: "[ Food & Beverage ]",
+    heroImage: "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/WONDERWAFFLE.png",
+    detailImages: [],
+    detailVideos: [],
   },
 ];
+
+/**
+ * Enrich project data with S3 media URLs
+ * Falls back to existing Google Drive URLs if S3 media not found
+ */
+function enrichProjectWithMedia(project: IProject): IProject {
+  try {
+    // Use statically imported media map
+    const mediaMap = mediaMapData as any;
+
+    // Projects are prefixed with "project-" in the media map
+    const s3Media = mediaMap[`project-${project.slug}`];
+
+    if (!s3Media) {
+      // No S3 media found, use existing URLs
+      return project;
+    }
+
+    // Merge S3 media with existing project data
+    return {
+      ...project,
+      heroImage: s3Media.heroImage || project.heroImage,
+      detailImages:
+        s3Media.detailImages.length > 0
+          ? s3Media.detailImages
+          : project.detailImages,
+      detailVideos:
+        s3Media.detailVideos && s3Media.detailVideos.length > 0
+          ? s3Media.detailVideos
+          : project.detailVideos,
+      detailPdf: s3Media.detailPdf || project.detailPdf,
+    };
+  } catch (error) {
+    // Media map not found or error loading it
+    // Return original project data (fallback to Google Drive URLs)
+    return project;
+  }
+}
+
+/**
+ * Get enriched project data with S3 media URLs
+ * Use this function in components instead of importing project_data directly
+ */
+export function getProjectData(): IProject[] {
+  return project_data.map(enrichProjectWithMedia);
+}
 
 // Portfolio interface (for portfolio slider/showcase)
 export interface IPortfolio {
@@ -114,13 +150,14 @@ export interface IPortfolio {
   detailPdf?: string;
 }
 
+// S3 media only - no fallback URLs
 export const portfolio_data: IPortfolio[] = [
   {
     id: 1,
     slug: "atleta",
     titleKey: "atleta",
     category: "[ Sports Marketing ]",
-    heroImage: "https://lh3.googleusercontent.com/d/1NkgyqBmo7a0WarDdd6KL3G_hVb42K1OS",
+    heroImage: "",
     detailImages: [],
     detailVideos: [
       "/assets/videos/portfolio/atleta/CopyfATHLETICALPHABET.mp4",
@@ -133,7 +170,7 @@ export const portfolio_data: IPortfolio[] = [
     slug: "atraktiv",
     titleKey: "atraktiv",
     category: "[ Marketing ]",
-    heroImage: "https://lh3.googleusercontent.com/d/1CHr3Vb3oANNh6XT1-6PEY-E1lJFfS_qd",
+    heroImage: "",
     detailImages: [],
     detailVideos: [
       "/assets/videos/portfolio/atraktiv/CopyofATRAKTIV.mp4",
