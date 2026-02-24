@@ -310,5 +310,9 @@
       "services": "Video Production",
       "deliverables": "Long-form Series (30 Episodes), Trailer"
     }
+  },
+  "common": {
+    "seeMore": "See more",
+    "viewProject": "VIEW PROJECT"
   }
 }

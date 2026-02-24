@@ -26,7 +26,7 @@ export default function PortfolioDetailsSection({
   }, []);
 
   return (
-    <div className="project-details-1-area project-details-1-pt" style={{ marginTop: "100px", marginBottom: "100px" }}>
+    <div className="project-details-1-area project-details-1-pt" style={{ marginTop: "0px", marginBottom: "50px", overflowX: "hidden" }}>
       <div className="container-fluid p-0">
         <div className="row g-0">
           {/* LEFT SIDE - Vertical Reels Slider */}

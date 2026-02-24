@@ -319,5 +319,9 @@
       "services": "Video Produkcija",
       "deliverables": "Long-form Serijal (30 Epizoda), Trailer"
     }
+  },
+  "common": {
+    "seeMore": "Vise",
+    "viewProject": "POGLEDAJ PROJEKAT"
   }
 }

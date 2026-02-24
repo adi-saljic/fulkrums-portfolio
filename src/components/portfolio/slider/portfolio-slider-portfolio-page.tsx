@@ -79,8 +79,8 @@ const TypedSlider = Slider as React.ComponentType<any>;
 export default function PortfolioSliderPortfolioPage() {
   const [slider1, setSlider1] = useState<any>(null);
   const [slider2, setSlider2] = useState<any>(null);
-  const [sliderIndex, setSliderIndex] = useState<number>(1);
   const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   // Load portfolio data at runtime (not build time)
   const slider_projects = getPortfolioData();
@@ -168,21 +168,11 @@ export default function PortfolioSliderPortfolioPage() {
         <div className="dddd"></div>
 
         <div className="tp-portfolio-11-slider-nav-wrap z-index-5" style={{ paddingLeft: "10%", maxWidth: "90%" }}>
-          <div
-            className="slides-numbers d-none d-lg-flex d-flex align-items-center"
-            style={{ display: "inline-block" }}
-          >
-            <div className="slider-line"></div>
-            <span className="active">
-              {sliderIndex < 10 ? `0${sliderIndex}` : sliderIndex}
-            </span>
-          </div>
           <TypedSlider
             {...getSliderSettingTwo(isTransitioning)}
             asNavFor={slider1}
             ref={(slider: any) => setSlider2(slider)}
             beforeChange={handleBeforeChange}
-            afterChange={(index: number) => setSliderIndex(index + 1)}
             className="tp-portfolio-11-slider-nav-active d-none d-lg-block"
           >
             {slider_projects.map((project, index) => (
@@ -193,16 +183,65 @@ export default function PortfolioSliderPortfolioPage() {
                 <Link
                   href={`/portfolio/${project.slug}`}
                   style={{ display: "block", cursor: "pointer", padding: "0 10px" }}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
                 >
-                  <div className="tp-portfolio-11-slider-nav-thumb" style={{ position: "relative", width: "100%", height: "150px", overflow: "hidden", borderRadius: "8px", border: "2px solid rgba(255,255,255,0.1)" }}>
+                  <div
+                    className="tp-portfolio-11-slider-nav-thumb"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "150px",
+                      overflow: "hidden",
+                      borderRadius: "8px",
+                      border: hoveredIndex === index ? "2px solid rgba(255,107,53,0.8)" : "2px solid rgba(255,255,255,0.1)",
+                      transform: hoveredIndex === index ? "scale(1.05)" : "scale(1)",
+                      transition: "all 0.3s ease",
+                      boxShadow: hoveredIndex === index ? "0 8px 25px rgba(255,107,53,0.3)" : "none"
+                    }}
+                  >
                     {project.heroImage && (
                       <Image
                         src={project.heroImage}
                         alt={project.titleKey}
                         fill
                         sizes="300px"
-                        style={{ objectFit: "cover", objectPosition: "center" }}
+                        style={{
+                          objectFit: "cover",
+                          objectPosition: "center",
+                          transition: "all 0.3s ease",
+                          transform: hoveredIndex === index ? "scale(1.1)" : "scale(1)",
+                          filter: hoveredIndex === index ? "blur(3px)" : "none"
+                        }}
                       />
+                    )}
+                    {hoveredIndex === index && (
+                      <div
+                        style={{
+                          position: 'absolute',
+                          inset: 0,
+                          background: 'rgba(0, 0, 0, 0.6)',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          transition: 'all 0.3s ease',
+                          zIndex: 10
+                        }}
+                      >
+                        <span
+                          style={{
+                            fontSize: '13px',
+                            fontWeight: 500,
+                            color: '#fff',
+                            letterSpacing: '2px',
+                            textAlign: 'center',
+                            textTransform: 'uppercase',
+                            fontFamily: 'Syne, Syne Fallback, sans-serif'
+                          }}
+                        >
+                          See more
+                        </span>
+                      </div>
                     )}
                   </div>
                   <div className="tp-portfolio-11-slider-nav-content-wrap">
