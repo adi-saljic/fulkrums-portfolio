@@ -9,9 +9,9 @@ import { ProjectShape, RightArrow } from "../svg";
 
 /**
  * Get homepage thumbnail from S3 media map
- * Falls back to original Google Drive URL if not found
+ * Falls back to placeholder if not found
  */
-function getHomepageThumbnail(slug: string, fallbackUrl: string): string {
+function getHomepageThumbnail(slug: string, fallbackUrl?: string): string {
   try {
     const mediaMap = require('@/data/generated/media-map.json');
     const homepageThumbnails = mediaMap['homepage-thumbnails'];
@@ -20,10 +20,11 @@ function getHomepageThumbnail(slug: string, fallbackUrl: string): string {
       return homepageThumbnails[slug];
     }
   } catch (error) {
-    // Media map not found, use fallback
+    console.warn(`Media map not found for slug: ${slug}`);
   }
 
-  return fallbackUrl;
+  // Return fallback or use a placeholder to prevent empty URLs
+  return fallbackUrl || '/assets/img/logo/logo.png';
 }
 
 // Client data with S3 images only - no fallback URLs
@@ -304,7 +305,7 @@ export default function ProjectFour({
           </div>
         </div>
 
-        {/* Mobile Layout: Image, Content, Content, Image pattern */}
+        {/* Mobile Layout: Vertical stack - Image, Title, Buttons */}
         <div className="row d-lg-none">
           <div className="col-12">
             {project_data.map((item) => {
@@ -314,32 +315,60 @@ export default function ProjectFour({
                 : null;
 
               return (
-                <div key={item.id} className="tp-project-3-wrap">
-                  {/* Image 1 */}
-                  <div className="tp-project-3-thumb pro-img-1 mb-30">
-                    <Image
-                      src={item.client_1.image}
-                      alt={item.client_1.title}
-                      style={{ height: "auto" }}
-                      width={800}
-                      height={600}
-                    />
-                  </div>
+                <div key={item.id}>
+                  {/* Project 1 */}
+                  <div style={{ marginBottom: "60px", textAlign: "center" }}>
+                    {/* Image */}
+                    <div style={{ marginBottom: "20px" }}>
+                      <Image
+                        src={item.client_1.image}
+                        alt={item.client_1.title}
+                        width={600}
+                        height={800}
+                        style={{
+                          height: "auto",
+                          width: "100%",
+                          maxWidth: "100%",
+                          objectFit: "contain",
+                          margin: "0 auto"
+                        }}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        priority={false}
+                        loading="lazy"
+                      />
+                    </div>
 
-                  {/* Content 1 */}
-                  <div className="tp-project-3-content text-start mb-40">
+                    {/* Title */}
                     <h4
                       className="tp-project-3-title-sm"
-                      style={{ fontSize: "32px" }}
+                      style={{
+                        fontSize: "28px",
+                        marginBottom: "20px",
+                        textAlign: "center"
+                      }}
                     >
                       {item.client_1.title}
                     </h4>
-                    <div style={{ marginTop: "15px" }}>
+
+                    {/* Buttons */}
+                    <div style={{
+                      display: "flex",
+                      gap: "10px",
+                      flexWrap: "nowrap",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      marginBottom: "0"
+                    }}>
                       {dataSource1.hasPortfolio && (
                         <Link
                           href={`/portfolio/${item.client_1.slug}`}
                           className="tp-btn-border"
-                          style={{ marginRight: "10px", display: "inline-block" }}
+                          style={{
+                            fontSize: "16px",
+                            padding: "0 30px",
+                            height: "50px",
+                            lineHeight: "50px"
+                          }}
                         >
                           <span className="tp-btn-border-wrap">
                             <span className="text-1">Portfolio</span>
@@ -351,7 +380,12 @@ export default function ProjectFour({
                         <Link
                           href={`/study-cases/${item.client_1.slug}`}
                           className="tp-btn-border"
-                          style={{ display: "inline-block" }}
+                          style={{
+                            fontSize: "16px",
+                            padding: "0 30px",
+                            height: "50px",
+                            lineHeight: "50px"
+                          }}
                         >
                           <span className="tp-btn-border-wrap">
                             <span className="text-1">Case Study</span>
@@ -362,58 +396,86 @@ export default function ProjectFour({
                     </div>
                   </div>
 
-                  {/* Content 2 */}
+                  {/* Project 2 */}
                   {item.client_2 && dataSource2 && (
-                    <>
-                      <div className="tp-project-3-content text-start mb-30">
-                        <h4
-                          className="tp-project-3-title-sm"
-                          style={{ fontSize: "32px" }}
-                        >
-                          {item.client_2.title}
-                        </h4>
-                        <div style={{ marginTop: "15px" }}>
-                          {dataSource2.hasPortfolio && (
-                            <Link
-                              href={`/portfolio/${item.client_2.slug}`}
-                              className="tp-btn-border"
-                              style={{
-                                marginRight: "10px",
-                                display: "inline-block",
-                              }}
-                            >
-                              <span className="tp-btn-border-wrap">
-                                <span className="text-1">Portfolio</span>
-                                <span className="text-2">Portfolio</span>
-                              </span>
-                            </Link>
-                          )}
-                          {dataSource2.hasStudyCase && (
-                            <Link
-                              href={`/study-cases/${item.client_2.slug}`}
-                              className="tp-btn-border"
-                              style={{ display: "inline-block" }}
-                            >
-                              <span className="tp-btn-border-wrap">
-                                <span className="text-1">Case Study</span>
-                                <span className="text-2">Case Study</span>
-                              </span>
-                            </Link>
-                          )}
-                        </div>
-                      </div>
-
-                      {/* Image 2 */}
-                      <div className="tp-project-3-thumb pro-img-2 mb-60">
+                    <div style={{ marginBottom: "60px", textAlign: "center" }}>
+                      {/* Image */}
+                      <div style={{ marginBottom: "20px" }}>
                         <Image
                           src={item.client_2.image}
                           alt={item.client_2.title}
-                          style={{ height: "auto" }}
-                          width={800}
-                          height={600}
+                          width={600}
+                          height={800}
+                          style={{
+                            height: "auto",
+                            width: "100%",
+                            maxWidth: "100%",
+                            objectFit: "contain",
+                            margin: "0 auto"
+                          }}
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          priority={false}
+                          loading="lazy"
                         />
                       </div>
-                    </>
+
+                      {/* Title */}
+                      <h4
+                        className="tp-project-3-title-sm"
+                        style={{
+                          fontSize: "28px",
+                          marginBottom: "20px",
+                          textAlign: "center"
+                        }}
+                      >
+                        {item.client_2.title}
+                      </h4>
+
+                      {/* Buttons */}
+                      <div style={{
+                        display: "flex",
+                        gap: "10px",
+                        flexWrap: "nowrap",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        marginBottom: "0"
+                      }}>
+                        {dataSource2.hasPortfolio && (
+                          <Link
+                            href={`/portfolio/${item.client_2.slug}`}
+                            className="tp-btn-border"
+                            style={{
+                              fontSize: "16px",
+                              padding: "0 30px",
+                              height: "50px",
+                              lineHeight: "50px"
+                            }}
+                          >
+                            <span className="tp-btn-border-wrap">
+                              <span className="text-1">Portfolio</span>
+                              <span className="text-2">Portfolio</span>
+                            </span>
+                          </Link>
+                        )}
+                        {dataSource2.hasStudyCase && (
+                          <Link
+                            href={`/study-cases/${item.client_2.slug}`}
+                            className="tp-btn-border"
+                            style={{
+                              fontSize: "16px",
+                              padding: "0 30px",
+                              height: "50px",
+                              lineHeight: "50px"
+                            }}
+                          >
+                            <span className="tp-btn-border-wrap">
+                              <span className="text-1">Case Study</span>
+                              <span className="text-2">Case Study</span>
+                            </span>
+                          </Link>
+                        )}
+                      </div>
+                    </div>
                   )}
                 </div>
               );
