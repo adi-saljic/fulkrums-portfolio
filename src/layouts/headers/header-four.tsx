@@ -44,7 +44,9 @@ const {isSticky, headerFullWidth, adjustMenuBackground} = useStickyHeader(20);
               </div>
               <div className="col-xl-2 col-lg-6 col-md-6 col-6">
                 <div className="tp-header-3-right d-flex align-items-center justify-content-end gap-3">
-                  <LanguageSwitcher />
+                  <div className="d-none d-xl-block">
+                    <LanguageSwitcher />
+                  </div>
                   <button onClick={() => setOpenOffCanvas(true)} className="tp-header-3-bar tp-offcanvas-open-btn d-xl-none" style={{ color: '#fff' }}>
                     <i className="fa-solid fa-bars"></i>
                   </button>

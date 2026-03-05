@@ -7,10 +7,16 @@ import { FirstBracket, FirstBracketTwo, RightArrow, SvgBg } from "../svg";
 export default function ServiceFour() {
   const t = useTranslations('services');
   return (
-    <div className="tp-service-3-area pt-130 pb-130">
-      <div className="container">
+    <div
+      className="tp-service-3-area pt-130 pb-130"
+      style={{
+        paddingTop: 'clamp(15px, 3vw, 130px)',
+        paddingBottom: 'clamp(15px, 3vw, 130px)'
+      }}
+    >
+      <div className="container container-1720">
         <div className="row">
-          <div className="col-xl-9">
+          <div className="col-xl-12">
             <div className="tp-service-3-title-box mb-60 p-relative">
               <span className="tp-section-subtitle-2 tp_fade_bottom">
                 <span>
@@ -44,7 +50,11 @@ export default function ServiceFour() {
                 </div>
                 <div className="col-xl-7 col-lg-7">
                   <div className="tp-service-3-content">
-                    <p>{item.desc}</p>
+                    <p style={{
+                      color: '#ffffff',
+                      fontSize: 'clamp(16px, 1.5vw, 20px)',
+                      lineHeight: '1.6'
+                    }}>{item.desc}</p>
                     <div className="tp-service-3-category">
                       {item.category.map((c: string, i: number) => (
                         <span key={i}>{c}</span>

@@ -133,26 +133,34 @@ export default function ProjectFour({
                 : null;
 
               return (
-                <div key={item.id} className="tp-project-3-wrap">
+                <div
+                  key={item.id}
+                  className="tp-project-3-wrap"
+                  style={{
+                    marginTop: "2vh",
+                    marginBottom: "2vh"
+                  }}
+                >
                   <div className="row align-items-center">
                     {/* Left Image */}
-                    <div className="col-xl-4 col-lg-4">
+                    <div className="col-xl-5 col-lg-5">
                       <div
                         className="tp-project-3-thumb pro-img-1"
                         style={{
                           display: "flex",
                           justifyContent: "center",
                           alignItems: "center",
-                          minHeight: "400px",
+                          height: "60vh",
                         }}
                       >
                         <Image
                           src={item.client_1.image}
                           alt={item.client_1.title}
-                          width={700}
-                          height={1500}
+                          width={1000}
+                          height={2000}
                           style={{
-                            height: "auto",
+                            width: "auto",
+                            height: "100%",
                             maxWidth: "100%",
                             objectFit: "contain",
                           }}
@@ -161,15 +169,15 @@ export default function ProjectFour({
                     </div>
 
                     {/* Middle Content */}
-                    <div className="col-xl-4 col-lg-4">
+                    <div className="col-xl-2 col-lg-2">
                       <div
                         style={{
                           display: "flex",
                           flexDirection: "column",
                           justifyContent: "center",
                           alignItems: "center",
-                          minHeight: "400px",
-                          gap: "50px",
+                          height: "60vh",
+                          gap: "100px",
                         }}
                       >
                         {/* Top Content - Client 1 (from left) */}
@@ -199,6 +207,10 @@ export default function ProjectFour({
                               <Link
                                 href={`/portfolio/${item.client_1.slug}`}
                                 className="tp-btn-border"
+                                style={{
+                                  minWidth: "140px",
+                                  padding: "0 35px"
+                                }}
                               >
                                 <span className="tp-btn-border-wrap">
                                   <span className="text-1">Portfolio</span>
@@ -210,6 +222,10 @@ export default function ProjectFour({
                               <Link
                                 href={`/study-cases/${item.client_1.slug}`}
                                 className="tp-btn-border"
+                                style={{
+                                  minWidth: "160px",
+                                  padding: "0 35px"
+                                }}
                               >
                                 <span className="tp-btn-border-wrap">
                                   <span className="text-1">Case Study</span>
@@ -248,6 +264,10 @@ export default function ProjectFour({
                                 <Link
                                   href={`/portfolio/${item.client_2.slug}`}
                                   className="tp-btn-border"
+                                  style={{
+                                    minWidth: "140px",
+                                    padding: "0 35px"
+                                  }}
                                 >
                                   <span className="tp-btn-border-wrap">
                                     <span className="text-1">Portfolio</span>
@@ -259,6 +279,10 @@ export default function ProjectFour({
                                 <Link
                                   href={`/study-cases/${item.client_2.slug}`}
                                   className="tp-btn-border"
+                                  style={{
+                                    minWidth: "160px",
+                                    padding: "0 35px"
+                                  }}
                                 >
                                   <span className="tp-btn-border-wrap">
                                     <span className="text-1">Case Study</span>
@@ -273,7 +297,7 @@ export default function ProjectFour({
                     </div>
 
                     {/* Right Image */}
-                    <div className="col-xl-4 col-lg-4">
+                    <div className="col-xl-5 col-lg-5">
                       {item.client_2 && (
                         <div
                           className="tp-project-3-thumb pro-img-2"
@@ -281,16 +305,17 @@ export default function ProjectFour({
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center",
-                            minHeight: "400px",
+                            height: "60vh",
                           }}
                         >
                           <Image
                             src={item.client_2.image}
                             alt={item.client_2.title}
-                            width={700}
-                            height={1500}
+                            width={1000}
+                            height={2000}
                             style={{
-                              height: "auto",
+                              width: "auto",
+                              height: "100%",
                               maxWidth: "100%",
                               objectFit: "contain",
                             }}
@@ -365,9 +390,10 @@ export default function ProjectFour({
                           className="tp-btn-border"
                           style={{
                             fontSize: "16px",
-                            padding: "0 30px",
+                            padding: "0 35px",
                             height: "50px",
-                            lineHeight: "50px"
+                            lineHeight: "50px",
+                            minWidth: "140px"
                           }}
                         >
                           <span className="tp-btn-border-wrap">
@@ -382,9 +408,10 @@ export default function ProjectFour({
                           className="tp-btn-border"
                           style={{
                             fontSize: "16px",
-                            padding: "0 30px",
+                            padding: "0 35px",
                             height: "50px",
-                            lineHeight: "50px"
+                            lineHeight: "50px",
+                            minWidth: "160px"
                           }}
                         >
                           <span className="tp-btn-border-wrap">
@@ -446,9 +473,10 @@ export default function ProjectFour({
                             className="tp-btn-border"
                             style={{
                               fontSize: "16px",
-                              padding: "0 30px",
+                              padding: "0 35px",
                               height: "50px",
-                              lineHeight: "50px"
+                              lineHeight: "50px",
+                              minWidth: "140px"
                             }}
                           >
                             <span className="tp-btn-border-wrap">
@@ -463,9 +491,10 @@ export default function ProjectFour({
                             className="tp-btn-border"
                             style={{
                               fontSize: "16px",
-                              padding: "0 30px",
+                              padding: "0 35px",
                               height: "50px",
-                              lineHeight: "50px"
+                              lineHeight: "50px",
+                              minWidth: "160px"
                             }}
                           >
                             <span className="tp-btn-border-wrap">

@@ -8,7 +8,13 @@ export default function AboutThree() {
   const t = useTranslations("about");
 
   return (
-    <div className="tp-about-3-area pt-120 pb-110">
+    <div
+      className="tp-about-3-area pt-120 pb-110"
+      style={{
+        paddingTop: 'clamp(15px, 3vw, 120px)',
+        paddingBottom: 'clamp(15px, 3vw, 110px)'
+      }}
+    >
       <div className="container">
         <div className="row">
           <div className="col-xl-12">

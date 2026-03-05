@@ -4,6 +4,7 @@ import { Link } from "@/i18n/routing";
 import { useTranslations } from 'next-intl';
 import { CloseTwo } from "../svg";
 import MobileMenus from "./mobile-menus";
+import LanguageSwitcher from "../language-switcher";
 
 // prop type
 type IProps = {
@@ -44,6 +45,10 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
                   <Link href="mailto:office@fulkrums.com" style={{ color: '#fff' }}>office@fulkrums.com</Link>
                 </li>
               </ul>
+            </div>
+            <div className="tp-header-3-offcanvas-language d-xl-none">
+              <h3 className="tp-header-3-offcanvas-language-title">Language</h3>
+              <LanguageSwitcher mobile={true} />
             </div>
           </div>
         </div>

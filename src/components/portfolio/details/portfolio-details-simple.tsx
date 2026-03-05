@@ -51,9 +51,13 @@ export default function PortfolioDetailsSimple({ project, hasVideos = false }: I
                     {project.category}
                   </span>
                   <h4
-                    className="port-showcase-slider-title tp-char-animation"
+                    className="port-showcase-slider-title"
                     style={{
                       textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8), -2px -2px 4px rgba(0, 0, 0, 0.8), 2px -2px 4px rgba(0, 0, 0, 0.8), -2px 2px 4px rgba(0, 0, 0, 0.8)",
+                      fontSize: "clamp(20px, 3.5vw, 36px)",
+                      letterSpacing: "0.05em",
+                      lineHeight: "1.4",
+                      wordSpacing: "0.1em"
                     }}
                   >
                     {project.titleKey}
@@ -76,20 +80,31 @@ export default function PortfolioDetailsSimple({ project, hasVideos = false }: I
                   <div
                     className="showcase-details-thumb"
                     onClick={() => setFullscreenImage(img)}
-                    style={{ cursor: "pointer" }}
+                    style={{
+                      cursor: "pointer",
+                      minHeight: "300px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      backgroundColor: "#000"
+                    }}
                   >
                     <Image
                       data-speed=".8"
                       src={img}
                       alt="details-thumb"
-                      width={600}
-                      height={450}
+                      width={800}
+                      height={800}
                       style={{
                         height: "auto",
                         width: "100%",
-                        objectFit: "cover",
+                        maxHeight: "600px",
+                        objectFit: "contain",
                         display: "block"
                       }}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      priority={index < 3}
+                      loading={index < 3 ? "eager" : "lazy"}
                     />
                   </div>
                 </div>

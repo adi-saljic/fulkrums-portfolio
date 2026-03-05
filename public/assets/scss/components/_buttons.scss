@@ -705,9 +705,10 @@
         &-wrap{
             position: relative;
             z-index: 1;
-            float: left;
             overflow: hidden;
             display: inline-block;
+            width: 100%;
+            text-align: center;
             & .text-1{
                 position: relative;
                 display: block;
@@ -715,10 +716,13 @@
                 transition: all 0.3s ease;
                 -o-transition: all 0.3s ease;
                 -webkit-transition: all 0.3s ease;
+                text-align: center;
             }
             & .text-2{
                 position: absolute;
                 top: 30%;
+                left: 0;
+                right: 0;
                 display: block;
                 color: var(--tp-common-white);
                 -webkit-transition: all 0.3s ease;
@@ -726,6 +730,7 @@
                 transition: all 0.3s ease;
                 opacity: 0;
                 visibility: hidden;
+                text-align: center;
             }
         }
         @media #{$xs}{
