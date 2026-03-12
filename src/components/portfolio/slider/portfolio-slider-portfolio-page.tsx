@@ -107,7 +107,7 @@ export default function PortfolioSliderPortfolioPage() {
           {slider_projects.map((project) => (
             <div key={project.id}>
               <div
-                className="tp-portfolio-11-slider-bg d-flex align-items-end"
+                className="tp-portfolio-11-slider-bg d-flex align-items-start"
               >
                 {project.heroImage && (
                   <>
@@ -271,7 +271,7 @@ export default function PortfolioSliderPortfolioPage() {
                     display: "flex",
                     flexDirection: "column",
                     cursor: "pointer",
-                    padding: "0 10px",
+                    padding: "0 5px",
                     position: "relative"
                   }}
                   onMouseEnter={() => setHoveredIndex(index)}
@@ -393,7 +393,7 @@ export default function PortfolioSliderPortfolioPage() {
           }}
           style={{
             position: 'fixed',
-            bottom: '60px',
+            bottom: '30px',
             left: '50%',
             transform: 'translateX(-70px)',
             width: '55px',
@@ -436,7 +436,7 @@ export default function PortfolioSliderPortfolioPage() {
           }}
           style={{
             position: 'fixed',
-            bottom: '60px',
+            bottom: '30px',
             left: '50%',
             transform: 'translateX(15px)',
             width: '55px',

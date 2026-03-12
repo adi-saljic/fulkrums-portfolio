@@ -122,7 +122,7 @@ export default function PortfolioSliderHomeTen() {
           {slider_projects.map((project) => (
             <div key={project.id}>
               <div
-                className="tp-portfolio-11-slider-bg d-flex align-items-end"
+                className="tp-portfolio-11-slider-bg d-flex align-items-start"
               >
                 {project.heroImage && (
                   <>
@@ -281,7 +281,7 @@ export default function PortfolioSliderHomeTen() {
                     display: "flex",
                     flexDirection: "column",
                     cursor: "pointer",
-                    padding: "0 10px",
+                    padding: "0 5px",
                     position: "relative"
                   }}
                   onMouseEnter={() => setHoveredIndex(index)}
@@ -338,7 +338,7 @@ export default function PortfolioSliderHomeTen() {
                         fill
                         sizes="300px"
                         style={{
-                          objectFit: "contain",
+                          objectFit: "cover",
                           objectPosition: "center",
                           transition: "all 0.3s ease",
                           transform: hoveredIndex === index ? "scale(1.1)" : "scale(1)",
@@ -403,7 +403,7 @@ export default function PortfolioSliderHomeTen() {
           }}
           style={{
             position: 'fixed',
-            bottom: '60px',
+            bottom: '30px',
             left: '50%',
             transform: 'translateX(-70px)',
             width: '55px',
@@ -446,7 +446,7 @@ export default function PortfolioSliderHomeTen() {
           }}
           style={{
             position: 'fixed',
-            bottom: '60px',
+            bottom: '30px',
             left: '50%',
             transform: 'translateX(15px)',
             width: '55px',
