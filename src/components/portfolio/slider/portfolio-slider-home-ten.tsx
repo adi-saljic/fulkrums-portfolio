@@ -123,14 +123,6 @@ export default function PortfolioSliderHomeTen() {
             <div key={project.id}>
               <div
                 className="tp-portfolio-11-slider-bg d-flex align-items-end"
-                style={{
-                  position: 'relative',
-                  height: '100vh',
-                  minHeight: '600px',
-                  paddingTop: '170px',
-                  paddingBottom: '150px',
-                  overflow: 'hidden'
-                }}
               >
                 {project.heroImage && (
                   <>
@@ -270,7 +262,7 @@ export default function PortfolioSliderHomeTen() {
 
         <div className="dddd"></div>
 
-        <div className="tp-portfolio-11-slider-nav-wrap z-index-5" style={{ paddingLeft: "10%", maxWidth: "90%", paddingBottom: "160px" }}>
+        <div className="tp-portfolio-11-slider-nav-wrap z-index-5">
           <TypedSlider
             {...getSliderSettingTwo(isTransitioning)}
             asNavFor={slider1}
@@ -329,7 +321,7 @@ export default function PortfolioSliderHomeTen() {
                     style={{
                       position: "relative",
                       width: "100%",
-                      height: "180px",
+                      height: "clamp(150px, 16vh, 175px)",
                       overflow: "hidden",
                       borderRadius: "8px",
                       border: hoveredIndex === index ? "2px solid rgba(255,107,53,0.8)" : "2px solid rgba(255,255,255,0.1)",

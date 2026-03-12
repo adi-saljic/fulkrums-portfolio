@@ -1357,6 +1357,19 @@
             width: 100%;
             background-size: cover;
             background-position: center;
+            padding-top: clamp(100px, 17vh, 170px);
+            padding-bottom: clamp(80px, 15vh, 150px);
+            min-height: 600px;
+            overflow: hidden;
+            position: relative;
+
+            // Mobile: Move content to top (below header)
+            @media #{$md,$xs} {
+                align-items: flex-start !important;
+                padding-top: 140px;
+                padding-bottom: 180px;
+                justify-content: flex-start;
+            }
         }
         &-active{
             & .slick-active{
@@ -1501,25 +1514,44 @@
                 }
             }
 
+            &-image-container {
+                position: relative;
+                width: 100%;
+                height: clamp(140px, 18vh, 180px);
+                overflow: hidden;
+                border-radius: 8px;
+                border: 2px solid rgba(255, 255, 255, 0.1);
+                transition: all 0.3s ease;
+
+                @media #{$md} {
+                    height: clamp(120px, 16vh, 160px);
+                }
+
+                @media #{$xs} {
+                    height: clamp(100px, 14vh, 140px);
+                }
+            }
+
             &-wrap {
-                width: 1260px;
+                width: min(1260px, 90vw);
                 position: absolute;
-                bottom: 110px;
-                right: -65px;
+                bottom: clamp(60px, 11vh, 110px);
+                right: clamp(-280px, -5vw, -65px);
                 z-index: 99;
+                padding-bottom: 0 !important;
 
                 @media #{$xxxl} {
-                    right: -280px;
+                    right: clamp(-300px, -15vw, -280px);
                 }
 
                 @media #{$xxl} {
-                    right: -80px;
-                    width: 900px;
+                    right: clamp(-120px, -6vw, -80px);
+                    width: min(900px, 80vw);
                 }
 
                 @media #{$xl,$lg} {
-                    right: -80px;
-                    width: 600px;
+                    right: clamp(-100px, -7vw, -80px);
+                    width: min(600px, 75vw);
                 }
 
                 & .slides-numbers {
@@ -1606,7 +1638,7 @@
                 }
 
                 & .slick-list {
-                    padding: 50px 0;
+                    padding: clamp(30px, 5vh, 50px) 0;
                 }
             }
 

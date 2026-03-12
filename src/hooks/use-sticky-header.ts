@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import $ from "jquery";
 
 const useStickyHeader = (offset = 20) => {
   const [isSticky, setIsSticky] = useState(false);
@@ -19,16 +18,22 @@ const useStickyHeader = (offset = 20) => {
   }, []);
 
   function adjustMenuBackground() {
-    if ($(".tp-header-3-area").length > 0) {
-      const menuBox = $(".tp-header-3-menu-box");
-      if (menuBox.length > 0 && menuBox.offset()) {
-        const menuBoxWidth = menuBox.width()! - 200;
-        const menuBoxHeight = menuBox.height()!;
-        $(".menu-bg").css({
-          width: menuBoxWidth,
-          height: menuBoxHeight,
-          left: menuBox.offset()!.left + 100,
-        });
+    const headerArea = document.querySelector<HTMLElement>(".tp-header-3-area");
+    if (headerArea) {
+      const menuBox = headerArea.querySelector<HTMLElement>(".tp-header-3-menu-box");
+      const menuBg = headerArea.querySelector<HTMLElement>(".menu-bg");
+
+      if (menuBox && menuBg) {
+        // Use offsetWidth/Height which are zoom-independent
+        const width = menuBox.offsetWidth;
+        const height = menuBox.offsetHeight;
+
+        // Use relative positioning instead of absolute left
+        menuBg.style.width = `${width}px`;
+        menuBg.style.height = `${height}px`;
+        menuBg.style.left = `0`;
+        menuBg.style.right = `0`;
+        menuBg.style.margin = `0 auto`;
       }
     }
   }

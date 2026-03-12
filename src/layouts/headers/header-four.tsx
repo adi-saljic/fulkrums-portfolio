@@ -6,7 +6,11 @@ import MobileOffcanvas from "@/components/offcanvas/mobile-offcanvas";
 import useStickyHeader from "@/hooks/use-sticky-header";
 import LanguageSwitcher from "@/components/language-switcher";
 
-export default function HeaderFour() {
+type HeaderFourProps = {
+  noZIndex?: boolean;
+};
+
+export default function HeaderFour({ noZIndex = false }: HeaderFourProps) {
 const {isSticky, headerFullWidth, adjustMenuBackground} = useStickyHeader(20);
   const [openOffCanvas, setOpenOffCanvas] = React.useState(false);
   useEffect(() => {
@@ -18,7 +22,7 @@ const {isSticky, headerFullWidth, adjustMenuBackground} = useStickyHeader(20);
   return (
     <>
       <header>
-        <div id="header-sticky" className={`tp-header-3-area z-index-5 ${isSticky?'header-sticky':''}`} style={{ margin: '35px 0' }}>
+        <div id="header-sticky" className={`tp-header-3-area ${!noZIndex ? 'z-index-5' : ''} ${isSticky?'header-sticky':''}`} style={{ margin: 'clamp(20px, 3.5vh, 35px) 0', ...(noZIndex && { position: 'relative' }) }}>
           <span className="menu-bg"></span>
           <div className="container container-1740">
             <div className="row align-items-center">
