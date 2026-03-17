@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -10,15 +10,67 @@ type Props = {
 };
 
 export default function VerticalReelsSlider({ videos }: Props) {
-  const [unmutedVideo, setUnmutedVideo] = React.useState<number | null>(null);
-  const videoRefs = React.useRef<(HTMLVideoElement | null)[]>([]);
-  const [activeSlide, setActiveSlide] = React.useState<number>(0);
-  const [videosReady, setVideosReady] = React.useState<Set<number>>(new Set());
-  const swiperRef = React.useRef<any>(null);
-  const [hasScrolled, setHasScrolled] = React.useState<boolean>(false);
+  const [unmutedVideo, setUnmutedVideo] = useState<number | null>(null);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const [activeSlide, setActiveSlide] = useState<number>(0);
+  const [videosReady, setVideosReady] = useState<Set<number>>(new Set());
+  const swiperRef = useRef<any>(null);
+  const [hasScrolled, setHasScrolled] = useState<boolean>(false);
+
+  // NEW: State for video dimensions and fullscreen
+  const [videoDimensions, setVideoDimensions] = useState<Map<number, {width: number, height: number}>>(new Map());
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // NEW: Detect aspect ratio of active video
+  const activeVideoDimensions = videoDimensions.get(activeSlide);
+  const isLandscape = activeVideoDimensions
+    ? (activeVideoDimensions.width / activeVideoDimensions.height) > 1
+    : true; // Default landscape since all videos are landscape
+
+  // NEW: Handle video metadata loaded to get dimensions
+  const handleVideoLoadedMetadata = (index: number, event: React.SyntheticEvent<HTMLVideoElement>) => {
+    const video = event.currentTarget;
+    setVideoDimensions(prev => new Map(prev).set(index, {
+      width: video.videoWidth,
+      height: video.videoHeight
+    }));
+  };
+
+  // NEW: Fullscreen toggle
+  const toggleFullscreen = () => {
+    if (!document.fullscreenElement) {
+      containerRef.current?.requestFullscreen();
+      setIsFullscreen(true);
+    } else {
+      document.exitFullscreen();
+      setIsFullscreen(false);
+    }
+  };
+
+  // NEW: ESC key listener for fullscreen
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+  }, []);
 
   return (
-    <div style={{ position: "relative", width: "450px", maxWidth: "100%", margin: "0 auto", overflow: "hidden" }}>
+    <div
+      ref={containerRef}
+      className={`video-slider-container ${isLandscape ? 'landscape-mode' : 'portrait-mode'}`}
+    >
+      {/* Fullscreen Button */}
+      <button
+        onClick={toggleFullscreen}
+        className="fullscreen-toggle-btn"
+        aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+      >
+        {isFullscreen ? <i className="fa-solid fa-compress"></i> : <i className="fa-solid fa-expand"></i>}
+      </button>
+
       {/* Navigation Arrows */}
       <button
         onClick={() => swiperRef.current?.slidePrev()}
@@ -147,6 +199,7 @@ export default function VerticalReelsSlider({ videos }: Props) {
                   }
                 }}
                 src={video}
+                onLoadedMetadata={(e) => handleVideoLoadedMetadata(index, e)}
                 muted={unmutedVideo !== index}
                 loop
                 playsInline
@@ -159,7 +212,7 @@ export default function VerticalReelsSlider({ videos }: Props) {
                   transform: "translate(-50%, -50%)",
                   width: '100%',
                   height: '100%',
-                  objectFit: 'cover',
+                  objectFit: 'contain',
                   opacity: videosReady.has(index) || index === activeSlide ? 1 : 0.5,
                 }}
               />

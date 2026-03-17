@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { IPortfolio } from "@/data/portfolio-data";
+import SmartImageGrid from "../smart-image-grid";
 
 type IProps = {
   project: IPortfolio;
@@ -9,7 +10,6 @@ type IProps = {
 };
 
 export default function PortfolioDetailsSimple({ project, hasVideos = false }: IProps) {
-  const [fullscreenImage, setFullscreenImage] = React.useState<string | null>(null);
 
   return (
     <>
@@ -70,63 +70,12 @@ export default function PortfolioDetailsSimple({ project, hasVideos = false }: I
       </div>
       )}
 
-      {/* Images - Clean grid layout with 3 columns */}
+      {/* Smart Image Grid - Automatically adapts layout based on aspect ratios */}
       {project.detailImages && project.detailImages.length > 0 && (
         <div className="showcase-details-thumb-wrap pb-60 pt-60">
           <div className="container">
-            <div className="row gx-4 gy-4 justify-content-center">
-              {project.detailImages.map((img, index) => (
-                <div key={index} className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                  <div
-                    className="showcase-details-thumb"
-                    onClick={() => setFullscreenImage(img)}
-                    style={{
-                      cursor: "pointer",
-                      minHeight: "300px",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      backgroundColor: "#000"
-                    }}
-                  >
-                    <Image
-                      data-speed=".8"
-                      src={img}
-                      alt="details-thumb"
-                      width={800}
-                      height={800}
-                      style={{
-                        height: "auto",
-                        width: "100%",
-                        maxHeight: "600px",
-                        objectFit: "contain",
-                        display: "block"
-                      }}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      priority={index < 3}
-                      loading={index < 3 ? "eager" : "lazy"}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
+            <SmartImageGrid images={project.detailImages} />
           </div>
-        </div>
-      )}
-
-      {/* Fullscreen modal */}
-      {fullscreenImage && (
-        <div onClick={() => setFullscreenImage(null)} style={{
-          position: "fixed", top: 0, left: 0, right: 0, bottom: 0,
-          backgroundColor: "#000", zIndex: 9999, display: "flex",
-          alignItems: "center", justifyContent: "center", padding: 0,
-        }}>
-          <button onClick={(e) => { e.stopPropagation(); setFullscreenImage(null); }} style={{
-            position: "fixed", top: "15px", right: "15px", background: "transparent",
-            border: "none", color: "white", fontSize: "40px", cursor: "pointer",
-            zIndex: 10001, lineHeight: "1", padding: "0", textShadow: "0 0 10px rgba(0,0,0,0.8)",
-          }}>×</button>
-          <Image src={fullscreenImage} alt="Fullscreen" fill sizes="100vw" style={{ objectFit: "contain" }} onClick={(e) => e.stopPropagation()} />
         </div>
       )}
     </>
