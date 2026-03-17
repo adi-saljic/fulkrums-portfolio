@@ -137,20 +137,21 @@ export default function ProjectFour({
                   key={item.id}
                   className="tp-project-3-wrap"
                   style={{
-                    marginTop: "2vh",
-                    marginBottom: "2vh"
+                    marginTop: "clamp(60px, 7vh, 120px)",
+                    marginBottom: "clamp(60px, 7vh, 120px)"
                   }}
                 >
                   <div className="row align-items-center">
                     {/* Left Image */}
-                    <div className="col-xl-5 col-lg-5">
+                    <div className="col-xl-4 col-lg-4">
                       <div
                         className="tp-project-3-thumb pro-img-1"
                         style={{
                           display: "flex",
                           justifyContent: "center",
                           alignItems: "center",
-                          height: "60vh",
+                          height: "clamp(400px, 55vh, 650px)",
+                          maxHeight: "650px",
                         }}
                       >
                         <Image
@@ -159,25 +160,26 @@ export default function ProjectFour({
                           width={1000}
                           height={2000}
                           style={{
-                            width: "auto",
+                            width: "100%",
                             height: "100%",
-                            maxWidth: "100%",
-                            objectFit: "contain",
+                            objectFit: "cover",
+                            borderRadius: "20px",
                           }}
                         />
                       </div>
                     </div>
 
                     {/* Middle Content */}
-                    <div className="col-xl-2 col-lg-2">
+                    <div className="col-xl-4 col-lg-4">
                       <div
                         style={{
                           display: "flex",
                           flexDirection: "column",
-                          justifyContent: "center",
+                          justifyContent: "space-between",
                           alignItems: "center",
-                          height: "60vh",
-                          gap: "100px",
+                          height: "clamp(450px, 55vh, 700px)",
+                          gap: "clamp(20px, 3vh, 50px)",
+                          padding: "clamp(20px, 3vh, 40px) 0",
                         }}
                       >
                         {/* Top Content - Client 1 (from left) */}
@@ -191,46 +193,33 @@ export default function ProjectFour({
                         >
                           <h4
                             className="tp-project-3-title-sm"
-                            style={{ fontSize: "32px", marginBottom: "10px" }}
+                            style={{ marginBottom: "clamp(5px, 1vh, 10px)" }}
                           >
                             {item.client_1.title}
                           </h4>
                           <div
                             style={{
                               display: "flex",
-                              gap: "15px",
+                              gap: "clamp(15px, 2.5vw, 25px)",
                               justifyContent: "flex-start",
-                              marginTop: "20px",
+                              marginTop: "clamp(10px, 1.5vh, 20px)",
+                              flexWrap: "wrap",
                             }}
                           >
                             {dataSource1.hasPortfolio && (
                               <Link
                                 href={`/portfolio/${item.client_1.slug}`}
-                                className="tp-btn-border"
-                                style={{
-                                  minWidth: "140px",
-                                  padding: "0 35px"
-                                }}
+                                className="tp-btn-simple"
                               >
-                                <span className="tp-btn-border-wrap">
-                                  <span className="text-1">Portfolio</span>
-                                  <span className="text-2">Portfolio</span>
-                                </span>
+                                Portfolio
                               </Link>
                             )}
                             {dataSource1.hasStudyCase && (
                               <Link
                                 href={`/study-cases/${item.client_1.slug}`}
-                                className="tp-btn-border"
-                                style={{
-                                  minWidth: "160px",
-                                  padding: "0 35px"
-                                }}
+                                className="tp-btn-simple"
                               >
-                                <span className="tp-btn-border-wrap">
-                                  <span className="text-1">Case Study</span>
-                                  <span className="text-2">Case Study</span>
-                                </span>
+                                Case Study
                               </Link>
                             )}
                           </div>
@@ -248,46 +237,33 @@ export default function ProjectFour({
                           >
                             <h4
                               className="tp-project-3-title-sm"
-                              style={{ fontSize: "32px", marginBottom: "10px" }}
+                              style={{ marginBottom: "clamp(5px, 1vh, 10px)" }}
                             >
                               {item.client_2.title}
                             </h4>
                             <div
                               style={{
                                 display: "flex",
-                                gap: "15px",
+                                gap: "clamp(15px, 2.5vw, 25px)",
                                 justifyContent: "flex-end",
-                                marginTop: "20px",
+                                marginTop: "clamp(10px, 1.5vh, 20px)",
+                                flexWrap: "wrap",
                               }}
                             >
                               {dataSource2.hasPortfolio && (
                                 <Link
                                   href={`/portfolio/${item.client_2.slug}`}
-                                  className="tp-btn-border"
-                                  style={{
-                                    minWidth: "140px",
-                                    padding: "0 35px"
-                                  }}
+                                  className="tp-btn-simple"
                                 >
-                                  <span className="tp-btn-border-wrap">
-                                    <span className="text-1">Portfolio</span>
-                                    <span className="text-2">Portfolio</span>
-                                  </span>
+                                  Portfolio
                                 </Link>
                               )}
                               {dataSource2.hasStudyCase && (
                                 <Link
                                   href={`/study-cases/${item.client_2.slug}`}
-                                  className="tp-btn-border"
-                                  style={{
-                                    minWidth: "160px",
-                                    padding: "0 35px"
-                                  }}
+                                  className="tp-btn-simple"
                                 >
-                                  <span className="tp-btn-border-wrap">
-                                    <span className="text-1">Case Study</span>
-                                    <span className="text-2">Case Study</span>
-                                  </span>
+                                  Case Study
                                 </Link>
                               )}
                             </div>
@@ -297,7 +273,7 @@ export default function ProjectFour({
                     </div>
 
                     {/* Right Image */}
-                    <div className="col-xl-5 col-lg-5">
+                    <div className="col-xl-4 col-lg-4">
                       {item.client_2 && (
                         <div
                           className="tp-project-3-thumb pro-img-2"
@@ -305,7 +281,8 @@ export default function ProjectFour({
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center",
-                            height: "60vh",
+                            height: "clamp(400px, 55vh, 650px)",
+                            maxHeight: "650px",
                           }}
                         >
                           <Image
@@ -314,10 +291,10 @@ export default function ProjectFour({
                             width={1000}
                             height={2000}
                             style={{
-                              width: "auto",
+                              width: "100%",
                               height: "100%",
-                              maxWidth: "100%",
-                              objectFit: "contain",
+                              objectFit: "cover",
+                              borderRadius: "20px",
                             }}
                           />
                         </div>

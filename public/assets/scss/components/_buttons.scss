@@ -694,7 +694,7 @@
             content: "";
             top: -200%;
             left: 50%;
-            z-index: 1;
+            z-index: -1;
             border-radius: 50%;
             transition-duration: 800ms;
             transform: translateX(-50%);
@@ -704,7 +704,7 @@
         }
         &-wrap{
             position: relative;
-            z-index: 1;
+            z-index: 10;
             overflow: hidden;
             display: inline-block;
             width: 100%;
@@ -713,10 +713,13 @@
                 position: relative;
                 display: block;
                 color: var(--tp-common-black);
+                z-index: 2;
                 transition: all 0.3s ease;
                 -o-transition: all 0.3s ease;
                 -webkit-transition: all 0.3s ease;
                 text-align: center;
+                opacity: 1;
+                visibility: visible;
             }
             & .text-2{
                 position: absolute;
@@ -740,25 +743,34 @@
         }
         &:hover{
             border-color: var(--tp-common-black);
-            &::before{
-                top: -40%;
-            }
-            & .tp-btn-border-wrap{
-                & .text-1{
-                    -webkit-transform: translateY(-150%);
-                    -ms-transform: translateY(-150%);
-                    transform: translateY(-150%);
-                }
-                & .text-2{
-                    top: 50%;
-                    -webkit-transform: translateY(-50%);
-                    -ms-transform: translateY(-50%);
-                    transform: translateY(-50%);
-                    opacity: 1;
-                    visibility: visible;
-                }
-            }
+            // Hover animation removed per user request
         }
+    }
+    &-border-sm{
+        height: 60px;
+        line-height: 60px;
+        border-radius: 30px;
+        padding: 0 35px;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.03em;
+        z-index: 9;
+        overflow: hidden;
+        display: inline-block;
+        text-transform: capitalize;
+        position: relative;
+        transition: all .3s;
+        color: var(--tp-common-black);
+        border: 1px solid var(--tp-border-1);
+        transition-duration: 800ms;
+        @media #{$md,$xs}{
+            height: 50px;
+            line-height: 50px;
+            border-radius: 25px;
+            padding: 0 25px;
+            font-size: 14px;
+        }
+        // All animation removed - simple button only
     }
     &-border-lg{
         height: 60px;
@@ -799,27 +811,6 @@
                 margin: 0 auto;
             }
         }
-    }
-    &-border-sm{
-        height: 44px;
-        line-height: 42px;
-        border-radius: 100px;
-        padding: 0 30px;
-        z-index: 9;
-        font-size: 16px;
-        font-weight: 600;
-        letter-spacing: -0.16px;
-        overflow: hidden;
-        position: relative;
-        display: inline-block;
-        text-transform: uppercase;
-        color: var(--tp-common-white);
-        border: 1px solid var(--tp-common-white);
-        &:hover{
-            color: var(--tp-common-black);
-            background-color: var(--tp-common-white);
-            border-color: var(--tp-common-white);
-        }  
     }
 }
 
@@ -982,3 +973,26 @@
     }
 }
   
+// SIMPLE CLEAN BUTTON - NO ANIMATIONS
+.tp-btn-simple {
+    display: inline-block !important;
+    height: 60px !important;
+    line-height: 60px !important;
+    padding: 0 35px !important;
+    border-radius: 30px !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    background: transparent !important;
+    color: #FFFFFF !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    text-transform: capitalize !important;
+    text-align: center !important;
+    transition: all 0.3s ease !important;
+
+    &:hover {
+        background: #FFFFFF !important;
+        color: #1E1E1E !important;
+        border-color: #FFFFFF !important;
+    }
+}

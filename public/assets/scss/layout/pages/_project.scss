@@ -391,18 +391,30 @@
     }
 
     &-wrap {
-        margin: 110px 0;
+        margin: clamp(40px, 6vh, 80px) 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 400px;
+        min-height: clamp(300px, 40vh, 500px);
+
+        @media #{$xxl} {
+            margin: clamp(50px, 7vh, 90px) 0;
+        }
+
+        @media #{$xl} {
+            margin: clamp(45px, 6.5vh, 85px) 0;
+        }
+
+        @media #{$lg} {
+            margin: clamp(35px, 5vh, 70px) 0;
+        }
 
         @media #{$md} {
-            margin: 65px 0;
+            margin: clamp(30px, 4vh, 50px) 0;
         }
 
         @media #{$xs} {
-            margin: 50px 0;
+            margin: clamp(25px, 3vh, 40px) 0;
             min-height: auto;
         }
     }
@@ -466,41 +478,57 @@
     }
 
     &-title-sm {
-        font-size: 90px;
+        font-size: 32px;
         font-weight: 400;
-        line-height: 1;
+        line-height: 1.15;
         letter-spacing: -0.9px;
         color: var(--tp-common-white);
         font-family: var(--tp-ff-marcellus);
-        margin-bottom: 30px;
+        margin-bottom: 10px;
+
+        @media #{$xxl} {
+            font-size: 36px;
+        }
+
+        @media #{$xl} {
+            font-size: 34px;
+        }
 
         @media #{$lg} {
-            font-size: 65px;
+            font-size: 30px;
         }
 
         @media #{$md} {
-            font-size: 70px;
+            font-size: 28px;
         }
 
         @media #{$xs} {
-            font-size: 40px;
+            font-size: 24px;
         }
     }
 
     &-content {
-        margin-bottom: 105px;
-        margin-top: 50px;
+        margin-bottom: clamp(30px, 5vh, 60px);
+        margin-top: clamp(15px, 2vh, 30px);
+
+        @media #{$xxl} {
+            margin-bottom: clamp(35px, 5.5vh, 65px);
+        }
+
+        @media #{$xl} {
+            margin-bottom: clamp(30px, 5vh, 60px);
+        }
 
         @media #{$lg} {
-            margin-bottom: 30px;
+            margin-bottom: clamp(25px, 4vh, 40px);
         }
 
         @media #{$md} {
-            margin-bottom: 55px;
+            margin-bottom: clamp(25px, 4vh, 35px);
         }
 
         @media #{$xs} {
-            margin-bottom: 60px;
+            margin-bottom: clamp(20px, 3vh, 30px);
         }
     }
 
