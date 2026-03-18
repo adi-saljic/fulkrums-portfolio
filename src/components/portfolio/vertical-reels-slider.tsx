@@ -1,9 +1,10 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, EffectCreative } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/effect-creative";
 
 type Props = {
   videos: string[];
@@ -16,6 +17,10 @@ export default function VerticalReelsSlider({ videos }: Props) {
   const [videosReady, setVideosReady] = useState<Set<number>>(new Set());
   const swiperRef = useRef<any>(null);
   const [hasScrolled, setHasScrolled] = useState<boolean>(false);
+
+  // Mobile detection
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [showHint, setShowHint] = useState<boolean>(true);
 
   // NEW: State for video dimensions and fullscreen
   const [videoDimensions, setVideoDimensions] = useState<Map<number, {width: number, height: number}>>(new Map());
@@ -56,6 +61,19 @@ export default function VerticalReelsSlider({ videos }: Props) {
     document.addEventListener('fullscreenchange', handleFullscreenChange);
     return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
   }, []);
+
+  // Mobile detection
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Dismiss hint overlay
+  const dismissHint = () => {
+    setShowHint(false);
+  };
 
   return (
     <div
@@ -146,12 +164,21 @@ export default function VerticalReelsSlider({ videos }: Props) {
       </button>
 
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, EffectCreative]}
         spaceBetween={0}
         slidesPerView={1}
-        direction="vertical"
+        direction={isMobile ? 'horizontal' : 'vertical'}
+        effect={isMobile ? 'creative' : undefined}
+        creativeEffect={isMobile ? {
+          prev: {
+            translate: [0, '-100%', 0],
+          },
+          next: {
+            translate: [0, '100%', 0],
+          },
+        } : undefined}
         loop={true}
-        mousewheel={true}
+        mousewheel={!isMobile}
         onSlideChange={(swiper) => {
           const newIndex = swiper.realIndex;
           setActiveSlide(newIndex);
@@ -263,8 +290,8 @@ export default function VerticalReelsSlider({ videos }: Props) {
         ))}
       </Swiper>
 
-      {/* Scroll to see more text - only show if user hasn't scrolled yet */}
-      {!hasScrolled && (
+      {/* Scroll to see more text - only show on desktop if user hasn't scrolled yet */}
+      {!hasScrolled && !isMobile && (
         <div style={{
           position: "absolute",
           bottom: "20px",
@@ -302,6 +329,44 @@ export default function VerticalReelsSlider({ videos }: Props) {
         </div>
       )}
 
+      {/* First-time instructional overlay (mobile only) */}
+      {isMobile && showHint && (
+        <div
+          className="mobile-swipe-hint-overlay"
+          onClick={dismissHint}
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'rgba(0,0,0,0.8)',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 20,
+            gap: '20px',
+            backdropFilter: 'blur(5px)',
+            animation: 'fadeIn 0.3s ease',
+          }}
+        >
+          <div style={{ fontSize: '48px' }}>
+            <i className="fa-solid fa-hand-point-left" style={{ marginRight: '20px' }}></i>
+            <i className="fa-solid fa-hand-point-right"></i>
+          </div>
+          <p style={{
+            color: 'white',
+            fontSize: '18px',
+            textAlign: 'center',
+            padding: '0 40px',
+            fontWeight: 600,
+          }}>
+            Swipe left or right to navigate videos
+          </p>
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '14px' }}>
+            Tap anywhere to continue
+          </p>
+        </div>
+      )}
+
       <style jsx>{`
         @keyframes bounce {
           0%, 20%, 50%, 80%, 100% {
@@ -312,6 +377,15 @@ export default function VerticalReelsSlider({ videos }: Props) {
           }
           60% {
             transform: translateY(-5px);
+          }
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
           }
         }
       `}</style>

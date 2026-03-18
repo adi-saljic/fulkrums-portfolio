@@ -4,7 +4,8 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { IProject } from "@/data/project-data";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, EffectCreative } from "swiper/modules";
+import "swiper/css/effect-creative";
 
 type IProps = {
   project: IProject;
@@ -20,6 +21,23 @@ export default function ProjectDetailsArea({ project }: IProps) {
   );
   const videoRefs = React.useRef<(HTMLVideoElement | null)[]>([]);
   const [activeSlide, setActiveSlide] = React.useState<number>(0);
+
+  // Mobile detection
+  const [isMobile, setIsMobile] = React.useState<boolean>(false);
+  const [showHint, setShowHint] = React.useState<boolean>(true);
+
+  // Mobile detection useEffect
+  React.useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Dismiss hint overlay
+  const dismissHint = () => {
+    setShowHint(false);
+  };
 
   // Define which fields to display in order
   const infoFields = [
@@ -86,12 +104,21 @@ export default function ProjectDetailsArea({ project }: IProps) {
               <div className="col-lg-5 col-md-7 col-sm-9">
                 <div style={{ position: "relative", width: "100%" }}>
                   <Swiper
-                    modules={[Navigation]}
+                    modules={[Navigation, EffectCreative]}
                     spaceBetween={0}
                     slidesPerView={1}
-                    direction="vertical"
+                    direction={isMobile ? 'horizontal' : 'vertical'}
+                    effect={isMobile ? 'creative' : undefined}
+                    creativeEffect={isMobile ? {
+                      prev: {
+                        translate: [0, '-100%', 0],
+                      },
+                      next: {
+                        translate: [0, '100%', 0],
+                      },
+                    } : undefined}
                     loop={true}
-                    mousewheel={true}
+                    mousewheel={!isMobile}
                     navigation={{
                       nextEl: ".video-slider-next",
                       prevEl: ".video-slider-prev",
@@ -233,6 +260,44 @@ export default function ProjectDetailsArea({ project }: IProps) {
                       </SwiperSlide>
                     ))}
                   </Swiper>
+
+                  {/* First-time instructional overlay (mobile only) */}
+                  {isMobile && showHint && (
+                    <div
+                      onClick={dismissHint}
+                      style={{
+                        position: 'absolute',
+                        inset: 0,
+                        background: 'rgba(0,0,0,0.8)',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: 20,
+                        gap: '20px',
+                        backdropFilter: 'blur(5px)',
+                        animation: 'fadeIn 0.3s ease',
+                        borderRadius: '16px',
+                      }}
+                    >
+                      <div style={{ fontSize: '48px' }}>
+                        <i className="fa-solid fa-hand-point-left" style={{ marginRight: '20px' }}></i>
+                        <i className="fa-solid fa-hand-point-right"></i>
+                      </div>
+                      <p style={{
+                        color: 'white',
+                        fontSize: '18px',
+                        textAlign: 'center',
+                        padding: '0 40px',
+                        fontWeight: 600,
+                      }}>
+                        Swipe left or right to navigate videos
+                      </p>
+                      <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '14px' }}>
+                        Tap anywhere to continue
+                      </p>
+                    </div>
+                  )}
 
                   {/* Scroll indicators - subtle */}
                   <div
@@ -521,6 +586,18 @@ export default function ProjectDetailsArea({ project }: IProps) {
         </div>
       )}
       {/* Fullscreen image modal */}
+
+      {/* CSS Animation for overlay */}
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      `}</style>
     </>
   );
 }
