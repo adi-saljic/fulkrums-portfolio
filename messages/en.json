@@ -86,7 +86,10 @@
       "submit": "Send Message",
       "sending": "Sending...",
       "success": "Message sent successfully! We'll get back to you soon.",
-      "error": "Failed to send message. Please try again or contact us directly at office@fulkrums.com"
+      "error": "Failed to send message. Please try again or contact us directly at office@fulkrums.com",
+      "verificationRequired": "Please wait for verification to complete",
+      "rateLimitExceeded": "Too many attempts. Please try again in a minute.",
+      "verificationFailed": "Verification failed. Please refresh and try again."
     }
   },
   "footer": {
@@ -314,5 +317,9 @@
   "common": {
     "seeMore": "See more",
     "viewProject": "VIEW PROJECT"
+  },
+  "videoSlider": {
+    "swipeInstruction": "Swipe left or right to navigate",
+    "tapToContinue": "But first, tap anywhere to continue"
   }
 }

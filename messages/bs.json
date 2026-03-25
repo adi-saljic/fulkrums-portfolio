@@ -95,7 +95,10 @@
       "submit": "Pošalji Poruku",
       "sending": "Šalje se...",
       "success": "Poruka uspješno poslana! Odgovorićemo vam uskoro.",
-      "error": "Neuspješno slanje poruke. Pokušajte ponovo ili nas kontaktirajte direktno na office@fulkrums.com"
+      "error": "Neuspješno slanje poruke. Pokušajte ponovo ili nas kontaktirajte direktno na office@fulkrums.com",
+      "verificationRequired": "Molimo sačekajte da se verifikacija završi",
+      "rateLimitExceeded": "Previše pokušaja. Molimo pokušajte ponovo za minut.",
+      "verificationFailed": "Verifikacija nije uspjela. Molimo osvježite stranicu i pokušajte ponovo."
     }
   },
   "footer": {
@@ -323,5 +326,9 @@
   "common": {
     "seeMore": "Vise",
     "viewProject": "POGLEDAJ PROJEKAT"
+  },
+  "videoSlider": {
+    "swipeInstruction": "Povuci lijevo ili desno za navigaciju",
+    "tapToContinue": "Ali prvo, tapni bilo gdje da nastaviš"
   }
 }

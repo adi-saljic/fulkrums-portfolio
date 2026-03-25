@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectCreative } from "swiper/modules";
+import { useTranslations } from "next-intl";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-creative";
@@ -11,6 +12,7 @@ type Props = {
 };
 
 export default function VerticalReelsSlider({ videos }: Props) {
+  const tSlider = useTranslations("videoSlider");
   const [unmutedVideo, setUnmutedVideo] = useState<number | null>(null);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const [activeSlide, setActiveSlide] = useState<number>(0);
@@ -359,10 +361,10 @@ export default function VerticalReelsSlider({ videos }: Props) {
             padding: '0 40px',
             fontWeight: 600,
           }}>
-            Swipe left or right to navigate videos
+            {tSlider('swipeInstruction')}
           </p>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '14px' }}>
-            Tap anywhere to continue
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '16px' }}>
+            {tSlider('tapToContinue')}
           </p>
         </div>
       )}

@@ -14,6 +14,7 @@ type IProps = {
 export default function ProjectDetailsArea({ project }: IProps) {
   const t = useTranslations("projectData");
   const tDetails = useTranslations("projectDetails");
+  const tSlider = useTranslations("videoSlider");
   const projectData = t.raw(project.titleKey);
   const [unmutedVideo, setUnmutedVideo] = React.useState<number | null>(null);
   const [fullscreenImage, setFullscreenImage] = React.useState<string | null>(
@@ -291,10 +292,10 @@ export default function ProjectDetailsArea({ project }: IProps) {
                         padding: '0 40px',
                         fontWeight: 600,
                       }}>
-                        Swipe left or right to navigate videos
+                        {tSlider('swipeInstruction')}
                       </p>
-                      <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '14px' }}>
-                        Tap anywhere to continue
+                      <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '16px' }}>
+                        {tSlider('tapToContinue')}
                       </p>
                     </div>
                   )}
@@ -416,22 +417,6 @@ export default function ProjectDetailsArea({ project }: IProps) {
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-12">
-                <style jsx>{`
-                  @keyframes slowScroll {
-                    0% {
-                      transform: translateY(0);
-                    }
-                    100% {
-                      transform: translateY(-100%);
-                    }
-                  }
-                  .pdf-scroll-container {
-                    animation: slowScroll 10s linear infinite;
-                  }
-                  .showcase-details-pdf:hover .pdf-scroll-container {
-                    animation-play-state: paused;
-                  }
-                `}</style>
                 <div
                   className="showcase-details-pdf"
                   style={{
@@ -587,7 +572,7 @@ export default function ProjectDetailsArea({ project }: IProps) {
       )}
       {/* Fullscreen image modal */}
 
-      {/* CSS Animation for overlay */}
+      {/* CSS Animations */}
       <style jsx>{`
         @keyframes fadeIn {
           from {
@@ -596,6 +581,20 @@ export default function ProjectDetailsArea({ project }: IProps) {
           to {
             opacity: 1;
           }
+        }
+        @keyframes slowScroll {
+          0% {
+            transform: translateY(0);
+          }
+          100% {
+            transform: translateY(-100%);
+          }
+        }
+        .pdf-scroll-container {
+          animation: slowScroll 10s linear infinite;
+        }
+        .showcase-details-pdf:hover .pdf-scroll-container {
+          animation-play-state: paused;
         }
       `}</style>
     </>
