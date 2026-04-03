@@ -11,10 +11,10 @@
   },
   "hero": {
     "title": {
-      "line1": "Next-gen",
-      "line2": "digital agency"
+      "line1": "Digital Marketing &",
+      "line2": "Video Production Agency in Sarajevo"
     },
-    "services": "video marketing / performance marketing / web development / ai integrations"
+    "services": "video production / performance marketing / graphic design"
   },
   "about": {
     "subtitle": "What we do",
@@ -26,7 +26,9 @@
   "projects": {
     "title": "Latest",
     "titleHighlight": "Projects",
-    "seeProject": "See Project"
+    "seeProject": "See Project",
+    "seePortfolio": "See Portfolio",
+    "seeCaseStudy": "See Case Study"
   },
   "services": {
     "subtitle": "Our approach",
@@ -48,6 +50,13 @@
         "category": ["Brand Identity", "Visual Communication", "Psychology-Driven"]
       },
       {
+        "title": "Strategy & Consulting",
+        "desc": "We don't give opinions off the cuff. We audit the current state, define priorities, and create a clear execution plan. You get concrete recommendations, creative direction, and a measurement system your team can implement immediately.",
+        "category": ["Audit", "Creative Direction", "Execution Plan"]
+      }
+    ],
+    "_disabled_items": [
+      {
         "title": "Web Development",
         "desc": "Websites and landing pages with one purpose: convert visits into inquiries or purchases. Offer structure, speed, tracking readiness, and clear CTA flow.",
         "category": ["Landing Pages", "CRO", "Tracking Ready"]
@@ -56,11 +65,6 @@
         "title": "AI Integrations",
         "desc": "AI and automation that shorten the path from inquiry to sale. Lead qualification, routing, follow-up, and integration with CRM and internal tools.",
         "category": ["Automation", "Lead Routing", "CRM Sync"]
-      },
-      {
-        "title": "Strategy & Consulting",
-        "desc": "We don't give opinions off the cuff. We audit the current state, define priorities, and create a clear execution plan. You get concrete recommendations, creative direction, and a measurement system your team can implement immediately.",
-        "category": ["Audit", "Creative Direction", "Execution Plan"]
       }
     ]
   },

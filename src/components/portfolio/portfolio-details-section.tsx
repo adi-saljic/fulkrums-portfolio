@@ -30,7 +30,7 @@ export default function PortfolioDetailsSection({
       <div className="container-fluid p-0">
         <div className="row g-0">
           {/* LEFT SIDE - Vertical Reels Slider */}
-          <div className="col-xl-6">
+          <div className="col-xl-6" style={{ overflow: "hidden" }}>
             <div className="project-details-1-left">
               {project.detailVideos && project.detailVideos.length > 0 && (
                 <VerticalReelsSlider videos={project.detailVideos} />

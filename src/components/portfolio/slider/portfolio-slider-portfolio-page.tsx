@@ -168,7 +168,7 @@ export default function PortfolioSliderPortfolioPage() {
           className="tp-portfolio-11-mobile-controls d-lg-none"
           style={{
             position: 'absolute',
-            bottom: '80px',
+            bottom: '20dvh',
             left: '50%',
             transform: 'translateX(-50%)',
             zIndex: 100,

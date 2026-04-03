@@ -29,23 +29,23 @@ export default function ServiceFour() {
                   <FirstBracketTwo />
                 </span>
               </span>
-              <h4 className="tp-section-title-90 tp_text_invert tp_fade_bottom">
+              <h2 className="tp-section-title-90 tp_text_invert tp_fade_bottom">
                 {t('title')}
-              </h4>
+              </h2>
             </div>
           </div>
         </div>
 
-        {[0, 1, 2, 3, 4, 5].map((index) => {
+        {[0, 1, 2, 3].map((index) => {
           const item = t.raw(`items.${index}`);
           return (
             <div key={index} className="tp-service-3-wrap tp_fade_bottom">
               <div className="row align-items-start">
                 <div className="col-xl-3 col-lg-3">
                   <div className="tp-service-3-title-box">
-                    <h4 className="tp-service-3-title">
+                    <h3 className="tp-service-3-title">
                       <Link href="/service">{item.title}</Link>
-                    </h4>
+                    </h3>
                   </div>
                 </div>
                 <div className="col-xl-7 col-lg-7">

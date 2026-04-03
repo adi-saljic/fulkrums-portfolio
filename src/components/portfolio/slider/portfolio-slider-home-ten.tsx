@@ -112,7 +112,7 @@ export default function PortfolioSliderHomeTen() {
 
   return (
     <div className="tp-portfolio-11-area fix">
-      <div className="tp-portfolio-11-slider-wrap p-relative" style={{ height: '100vh', minHeight: '600px' }}>
+      <div className="tp-portfolio-11-slider-wrap p-relative" style={{ height: '100dvh', minHeight: '600px' }}>
         <TypedSlider
           {...getSliderSettingOne(isTransitioning)}
           asNavFor={slider2}
@@ -131,6 +131,7 @@ export default function PortfolioSliderHomeTen() {
                       alt={t(`${project.titleKey}.title`)}
                       fill
                       priority
+                      unoptimized
                       sizes="100vw"
                       style={{
                         objectFit: 'cover',
@@ -178,7 +179,7 @@ export default function PortfolioSliderHomeTen() {
           className="tp-portfolio-11-mobile-controls d-lg-none"
           style={{
             position: 'absolute',
-            bottom: '80px',
+            bottom: '20dvh',
             left: '50%',
             transform: 'translateX(-50%)',
             zIndex: 100,

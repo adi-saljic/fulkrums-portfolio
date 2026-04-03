@@ -47,8 +47,13 @@ export default function ProjectPage({ params }: IProps) {
   }
 
   // Check if this project has YouTube videos for study case
-  const hasYouTubeVideos = slug === "atleta" && youtubeVideos.atleta?.studyCase;
-  const youtubeVideoEmbeds = slug === "atleta" ? youtubeVideos.atleta?.studyCase : null;
+  const slugToKey: Record<string, keyof typeof youtubeVideos> = {
+    "atleta": "atleta",
+    "quickie-liga": "quickieLiga",
+  };
+  const youtubeKey = slugToKey[slug];
+  const hasYouTubeVideos = !!(youtubeKey && youtubeVideos[youtubeKey]?.studyCase);
+  const youtubeVideoEmbeds = youtubeKey ? youtubeVideos[youtubeKey]?.studyCase : null;
 
   return (
     <>

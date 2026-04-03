@@ -23,16 +23,16 @@ const project_data: IProject[] = [
     detailImages: [],
     detailVideos: [
       "/assets/videos/quickieLiga/QUICKIENAJAVA.mp4",
-      "/assets/videos/quickieLiga/quickieVideo.mp4",
     ],
   },
   {
-    id: 2,
-    slug: "bestdrive-maja",
-    titleKey: "bestdriveMaja",
+    id: 7,
+    slug: "wonderflle",
+    titleKey: "wonderflle",
     category: "",
-    heroImage: "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/BESTDRIVE-MAJA.png",
+    heroImage: "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/WONDERWAFFLE.png",
     detailImages: [],
+    detailVideos: [],
   },
   {
     id: 3,
@@ -82,13 +82,12 @@ const project_data: IProject[] = [
     detailPdf: "",
   },
   {
-    id: 7,
-    slug: "wonderflle",
-    titleKey: "wonderflle",
+    id: 2,
+    slug: "bestdrive-maja",
+    titleKey: "bestdriveMaja",
     category: "",
-    heroImage: "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/WONDERWAFFLE.png",
+    heroImage: "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/BESTDRIVE-MAJA.png",
     detailImages: [],
-    detailVideos: [],
   },
 ];
 

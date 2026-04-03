@@ -200,26 +200,10 @@
     max-width: 100%;
   }
 
-  // Landscape videos - adaptive width based on screen size
+  // Landscape videos - fill parent column
   &.landscape-mode {
-    // Mobile: almost full width for better viewing
-    width: 95vw;
-    max-width: 95vw;
-
-    // Tablet: slightly constrained
-    @media (min-width: 768px) {
-      width: min(85vw, 700px);
-    }
-
-    // Desktop: max 800px for optimal viewing
-    @media (min-width: 992px) {
-      width: min(80vw, 800px);
-    }
-
-    // Large desktop: cap at 900px
-    @media (min-width: 1400px) {
-      width: min(70vw, 900px);
-    }
+    width: 100%;
+    max-width: 100%;
   }
 }
 

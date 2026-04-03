@@ -40,10 +40,7 @@
             font-size: 110px;
         }
         & span{
-            padding-left: 315px;
-            @media #{$md,$xs}{
-                padding-left: 0;
-            }
+            padding-left: 0;
         }
     }
     &-btn-box{

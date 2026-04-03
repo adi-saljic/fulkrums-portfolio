@@ -30,16 +30,14 @@ export default function AboutThree() {
                   <FirstBracketTwo />
                 </span>
               </span>
-              <h4
+              <h2
                 className="tp-section-title-90 tp_text_invert tp_fade_bottom"
                 style={{
-                  fontSize: "clamp(40px, 6vw, 90px)",
-                  lineHeight: "1.2",
                   wordWrap: "break-word",
                 }}
               >
                 {t("title")}
-              </h4>
+              </h2>
             </div>
           </div>
         </div>

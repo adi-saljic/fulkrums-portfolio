@@ -30,29 +30,9 @@ function getHomepageThumbnail(slug: string, fallbackUrl?: string): string {
 // Client data with S3 images only - no fallback URLs
 const clientsData = [
   {
-    slug: "zamzam",
-    title: "Zamzam Project",
-    image: getHomepageThumbnail("zamzam", ""),
-  },
-  {
-    slug: "quickie-liga",
-    title: "Quickie Liga",
-    image: getHomepageThumbnail("quickie-liga", ""),
-  },
-  {
-    slug: "it-works-marketing",
-    title: "It Works",
-    image: getHomepageThumbnail("it-works-marketing", ""),
-  },
-  {
-    slug: "green-concept",
-    title: "Green Concept Houses",
-    image: getHomepageThumbnail("green-concept-houses", ""),
-  },
-  {
-    slug: "get-energy-canada",
-    title: "Get Energy",
-    image: getHomepageThumbnail("getenergy", ""),
+    slug: "atleta",
+    title: "Atleta",
+    image: getHomepageThumbnail("atleta", ""),
   },
   {
     slug: "cheyf",
@@ -60,14 +40,34 @@ const clientsData = [
     image: getHomepageThumbnail("cheyf", ""),
   },
   {
+    slug: "quickie-liga",
+    title: "Quickie Liga",
+    image: getHomepageThumbnail("quickie-liga", ""),
+  },
+  {
+    slug: "zamzam",
+    title: "Zamzam Project",
+    image: getHomepageThumbnail("zamzam", ""),
+  },
+  {
+    slug: "green-concept",
+    title: "Green Concept Houses",
+    image: getHomepageThumbnail("green-concept-houses", ""),
+  },
+  {
     slug: "cheyf-accommodations",
     title: "Cheyf Accommodations",
     image: getHomepageThumbnail("cheyf-accommodation", ""),
   },
   {
-    slug: "atleta",
-    title: "Atletska Kondicija",
-    image: getHomepageThumbnail("atleta", ""),
+    slug: "it-works-marketing",
+    title: "It Works",
+    image: getHomepageThumbnail("it-works-marketing", ""),
+  },
+  {
+    slug: "get-energy-canada",
+    title: "Get Energy",
+    image: getHomepageThumbnail("getenergy", ""),
   },
 ];
 
@@ -112,12 +112,12 @@ export default function ProjectFour({
           <div className="row justify-content-center">
             <div className="col-xl-12">
               <div className="tp-project-3-title-box p-relative mb-60" style={{ textAlign: "center" }}>
-                <h4
+                <h2
                   className="tp-section-title-200 tp_reveal_anim"
-                  style={{ fontSize: "80px" }}
+                  style={{ fontSize: "clamp(28px, 4vw, 55px)" }}
                 >
                   {t("title")} <span>{t("titleHighlight")}</span>
-                </h4>
+                </h2>
               </div>
             </div>
           </div>
@@ -191,12 +191,12 @@ export default function ProjectFour({
                             width: "100%",
                           }}
                         >
-                          <h4
+                          <h3
                             className="tp-project-3-title-sm"
                             style={{ marginBottom: "clamp(5px, 1vh, 10px)" }}
                           >
                             {item.client_1.title}
-                          </h4>
+                          </h3>
                           <div
                             style={{
                               display: "flex",
@@ -211,7 +211,7 @@ export default function ProjectFour({
                                 href={`/portfolio/${item.client_1.slug}`}
                                 className="tp-btn-simple"
                               >
-                                Portfolio
+                                {t("seePortfolio")}
                               </Link>
                             )}
                             {dataSource1.hasStudyCase && (
@@ -219,7 +219,7 @@ export default function ProjectFour({
                                 href={`/study-cases/${item.client_1.slug}`}
                                 className="tp-btn-simple"
                               >
-                                Case Study
+                                {t("seeCaseStudy")}
                               </Link>
                             )}
                           </div>
@@ -235,12 +235,12 @@ export default function ProjectFour({
                               width: "100%",
                             }}
                           >
-                            <h4
+                            <h3
                               className="tp-project-3-title-sm"
                               style={{ marginBottom: "clamp(5px, 1vh, 10px)" }}
                             >
                               {item.client_2.title}
-                            </h4>
+                            </h3>
                             <div
                               style={{
                                 display: "flex",
@@ -255,7 +255,7 @@ export default function ProjectFour({
                                   href={`/portfolio/${item.client_2.slug}`}
                                   className="tp-btn-simple"
                                 >
-                                  Portfolio
+                                  {t("seePortfolio")}
                                 </Link>
                               )}
                               {dataSource2.hasStudyCase && (
@@ -263,7 +263,7 @@ export default function ProjectFour({
                                   href={`/study-cases/${item.client_2.slug}`}
                                   className="tp-btn-simple"
                                 >
-                                  Case Study
+                                  {t("seeCaseStudy")}
                                 </Link>
                               )}
                             </div>
@@ -341,7 +341,7 @@ export default function ProjectFour({
                     </div>
 
                     {/* Title */}
-                    <h4
+                    <h3
                       className="tp-project-3-title-sm"
                       style={{
                         fontSize: "28px",
@@ -350,7 +350,7 @@ export default function ProjectFour({
                       }}
                     >
                       {item.client_1.title}
-                    </h4>
+                    </h3>
 
                     {/* Buttons */}
                     <div style={{
@@ -374,8 +374,8 @@ export default function ProjectFour({
                           }}
                         >
                           <span className="tp-btn-border-wrap">
-                            <span className="text-1">Portfolio</span>
-                            <span className="text-2">Portfolio</span>
+                            <span className="text-1">{t("seePortfolio")}</span>
+                            <span className="text-2">{t("seePortfolio")}</span>
                           </span>
                         </Link>
                       )}
@@ -392,8 +392,8 @@ export default function ProjectFour({
                           }}
                         >
                           <span className="tp-btn-border-wrap">
-                            <span className="text-1">Case Study</span>
-                            <span className="text-2">Case Study</span>
+                            <span className="text-1">{t("seeCaseStudy")}</span>
+                            <span className="text-2">{t("seeCaseStudy")}</span>
                           </span>
                         </Link>
                       )}
@@ -424,7 +424,7 @@ export default function ProjectFour({
                       </div>
 
                       {/* Title */}
-                      <h4
+                      <h3
                         className="tp-project-3-title-sm"
                         style={{
                           fontSize: "28px",
@@ -433,7 +433,7 @@ export default function ProjectFour({
                         }}
                       >
                         {item.client_2.title}
-                      </h4>
+                      </h3>
 
                       {/* Buttons */}
                       <div style={{

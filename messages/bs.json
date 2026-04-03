@@ -11,10 +11,10 @@
   },
   "hero": {
     "title": {
-      "line1": "Next-gen",
-      "line2": "digital agency"
+      "line1": "Agencija za digitalni marketing",
+      "line2": "i video produkciju u Sarajevu"
     },
-    "services": "video marketing / performance marketing / web development / ai integrations"
+    "services": "video produkcija / performance marketing / graphic design"
   },
   "about": {
     "subtitle": "Šta radimo",
@@ -26,7 +26,9 @@
   "projects": {
     "title": "Najnoviji",
     "titleHighlight": "Projekti",
-    "seeProject": "Pogledaj Projekat"
+    "seeProject": "Pogledaj Projekat",
+    "seePortfolio": "Pogledaj Portfolio",
+    "seeCaseStudy": "Pogledaj Case Study"
   },
   "services": {
     "subtitle": "Naš pristup",
@@ -57,6 +59,13 @@
         ]
       },
       {
+        "title": "Strategy & Consulting",
+        "desc": "Ne dajemo mišljenja napamet. Radimo audit postojećeg stanja, definišemo prioritete i jasan plan izvedbe. Dobijaš konkretne preporuke, creative direction i sistem mjerenja koji tim može odmah provesti.",
+        "category": ["Audit", "Creative Direction", "Execution Plan"]
+      }
+    ],
+    "_disabled_items": [
+      {
         "title": "Web Development",
         "desc": "Web i landing stranice koje imaju jednu svrhu: pretvoriti posjetu u upit ili kupovinu. Struktura ponude, brzina, tracking spremnost i jasni CTA flow.",
         "category": ["Landing Pages", "CRO", "Tracking Ready"]
@@ -65,11 +74,6 @@
         "title": "AI Integrations",
         "desc": "AI i automatizacije koje skraćuju put od upita do prodaje. Kvalifikacija leadova, routing, follow up i povezivanje sa CRM-om i internim alatima.",
         "category": ["Automation", "Lead Routing", "CRM Sync"]
-      },
-      {
-        "title": "Strategy & Consulting",
-        "desc": "Ne dajemo mišljenja napamet. Radimo audit postojećeg stanja, definišemo prioritete i jasan plan izvedbe. Dobijaš konkretne preporuke, creative direction i sistem mjerenja koji tim može odmah provesti.",
-        "category": ["Audit", "Creative Direction", "Execution Plan"]
       }
     ]
   },
