@@ -52,8 +52,9 @@ export default function ProjectPage({ params }: IProps) {
     "quickie-liga": "quickieLiga",
   };
   const youtubeKey = slugToKey[slug];
-  const hasYouTubeVideos = !!(youtubeKey && youtubeVideos[youtubeKey]?.studyCase);
-  const youtubeVideoEmbeds = youtubeKey ? youtubeVideos[youtubeKey]?.studyCase : null;
+  const youtubeEntry = youtubeKey ? (youtubeVideos[youtubeKey] as { studyCase?: string[]; portfolio?: string[] }) : null;
+  const hasYouTubeVideos = !!(youtubeEntry?.studyCase);
+  const youtubeVideoEmbeds = youtubeEntry?.studyCase ?? null;
 
   return (
     <>
