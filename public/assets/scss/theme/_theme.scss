@@ -133,6 +133,13 @@
 	.container-1720{
 		max-width: 1720px;
 		margin: 0 auto;
+		padding-left: clamp(15px, 2vw, 30px);
+		padding-right: clamp(15px, 2vw, 30px);
+
+		@media #{$xs} {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
 	}
 	.container-1480{
 		max-width: 1480px;

@@ -39,7 +39,7 @@ export default function FooterFour() {
                 </div>
                 <div className="tp-footer-2-contact-item mb-2">
                   <span>
-                    <Link href="mailto:contact@liko.com">
+                    <Link href="mailto:office@fulkrums.com">
                       office@fulkrums.com
                     </Link>
                   </span>

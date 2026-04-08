@@ -16,9 +16,9 @@ export default function ContactOne({ buttonLabel }: { buttonLabel?: string }) {
           <div className="row justify-content-center">
             <div className="col-xl-10">
               <div className="tp-cta-title-box text-center">
-                <h4 className="tp-cta-title cta-text" style={{ fontSize: "clamp(50px, 6vw, 80px)", lineHeight: "1.3", marginBottom: "40px" }}>
+                <h2 className="tp-cta-title cta-text" style={{ fontSize: "clamp(32px, 4.5vw, 60px)", lineHeight: "1.3", marginBottom: "40px" }}>
                   {t('title')} <span>{t('titleHighlight')}</span>
-                </h4>
+                </h2>
                 <p className="tp_fade_bottom" style={{ fontSize: "18px", maxWidth: "700px", margin: "0 auto 50px" }}>
                   {t('description')}
                 </p>

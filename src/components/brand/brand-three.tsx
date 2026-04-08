@@ -3,7 +3,12 @@ import BrandSlider from './brand-slider';
 
 export default function BrandThree() {
   return (
-    <div className="tp-brand-3-area pb-120">
+    <div
+      className="tp-brand-3-area pb-120"
+      style={{
+        paddingBottom: 'clamp(15px, 3vw, 120px)'
+      }}
+    >
       <div className="container container-1400">
         <div className="row">
           <div className="col-xl-12">

@@ -14,10 +14,10 @@ export default function HeroBannerFour() {
               <div className="tp-hero-3-circle-shape">
                 <span></span>
               </div>
-              <h4 className="tp-hero-3-title tp_reveal_anim">
+              <h1 className="tp-hero-3-title tp_reveal_anim">
                 <span className="tp-reveal-line"> {t('title.line1')} </span>
                 <span className="tp-reveal-line">{t('title.line2')}</span>
-              </h4>
+              </h1>
               <span className="tp-hero-3-category tp_reveal_anim">
                 {t('services')}
               </span>

@@ -45,9 +45,10 @@ export default function PortfolioPage() {
           left: 0,
           right: 0,
           zIndex: 1000,
+          minHeight: "100px",
         }}
       >
-        <HeaderFour />
+        <HeaderFour noZIndex={true} />
       </div>
       {/* header area end */}
 

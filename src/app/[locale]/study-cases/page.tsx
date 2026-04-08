@@ -38,8 +38,8 @@ const StudyCasesPage = () => {
   return (
     <div style={{ height: '100vh', overflow: 'hidden', position: 'relative' }}>
       {/* header area start */}
-      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: 1000 }}>
-        <HeaderFour />
+      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: 1000, minHeight: '100px' }}>
+        <HeaderFour noZIndex={true} />
       </div>
       {/* header area end */}
 

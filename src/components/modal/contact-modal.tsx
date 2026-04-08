@@ -1,13 +1,13 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useTranslations } from 'next-intl';
+import { Turnstile } from '@marsidev/react-turnstile';
 import ErrorMsg from "../error-msg";
 
 type FormData = {
@@ -16,6 +16,7 @@ type FormData = {
   email: string;
   phone?: string;
   message: string;
+  website?: string; // Honeypot field
 };
 
 const schema: yup.ObjectSchema<FormData> = yup.object().shape({
@@ -46,24 +47,85 @@ export default function ContactModal({ showModal, setShowModal }: IProps) {
   });
 
   const [isSending, setIsSending] = React.useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string>('');
+  const [formOpenTime, setFormOpenTime] = useState<number>(0);
+
+  // Track form open time for timing validation
+  useEffect(() => {
+    if (showModal) {
+      setFormOpenTime(Date.now());
+      setTurnstileToken(''); // Reset token when modal opens
+    }
+  }, [showModal]);
 
   const onSubmit = handleSubmit(async (data: FormData) => {
     setIsSending(true);
 
     try {
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        {
-          from_name: `${data.firstName} ${data.lastName}`,
-          from_email: data.email,
-          phone: data.phone || "Not provided",
-          message: data.message,
-          to_email: "office@fulkrums.com",
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-      );
+      // Validate Turnstile token exists
+      if (!turnstileToken) {
+        toast.error(t('verificationRequired'), {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: 'dark',
+        });
+        setIsSending(false);
+        return;
+      }
 
+      // Call API route instead of EmailJS directly
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstName: data.firstName,
+          lastName: data.lastName,
+          email: data.email,
+          phone: data.phone,
+          message: data.message,
+          website: data.website, // Honeypot field
+          captchaToken: turnstileToken,
+          formOpenTime: formOpenTime,
+        }),
+      });
+
+      if (!response.ok) {
+        const error = await response.json();
+
+        // Handle specific error cases
+        if (response.status === 429) {
+          toast.error(t('rateLimitExceeded'), {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: 'dark',
+          });
+        } else if (response.status === 403) {
+          toast.error(t('verificationFailed'), {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: 'dark',
+          });
+        } else {
+          throw new Error(error.error || 'Submission failed');
+        }
+
+        setIsSending(false);
+        return;
+      }
+
+      // Success
       toast.success(t('success'), {
         position: "top-right",
         autoClose: 5000,
@@ -72,7 +134,9 @@ export default function ContactModal({ showModal, setShowModal }: IProps) {
         pauseOnHover: true,
         draggable: true,
       });
+
       reset();
+      setTurnstileToken('');
       if (typeof setShowModal === 'function') {
         if (setShowModal.length === 0) {
           (setShowModal as () => void)();
@@ -81,7 +145,7 @@ export default function ContactModal({ showModal, setShowModal }: IProps) {
         }
       }
     } catch (error) {
-      console.error("EmailJS Error:", error);
+      console.error('Contact form error:', error);
       toast.error(t('error'), {
         position: "top-right",
         autoClose: 5000,
@@ -273,14 +337,40 @@ export default function ContactModal({ showModal, setShowModal }: IProps) {
               ></textarea>
               <ErrorMsg msg={errors.message?.message!} />
             </div>
+
+            {/* Honeypot - hidden field to catch bots */}
+            <div style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0 }}>
+              <input
+                type="text"
+                {...register("website")}
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+              />
+            </div>
+
+            {/* Cloudflare Turnstile - invisible bot protection */}
+            <div className="mb-20">
+              <Turnstile
+                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+                onSuccess={(token) => setTurnstileToken(token)}
+                onError={() => setTurnstileToken('')}
+                onExpire={() => setTurnstileToken('')}
+                options={{
+                  theme: 'dark',
+                  size: 'invisible',
+                }}
+              />
+            </div>
+
             <div className="cn-contactform-btn text-center">
               <button
                 className="submit-btn"
                 type="submit"
-                disabled={isSending || !isValid}
+                disabled={isSending || !isValid || !turnstileToken}
                 style={{
-                  opacity: isSending || !isValid ? 0.5 : 1,
-                  cursor: isSending || !isValid ? 'not-allowed' : 'pointer'
+                  opacity: isSending || !isValid || !turnstileToken ? 0.5 : 1,
+                  cursor: isSending || !isValid || !turnstileToken ? 'not-allowed' : 'pointer'
                 }}
               >
                 {isSending ? t('sending') : t('submit')}
