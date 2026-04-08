@@ -5,7 +5,7 @@ import { ProjectShape, RightArrow } from "../svg";
 import ContactModal from "../modal/contact-modal";
 import { useContactModal } from '@/context/contact-modal-context';
 
-export default function ContactOne() {
+export default function ContactOne({ buttonLabel }: { buttonLabel?: string }) {
   const t = useTranslations('contact');
   const { showModal, openModal, closeModal } = useContactModal();
 
@@ -43,7 +43,7 @@ export default function ContactOne() {
                       textTransform: "capitalize"
                     }}
                   >
-                    {t('button')}
+                    {buttonLabel ?? t('button')}
                   </button>
                 </div>
               </div>

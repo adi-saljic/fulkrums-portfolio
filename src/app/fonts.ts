@@ -20,6 +20,7 @@ export const gallery = localFont({
     },
   ],
   variable: "--tp-ff-gallery",
+  display: "swap",
 });
 
 export const aladin = Aladin({

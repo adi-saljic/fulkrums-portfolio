@@ -30,7 +30,7 @@ export default function FooterFour() {
                 <div className="tp-footer-2-contact-item mb-2">
                   <span>
                     <Link
-                      href="https://www.google.com/maps/@23.8223596,90.3656686,15z?entry=ttu"
+                      href="https://www.google.com/maps/@43.8563,18.4131,15z"
                       target="_blank"
                     >
                       Mihaljevska 100, 71000 Sarajevo
@@ -54,19 +54,6 @@ export default function FooterFour() {
                       target="_blank"
                       title="Marketing Team"
                       className="linkedin-marketing"
-                    >
-                      <i className="fa-brands fa-linkedin-in"></i>
-                    </Link>
-                  </div>
-                  <div className="d-flex flex-column align-items-center">
-                    <span style={{ fontSize: "12px", marginBottom: "8px", color: "#4a90e2" }}>
-                      {t('social.development')}
-                    </span>
-                    <Link
-                      href="https://www.linkedin.com/in/adi-saljic-04169227b"
-                      target="_blank"
-                      title="Development Team"
-                      className="linkedin-dev"
                     >
                       <i className="fa-brands fa-linkedin-in"></i>
                     </Link>

@@ -11,22 +11,24 @@
   },
   "hero": {
     "title": {
-      "line1": "Next-gen",
-      "line2": "digital agency"
+      "line1": "Agencija za digitalni marketing",
+      "line2": "i video produkciju u Sarajevu"
     },
-    "services": "video marketing / performance marketing / web development / ai integrations"
+    "services": "video produkcija / performance marketing / graphic design"
   },
   "about": {
     "subtitle": "Šta radimo",
     "title": "Pretvaramo Kreativu U Mjerljive Rezultate.",
-    "description1": "Mi smo digital agencija fokusirana na performance creative, growth marketing i web plus AI integracije. Naš posao nije da napravimo \"lijep\" sadržaj, nego solucije i sisteme koji donose leadove i prodaju.",
+    "description1": "Mi smo digital agencija fokusirana na performance creative, growth marketing i brand storytelling i video produkciju. Naš posao nije da napravimo \"lijep\" sadržaj, nego solucije i sisteme koji donose leadove i prodaju.",
     "description2": "Imamo 10 godina iskustva kroz različite industrije. Radimo sa jasnim procesom: research, strategija, produkcija, iteracije i reporting, bez generičnih paketa i bez praznih obećanja.",
     "button": "O nama"
   },
   "projects": {
     "title": "Najnoviji",
     "titleHighlight": "Projekti",
-    "seeProject": "Pogledaj Projekat"
+    "seeProject": "Pogledaj Projekat",
+    "seePortfolio": "Pogledaj Portfolio",
+    "seeCaseStudy": "Pogledaj Case Study"
   },
   "services": {
     "subtitle": "Naš pristup",
@@ -34,6 +36,7 @@
     "items": [
       {
         "title": "Video Production",
+        "slug": "video-production",
         "desc": "Od istraživanja tržišta i razrade koncepta, do kompletnog plana realizacije i produkcije. Strategiju ne baziramo na prolaznim trendovima i skečevima nego na jasnoj poruci i identitetu brenda, kako bi sadržaj bio autentičan, dugoročno upotrebljiv i usmjeren na rezultat.",
         "category": [
           "Research",
@@ -44,11 +47,13 @@
       },
       {
         "title": "Performance Marketing",
+        "slug": "performance-marketing",
         "desc": "Kampanje koje se vode podacima, ne \"savjetu malog rođaka\". Test plan, optimizacija i reporting koji se vežu na stvarne ciljeve biznisa, ne na \"engagement\" i \"trash traffic\".",
         "category": ["Istraživanje", "Plan", "Realizacija i Reporting"]
       },
       {
         "title": "Graphic Design",
+        "slug": "graphic-design",
         "desc": "Ne radimo dekoraciju i \"uljepšavanje\". Svaki dizajn ima svoje \"zašto\" - vođen psihologijom pažnje, čitljivosti i donošenja odluke. Dizajn nije tu da bude komplikovan, nego da riješi problem i jasno prenese poruku.",
         "category": [
           "Brand Identity",
@@ -57,19 +62,9 @@
         ]
       },
       {
-        "title": "Web Development",
-        "desc": "Web i landing stranice koje imaju jednu svrhu: pretvoriti posjetu u upit ili kupovinu. Struktura ponude, brzina, tracking spremnost i jasni CTA flow.",
-        "category": ["Landing Pages", "CRO", "Tracking Ready"]
-      },
-      {
-        "title": "AI Integrations",
-        "desc": "AI i automatizacije koje skraćuju put od upita do prodaje. Kvalifikacija leadova, routing, follow up i povezivanje sa CRM-om i internim alatima.",
-        "category": ["Automation", "Lead Routing", "CRM Sync"]
-      },
-      {
-        "title": "Strategy & Consulting",
+        "title": "Video & Marketing Strategija",
         "desc": "Ne dajemo mišljenja napamet. Radimo audit postojećeg stanja, definišemo prioritete i jasan plan izvedbe. Dobijaš konkretne preporuke, creative direction i sistem mjerenja koji tim može odmah provesti.",
-        "category": ["Audit", "Creative Direction", "Execution Plan"]
+        "category": ["Creative Direction", "Plan Kampanje", "Execution Plan"]
       }
     ]
   },
@@ -95,7 +90,10 @@
       "submit": "Pošalji Poruku",
       "sending": "Šalje se...",
       "success": "Poruka uspješno poslana! Odgovorićemo vam uskoro.",
-      "error": "Neuspješno slanje poruke. Pokušajte ponovo ili nas kontaktirajte direktno na office@fulkrums.com"
+      "error": "Neuspješno slanje poruke. Pokušajte ponovo ili nas kontaktirajte direktno na office@fulkrums.com",
+      "verificationRequired": "Molimo sačekajte da se verifikacija završi",
+      "rateLimitExceeded": "Previše pokušaja. Molimo pokušajte ponovo za minut.",
+      "verificationFailed": "Verifikacija nije uspjela. Molimo osvježite stranicu i pokušajte ponovo."
     }
   },
   "footer": {
@@ -109,8 +107,7 @@
     },
     "social": {
       "title": "Pratite nas",
-      "marketing": "Marketing",
-      "development": "Razvoj softvera"
+      "marketing": "Marketing"
     },
     "copyright": "© 2025 Fulkrums. Sva prava zadržana."
   },
@@ -318,6 +315,67 @@
       "client": "Zamzam Projekat",
       "services": "Video Produkcija",
       "deliverables": "Long-form Serijal (30 Epizoda), Trailer"
+    }
+  },
+  "common": {
+    "seeMore": "Vise",
+    "viewProject": "POGLEDAJ PROJEKAT"
+  },
+  "videoSlider": {
+    "swipeInstruction": "Povuci lijevo ili desno za navigaciju",
+    "tapToContinue": "Ali prvo, tapni bilo gdje da nastaviš"
+  },
+  "videoProduction": {
+    "smallLabel": "VIDEO PRODUKCIJA",
+    "secondaryLabel": "content services for Facebook, Instagram, Tiktok, Youtube & mnoge druge",
+    "headline": "Premium Video produkcija kratkih i dugih formi videa",
+    "hashtags": "#Reels #Youtubevideo #Reklame #Motiongraphicsvideo",
+    "description": "Svaki projekat gradimo strateški što rezultira kreativnim sadržajem, jasno predstavljenom vizijom vašeg branda. Istraživanje tržišta, content plan i detaljne skripte realizovane uz pomoć profesionalne opreme vode nas do jasno definisanog cilja i mjerljivog rezultata.",
+    "stats": {
+      "viewsSuffix": "M+",
+      "viewsLabel": "pregleda na društvenim mrežama",
+      "minutesSuffix": "+",
+      "minutesLabel": "minuta klijentski odobrenog video sadržaja",
+      "leadsSuffix": "k+",
+      "leadsLabel": "generiranih leadova i prodaja"
+    },
+    "process": {
+      "subtitle": "KAKO MI RADIMO?",
+      "title": "Pogledajte kako izgleda proces od A do Ž.",
+      "step1Title": "Research & Context",
+      "step1Body": "Prije snimanja i montaže, ulazimo u kontekst brenda i cilja da bismo definisali šta video treba da postigne. Analiziramo:",
+      "step1List": "ko je publika i šta je \"win\" nakon videa\ngdje se video koristi (Reels, TikTok, YouTube, web, kampanje)\nkoja su ključna pitanja, dileme i motivi publike\npostojeći sadržaj, ton i vizuelni identitet brenda",
+      "step2Title": "Concepts, Angles & Narrative Plan",
+      "step2Body": "Ne oslanjamo se na jedan koncept. Mapiramo više uglova i biramo najbolji smjer u odnosu na cilj i kanal:",
+      "step2List": "ads i direct response (problem-solution, offer, demo, objection handling)\nsocial proof (testimonials, case highlights, community moments)\nbrand awareness (pozicioniranje, vrijednosti, premium dojam)\nstorytelling i mini-doc (priča, konflikt, razvoj, zaključak)\nedukativni format (objašnjenje, how-to, breakdown procesa)",
+      "step3Title": "Script & Structure",
+      "step3Body": "Skripta je osnova svakog dobrog videa. U zavisnosti od formata pravimo jasan koncept, razradu i prethodno upoznajemo učesnike/glumce kako bi svaki video uspješno prošao. Tipične komponente:",
+      "step3List": "hook ili opening beat koji zadrži pažnju\nkontekst i poruka u prvih par sekundi ili prvih 30-60 sekundi, ovisno o formatu\nmehanizam ili priča koja gradi povjerenje\nključne tačke: benefiti, diferencijacija, dokaz\njasan završetak i CTA koji odgovara brendu",
+      "step4Title": "Production & Asset Sourcing",
+      "step4Body": "Radimo fleksibilno u odnosu na projekat i budžet:",
+      "step4List": "snimanje na lokaciji ili u kontrolisanim uslovima\nkorištenje postojećih materijala klijenta, ako su kvalitetni i upotrebljivi\ndodatni b-roll, product demos, lifestyle kadrovi\nmotion graphics i UI prikazi kada treba objasniti proces ili podatke\nstock ili AI filler samo kada ima smisla i kada ne ruši premium dojam",
+      "step5Title": "Editing System (Retention + Premium Feel)",
+      "step5Body": "Montažu rade isključivo iskusni montažeri. Različite tehnike, cinematic look i final touch daju finalni premium izgled.",
+      "step5List": "tempo i cutovi prilagođeni formatu, short-form dinamično, long-form kontrolisano\nsound design i muzika u službi priče, ne kao slučajan layer\ncaptions i overlays kada doprinose razumijevanju i retentionu\ngrafike i callouts koji pojačavaju poruku, bez vizuelnog šuma\nverzije i varijacije kada se radi o kampanjama, hookovi, pacing, CTA, struktura",
+      "step6Title": "Delivery, Versions & Reuse",
+      "step6Body": "Isporučujemo video tako da može živjeti na više mjesta:",
+      "step6List": "formati za Reels/TikTok/Shorts, YouTube, web\ncutdowns i teaseri iz long-forma\ncover frames i osnovne varijacije po potrebi\njasna organizacija deliverables i eksport postavke spremne za objavu"
+    },
+    "comparison": {
+      "subtitle": "BEFORE / AFTER",
+      "title": "Šta smo primijetili da nije dobro (I zašto naši videi bolje prolaze)",
+      "beforeLabel": "Before Fulkrums",
+      "afterLabel": "After Fulkrums",
+      "before1": "Cinematic video, ali spor, bez tempa i ispričane priče",
+      "before2": "Neukusan trend video, napravljen da napumpa preglede bez drugog cilja",
+      "before3": "Video ad koji ne zadržava potencijalnog kupca u prve 2-3 sekunde pregleda",
+      "before4": "Isti ugao i koncept videa kroz svaki mjesec, bez plana i strategije",
+      "before5": "Spora realizacija i montaža videa, beskonačan broj grešaka i neusvajanje revizija",
+      "after1": "Cinematic tip videa sa jasno razrađenom strategijom, konceptom i profesionalnom montažom",
+      "after2": "Priprema za realizaciju i istraživanje se provodi kako bi projekat bio uspješno realizovan",
+      "after3": "Nezavisno od dužine videa i formata, produkcija je usmjerena ka zadržavanju pažnje",
+      "after4": "Jedan jasan i uhodan proces, brza realizacija i fajlovi spremni za launch, kako bi se vaš tim mogao fokusirati na vođenje biznisa.",
+      "after5": "Video ads producirani za kreiranje Brand Awaraness ili konverzije"
     }
   }
 }

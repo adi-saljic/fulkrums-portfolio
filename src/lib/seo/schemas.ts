@@ -5,8 +5,8 @@ export function generateLocalBusinessSchema(locale: string = 'bs') {
   const name = 'Fulkrums Digital Agency';
   const description =
     locale === 'bs'
-      ? 'Digitalna agencija u Sarajevu koja nudi video produkciju, dron snimanje, fotografiju, web development, AI integracije i performance marketing u Bosni i Hercegovini i Balkanu.'
-      : 'Digital agency in Sarajevo offering video production, drone filming, photography, web development, AI integrations, and performance marketing across Bosnia and Herzegovina and the Balkans.';
+      ? 'Agencija za video produkciju i marketing u Sarajevu. Nudimo video produkciju, dron snimanje, fotografiju, performance marketing i grafički dizajn u Bosni i Hercegovini i Balkanu.'
+      : 'Video production and marketing agency in Sarajevo offering video production, drone filming, photography, performance marketing, and graphic design across Bosnia and Herzegovina and the Balkans.';
 
   return {
     '@context': 'https://schema.org',
@@ -17,7 +17,7 @@ export function generateLocalBusinessSchema(locale: string = 'bs') {
     url: baseUrl,
     logo: `${baseUrl}/assets/img/logo/logo-transparent.png`,
     image: `${baseUrl}/assets/img/logo/logo-transparent.png`,
-    telephone: '+387-62-000-000',
+    telephone: '+387603270009',
     email: 'office@fulkrums.com',
     address: {
       '@type': 'PostalAddress',
@@ -58,7 +58,7 @@ export function generateLocalBusinessSchema(locale: string = 'bs') {
             name: locale === 'bs' ? 'Video Produkcija' : 'Video Production',
             description:
               locale === 'bs'
-                ? 'Profesionalna video produkcija, video marketing, i videografija u Sarajevu'
+                ? 'Profesionalna video produkcija, video marketing i videografija u Sarajevu'
                 : 'Professional video production, video marketing, and videography in Sarajevo',
           },
         },
@@ -71,28 +71,6 @@ export function generateLocalBusinessSchema(locale: string = 'bs') {
               locale === 'bs'
                 ? 'Dron snimanje i aerial fotografija u Bosni i Hercegovini'
                 : 'Drone filming and aerial photography in Bosnia and Herzegovina',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: locale === 'bs' ? 'Web Development' : 'Web Development',
-            description:
-              locale === 'bs'
-                ? 'Izrada web stranica, full stack development i web aplikacije u Sarajevu'
-                : 'Web development, full stack development and web applications in Sarajevo',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: locale === 'bs' ? 'AI Integracije' : 'AI Integrations',
-            description:
-              locale === 'bs'
-                ? 'AI integracije i automatizacija za biznis u Bosni'
-                : 'AI integrations and automation for business in Bosnia',
           },
         },
         {
@@ -121,6 +99,28 @@ export function generateLocalBusinessSchema(locale: string = 'bs') {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
+            name: locale === 'bs' ? 'Grafički Dizajn' : 'Graphic Design',
+            description:
+              locale === 'bs'
+                ? 'Brand identity, vizualna komunikacija i grafički dizajn u Sarajevu'
+                : 'Brand identity, visual communication, and graphic design in Sarajevo',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: locale === 'bs' ? 'Video & Marketing Strategija' : 'Video & Marketing Strategy',
+            description:
+              locale === 'bs'
+                ? 'Kreativna strategija, planiranje kampanja i marketing realizacija za video i performance marketing'
+                : 'Creative strategy, campaign planning, and marketing execution for video and performance marketing',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
             name: locale === 'bs' ? 'Fotografija' : 'Photography',
             description:
               locale === 'bs'
@@ -143,14 +143,14 @@ export function generateOrganizationSchema(locale: string = 'bs') {
     legalName: 'Fulkrums Digital Agency',
     url: baseUrl,
     logo: `${baseUrl}/assets/img/logo/logo-transparent.png`,
-    foundingDate: '2015',
+    foundingDate: '2025',
     foundingLocation: {
       '@type': 'Place',
       name: 'Sarajevo, Bosnia and Herzegovina',
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+387-62-000-000',
+      telephone: '+387603270009',
       contactType: 'customer service',
       email: 'office@fulkrums.com',
       areaServed: ['BA', 'HR', 'RS', 'ME'],
@@ -169,18 +169,10 @@ export function generateWebSiteSchema(locale: string = 'bs') {
     name: 'Fulkrums Digital Agency',
     description:
       locale === 'bs'
-        ? 'Digitalna agencija u Sarajevu - video produkcija, web development i AI integracije'
-        : 'Digital agency in Sarajevo - video production, web development and AI integrations',
+        ? 'Agencija za video produkciju i marketing u Sarajevu, Bosna i Hercegovina'
+        : 'Video production and marketing agency in Sarajevo, Bosnia and Herzegovina',
     publisher: {
       '@id': `${baseUrl}/#organization`,
-    },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${baseUrl}/search?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
     },
     inLanguage: ['bs', 'en'],
   };

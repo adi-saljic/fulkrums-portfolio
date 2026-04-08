@@ -11,22 +11,24 @@
   },
   "hero": {
     "title": {
-      "line1": "Next-gen",
-      "line2": "digital agency"
+      "line1": "Digital Marketing &",
+      "line2": "Video Production Agency in Sarajevo"
     },
-    "services": "video marketing / performance marketing / web development / ai integrations"
+    "services": "video production / performance marketing / graphic design"
   },
   "about": {
     "subtitle": "What we do",
     "title": "We Turn Creativity Into Measurable Results.",
-    "description1": "We are a digital agency focused on performance creative, growth marketing, and web plus AI integrations. Our job isn't to make \"pretty\" content, but solutions and systems that generate leads and sales.",
+    "description1": "We are a digital agency focused on performance creative, growth marketing, and brand storytelling and video production. Our job isn't to make \"pretty\" content, but solutions and systems that generate leads and sales.",
     "description2": "We have 10 years of experience across various industries. We work with a clear process: research, strategy, production, iterations, and reporting. No generic packages and no empty promises.",
     "button": "Our Team"
   },
   "projects": {
     "title": "Latest",
     "titleHighlight": "Projects",
-    "seeProject": "See Project"
+    "seeProject": "See Project",
+    "seePortfolio": "See Portfolio",
+    "seeCaseStudy": "See Case Study"
   },
   "services": {
     "subtitle": "Our approach",
@@ -34,33 +36,26 @@
     "items": [
       {
         "title": "Video Production",
+        "slug": "video-production",
         "desc": "From market research and concept development to complete production planning and execution. We don't base our strategy on fleeting trends and sketches, but on clear messaging and brand identity to ensure content is authentic, long-term usable, and result-oriented.",
         "category": ["Research", "Video Scripts", "Videography", "Video Production"]
       },
       {
         "title": "Performance Marketing",
+        "slug": "performance-marketing",
         "desc": "Data-driven campaigns, not your \"cousin's advice\". Test plans, optimization, and reporting tied to real business goals, not \"engagement\" and \"trash traffic\".",
         "category": ["Research", "Plan", "Execution & Reporting"]
       },
       {
         "title": "Graphic Design",
+        "slug": "graphic-design",
         "desc": "We don't do decoration and \"prettifying\". Every design has its \"why\" - driven by the psychology of attention, readability, and decision-making. Design isn't meant to be complicated, but to solve problems and clearly convey the message.",
         "category": ["Brand Identity", "Visual Communication", "Psychology-Driven"]
       },
       {
-        "title": "Web Development",
-        "desc": "Websites and landing pages with one purpose: convert visits into inquiries or purchases. Offer structure, speed, tracking readiness, and clear CTA flow.",
-        "category": ["Landing Pages", "CRO", "Tracking Ready"]
-      },
-      {
-        "title": "AI Integrations",
-        "desc": "AI and automation that shorten the path from inquiry to sale. Lead qualification, routing, follow-up, and integration with CRM and internal tools.",
-        "category": ["Automation", "Lead Routing", "CRM Sync"]
-      },
-      {
-        "title": "Strategy & Consulting",
+        "title": "Video & Marketing Strategy",
         "desc": "We don't give opinions off the cuff. We audit the current state, define priorities, and create a clear execution plan. You get concrete recommendations, creative direction, and a measurement system your team can implement immediately.",
-        "category": ["Audit", "Creative Direction", "Execution Plan"]
+        "category": ["Creative Direction", "Campaign Planning", "Execution Plan"]
       }
     ]
   },
@@ -86,7 +81,10 @@
       "submit": "Send Message",
       "sending": "Sending...",
       "success": "Message sent successfully! We'll get back to you soon.",
-      "error": "Failed to send message. Please try again or contact us directly at office@fulkrums.com"
+      "error": "Failed to send message. Please try again or contact us directly at office@fulkrums.com",
+      "verificationRequired": "Please wait for verification to complete",
+      "rateLimitExceeded": "Too many attempts. Please try again in a minute.",
+      "verificationFailed": "Verification failed. Please refresh and try again."
     }
   },
   "footer": {
@@ -100,8 +98,7 @@
     },
     "social": {
       "title": "Follow us",
-      "marketing": "Marketing",
-      "development": "Software development"
+      "marketing": "Marketing"
     },
     "copyright": "© 2025 Fulkrums. All rights reserved."
   },
@@ -309,6 +306,67 @@
       "client": "Zamzam Project",
       "services": "Video Production",
       "deliverables": "Long-form Series (30 Episodes), Trailer"
+    }
+  },
+  "common": {
+    "seeMore": "See more",
+    "viewProject": "VIEW PROJECT"
+  },
+  "videoSlider": {
+    "swipeInstruction": "Swipe left or right to navigate",
+    "tapToContinue": "But first, tap anywhere to continue"
+  },
+  "videoProduction": {
+    "smallLabel": "VIDEO PRODUKCIJA",
+    "secondaryLabel": "content services for Facebook, Instagram, Tiktok, Youtube & many more",
+    "headline": "Premium Video Production for Short and Long Form Content",
+    "hashtags": "#Reels #YoutubeVideo #Ads #MotionGraphicsVideo",
+    "description": "Every project is built strategically, resulting in creative content with a clearly defined brand vision. Market research, content planning, and detailed scripts executed with professional equipment lead to a clearly defined goal and measurable results.",
+    "stats": {
+      "viewsSuffix": "M+",
+      "viewsLabel": "views across social media platforms",
+      "minutesSuffix": "+",
+      "minutesLabel": "minutes of client-approved video content",
+      "leadsSuffix": "k+",
+      "leadsLabel": "generated leads and product or service sales"
+    },
+    "process": {
+      "subtitle": "HOW WE WORK?",
+      "title": "See the full process from A to Z.",
+      "step1Title": "Research & Context",
+      "step1Body": "Before filming and editing, we dive into the brand's context and objectives to define what the video needs to achieve. We analyse:",
+      "step1List": "who the audience is and what a \"win\" looks like after the video\nwhere the video will be used (Reels, TikTok, YouTube, web, campaigns)\nwhat the key questions, objections, and motivations of the audience are\nexisting content, tone, and visual brand identity",
+      "step2Title": "Concepts, Angles & Narrative Plan",
+      "step2Body": "We don't rely on a single concept. We map multiple angles and choose the best direction based on the goal and channel:",
+      "step2List": "ads and direct response (problem-solution, offer, demo, objection handling)\nsocial proof (testimonials, case highlights, community moments)\nbrand awareness (positioning, values, premium feel)\nstorytelling and mini-doc (story, conflict, development, conclusion)\neducational format (explanation, how-to, process breakdown)",
+      "step3Title": "Script & Structure",
+      "step3Body": "The script is the foundation of every great video. Depending on the format, we develop a clear concept, detailed breakdown, and brief all participants in advance so every video delivers. Typical components:",
+      "step3List": "hook or opening beat that retains attention\ncontext and message in the first few seconds or first 30–60 seconds depending on format\nmechanism or story that builds trust\nkey points: benefits, differentiation, proof\nclear ending and CTA that fits the brand",
+      "step4Title": "Production & Asset Sourcing",
+      "step4Body": "We work flexibly based on the project and budget:",
+      "step4List": "on-location or controlled environment shoots\nuse of existing client materials when quality and usable\nadditional b-roll, product demos, lifestyle shots\nmotion graphics and UI visuals when a process or data needs explaining\nstock or AI filler only when it makes sense and doesn't compromise premium quality",
+      "step5Title": "Editing System (Retention + Premium Feel)",
+      "step5Body": "Editing is handled exclusively by experienced editors. Different techniques, cinematic look, and final touch deliver the finished premium result.",
+      "step5List": "pacing and cuts adapted to format — short-form dynamic, long-form controlled\nsound design and music in service of the story, not as a random layer\ncaptions and overlays when they contribute to comprehension and retention\ngraphics and callouts that reinforce the message without visual noise\nversions and variations for campaigns — hooks, pacing, CTA, structure",
+      "step6Title": "Delivery, Versions & Reuse",
+      "step6Body": "We deliver video so it can live across multiple platforms:",
+      "step6List": "formats for Reels/TikTok/Shorts, YouTube, web\ncutdowns and teasers from long-form content\ncover frames and basic variations as needed\nclear deliverable organisation and export settings ready for publishing"
+    },
+    "comparison": {
+      "subtitle": "BEFORE / AFTER",
+      "title": "What We've Noticed Isn't Working (And Why Our Videos Perform Better)",
+      "beforeLabel": "Before Fulkrums",
+      "afterLabel": "After Fulkrums",
+      "before1": "Cinematic video, but slow, without pace or a told story",
+      "before2": "Tasteless trend video, made to pump up views with no other goal",
+      "before3": "Video ad that doesn't retain the potential buyer in the first 2-3 seconds of viewing",
+      "before4": "Same angle and video concept every month, without a plan or strategy",
+      "before5": "Slow production and video editing, endless mistakes and not accepting revisions",
+      "after1": "Cinematic-style video with a clearly developed strategy, concept and professional editing",
+      "after2": "Preparation and research are conducted to ensure the project is successfully executed",
+      "after3": "Regardless of video length and format, production is focused on retaining attention",
+      "after4": "One clear and established process, fast execution and launch-ready files, so your team can focus on running the business",
+      "after5": "Video ads produced to create Brand Awareness or conversions"
     }
   }
 }
