@@ -9,6 +9,8 @@ gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother, SplitText);
 // internal imports
 import HeaderFour from "@/layouts/headers/header-four";
 import ServiceDetailsArea from "@/components/service/service-details-area";
+import DigitalMarketingDetailsArea from "@/components/service/digital-marketing-details-area";
+import GraphicDesignDetailsArea from "@/components/service/graphic-design-details-area";
 import FooterFour from "@/layouts/footers/footer-four";
 // animation
 import { charAnimation, titleAnimation } from "@/utils/title-animation";
@@ -17,7 +19,7 @@ type IProps = {
   params: Promise<{ slug: string }>;
 };
 
-const SUPPORTED_SLUGS = ["video-production"];
+const SUPPORTED_SLUGS = ["video-production", "digital-marketing", "performance-marketing", "graphic-design"];
 
 export default function ServicePage({ params }: IProps) {
   const [slug, setSlug] = React.useState<string | null>(null);
@@ -47,7 +49,9 @@ export default function ServicePage({ params }: IProps) {
         <div id="smooth-content">
           <main>
             {/* service details area */}
-            <ServiceDetailsArea />
+            {slug === "video-production" && <ServiceDetailsArea />}
+            {(slug === "digital-marketing" || slug === "performance-marketing") && <DigitalMarketingDetailsArea />}
+            {slug === "graphic-design" && <GraphicDesignDetailsArea />}
             {/* service details area */}
           </main>
 

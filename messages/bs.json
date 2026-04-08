@@ -377,5 +377,89 @@
       "after4": "Jedan jasan i uhodan proces, brza realizacija i fajlovi spremni za launch, kako bi se vaš tim mogao fokusirati na vođenje biznisa.",
       "after5": "Video ads producirani za kreiranje Brand Awaraness ili konverzije"
     }
+  },
+  "digitalMarketing": {
+    "smallLabel": "DIGITAL MARKETING",
+    "secondaryLabel": "Meta Ads management za Facebook, Instagram + TikTok, Google, App campaigns",
+    "headline": "DIGITAL MARKETING KAMPANJE",
+    "hashtags": "#leads #sales #kampanja #metaads",
+    "description": "Ne svodimo marketing na samo puštanje oglasa. Prvo postavljamo sistem kroz tracking, istraživanje tržišta, strukturu kampanja i kreativu kao jednu povezanu cjelinu, a tek onda ulažemo budžet. Cilj je jasan: više prodaja ili više kvalitetnih upita.",
+    "stats": {
+      "stat1Label": "website kupovine u 30 dana (Client ItWorks)",
+      "stat2Label": "app installa u 30 dana (MobileMachineApp)",
+      "stat3Label": "kvalitetnih leadova u 12 dana, lokalno Sarajevo (AKNoviGrad)"
+    },
+    "process": {
+      "subtitle": "KAKO MI RADIMO?",
+      "title": "Pogledajte kako izgleda proces od A do Ž.",
+      "step1Title": "Signal & Tracking Setup",
+      "step1Body": "Prvo zaključamo šta je konverzija i da li je algoritam uopšte može učiti.",
+      "step1List": "pixel/events, purchase, initiate checkout, lead quality\nprovjera da tracking stvarno radi, ne da samo piše da radi\nkod lead gen kampanja: verifikacija broja + 2 pitanja",
+      "step1Outro": "",
+      "step2Title": "Cilj, ponuda i publika",
+      "step2Body": "Prije kreative i kampanje, moramo znati:",
+      "step2List": "kome pričamo i šta ta osoba hoće čuti\nšta je ponuda i zašto bi neko kliknuo danas\nkoji je najveći pain point i kako ga razbiti",
+      "step2Outro": "",
+      "step3Title": "Struktura kampanje",
+      "step3Body": "Postavimo logiku za testiranje kreative i uglova prodaje.",
+      "step3List": "kampanje i ad setovi po fazama: testiranje, skaliranje, retarget\nbudžet raspoređen da donosi učenje, ne samo potrošnju\noptimizacija kampanje se radi na vrijeme i kada je potrebno",
+      "step3Outro": "",
+      "step4Title": "Kreativa i copy",
+      "step4Body": "Kreativa nije dekoracija. Danas, jedan od glavnih pokretača prodaje.\nRadimo više uglova, npr:",
+      "step4List": "problem - rješenje\ndemonstracija i mehanizam\nsocial proof\nprijе - poslije\noffer i direktna ponuda",
+      "step4Outro": "Svaki ugao ima svoj zadatak i mjerimo šta stvarno vuče rezultat.",
+      "step5Title": "Optimizacija i iteracije",
+      "step5Body": "Ne čačkamo kampanju bez razloga.",
+      "step5List": "gasimo ono što ne donosi signal\ndupliramo ono što donosi rezultat\ntestiramo varijacije: hook, pacing, CTA, format, placement",
+      "step5Outro": "Sve promjene imaju razlog i prate se kroz period, ne kroz jedan dan.",
+      "step6Title": "Reporting i Analiza",
+      "step6Body": "U toku mjeseca radimo analize i optimizacije kampanje, skaliranje i mjesečni reporting. Uz reporting predlažemo nove korake.",
+      "step6List": "",
+      "step6Outro": ""
+    },
+    "comparison": {
+      "subtitle": "BEFORE / AFTER",
+      "title": "Šta smo primijetili da nije dobro\n(I zašto kampanje ne daju rezultat)",
+      "description": "Dosta kampanja se vodi na osjećaj. Bez jasnog signala, bez strukture i bez plana testiranja. Onda se budžet troši na pogrešne stvari, a rezultat izostane.",
+      "beforeLabel": "Before Fulkrums",
+      "afterLabel": "After Fulkrums",
+      "before1": "Pixel postoji, ali ne prati ispravno, optimizacija ide na pogrešan event",
+      "before2": "Sve u jednoj kampanji, nema kontrole, nema jasnog testa",
+      "before3": "Kreativa bez plana, isti ugao mjesecima, bez novih varijacija",
+      "before4": "Leadovi lošeg kvaliteta, nema pitanja, nema verifikacije, nema filtera",
+      "before5": "Ne postoji analiza rezultata, a i ako postoji, nije jasan zaključak uspješnosti kampanje",
+      "after1": "Tracking i signal se zaključaju prije trošenja budžeta",
+      "after2": "Jasna struktura: test, scale, retarget, po potrebi i katalog",
+      "after3": "Kreativa se radi kao sistem: više uglova, više varijacija, jasno zašto postoji svaki ad",
+      "after4": "Kvalitet leadova se štiti kroz bolju strukturu forme, pitanja i verifikaciju",
+      "after5": "Optimizacija je iteracija, ne panika, tačno znamo šta gasimo i zašto",
+      "after6": "Jedan tok rada, brze izmjene i jasni fajlovi spremni za launch"
+    }
+  },
+  "graphicDesign": {
+    "smallLabel": "GRAFIČKI DIZAJN",
+    "secondaryLabel": "Grafički dizajn za društvene mreže, print i brandiranje",
+    "headline": "GRAFIČKI DIZAJN ZA DRUŠTVENE MREŽE, PRINT I BRANDIRANJE",
+    "hashtags": "#socialmediadesign #staticads #printdesign #branding",
+    "description": "Dizajn nije tu da izgleda lijepo. Poruku treba prenijeti brzo, graditi brand na prethodno utvrđenim smjernicama i maksimalno približiti svoju viziju publici.",
+    "stats": {
+      "stat1Label": "uspješnih saradnji sa klijentima širom svijeta",
+      "stat2Label": "godina iskustva u industriji",
+      "stat3Label": "kreiranih vizuala"
+    },
+    "process": {
+      "subtitle": "KAKO FUNKCIONIŠE",
+      "title": "Jasan proces, bez pogađanja i bez dekoracije. Prvo definišemo šta treba postići, pa tek onda crtamo.",
+      "step1Title": "Zakaži Demo Poziv",
+      "step1Body": "Kratko prolazimo kroz cilj, publiku i gdje će se dizajn koristiti, da odmah postavimo smjer i očekivanja.",
+      "step2Title": "Zaprimi i ispuni upitnik",
+      "step2Body": "Dobijaš upitnik koji nam daje informacije o filozofiji brenda, potrebama, ponudi i stilu, da ne radimo naslijepo.",
+      "step3Title": "Pregledaj koncept na osnovu istraživanja",
+      "step3Body": "Na osnovu istraživanja pripremamo koncept i smjer, ti ga pregledaš i potvrdiš prije izrade finala.",
+      "step4Title": "Rad na dizajnu",
+      "step4Body": "Krećemo u izradu dizajna i pripremu formata za stvarnu upotrebu, u skladu sa dogovorenim smjerom.",
+      "step5Title": "Revizije i potvrda dizajna",
+      "step5Body": "Radimo revizije, zaključujemo final i isporučujemo spremne fajlove nakon potvrde."
+    }
   }
 }

@@ -368,5 +368,89 @@
       "after4": "One clear and established process, fast execution and launch-ready files, so your team can focus on running the business",
       "after5": "Video ads produced to create Brand Awareness or conversions"
     }
+  },
+  "digitalMarketing": {
+    "smallLabel": "DIGITAL MARKETING",
+    "secondaryLabel": "Meta Ads management for Facebook, Instagram + TikTok, Google, App campaigns",
+    "headline": "DIGITAL MARKETING CAMPAIGNS",
+    "hashtags": "#leads #sales #campaigns #metaads",
+    "description": "We don't reduce marketing to just running ads. We first build the system through tracking, market research, campaign structure and creative as one connected unit — then we invest the budget. The goal is clear: more sales or more quality leads.",
+    "stats": {
+      "stat1Label": "website purchases in 30 days (Client ItWorks)",
+      "stat2Label": "app installs in 30 days (MobileMachineApp)",
+      "stat3Label": "quality leads in 12 days, local Sarajevo (AKNoviGrad)"
+    },
+    "process": {
+      "subtitle": "HOW WE WORK?",
+      "title": "See the full process from A to Z.",
+      "step1Title": "Signal & Tracking Setup",
+      "step1Body": "First we lock down what the conversion is and whether the algorithm can even learn from it.",
+      "step1List": "pixel/events, purchase, initiate checkout, lead quality\nverifying that tracking actually works, not just says it does\nfor lead gen campaigns: number verification + 2 qualifying questions",
+      "step1Outro": "",
+      "step2Title": "Goal, Offer & Audience",
+      "step2Body": "Before creative and campaign, we need to know:",
+      "step2List": "who we're talking to and what that person wants to hear\nwhat the offer is and why someone would click today\nwhat the biggest pain point is and how to break it down",
+      "step2Outro": "",
+      "step3Title": "Campaign Structure",
+      "step3Body": "We set the logic for testing creative and sales angles.",
+      "step3List": "campaigns and ad sets by phase: testing, scaling, retargeting\nbudget distributed to drive learning, not just spend\ncampaign optimization done on time and when needed",
+      "step3Outro": "",
+      "step4Title": "Creative & Copy",
+      "step4Body": "Creative isn't decoration. Today, it's one of the main drivers of sales.\nWe run multiple angles, e.g:",
+      "step4List": "problem - solution\ndemonstration and mechanism\nsocial proof\nbefore - after\noffer and direct pitch",
+      "step4Outro": "Each angle has its job and we measure what actually drives results.",
+      "step5Title": "Optimization & Iterations",
+      "step5Body": "We don't fiddle with the campaign for no reason.",
+      "step5List": "we turn off what doesn't bring signal\nwe scale what brings results\nwe test variations: hook, pacing, CTA, format, placement",
+      "step5Outro": "Every change has a reason and is tracked over a period, not a single day.",
+      "step6Title": "Reporting & Analysis",
+      "step6Body": "During the month we run analysis and campaign optimizations, scaling and monthly reporting. With reporting we propose next steps.",
+      "step6List": "",
+      "step6Outro": ""
+    },
+    "comparison": {
+      "subtitle": "BEFORE / AFTER",
+      "title": "What We've Noticed Isn't Working\n(And Why Campaigns Don't Deliver Results)",
+      "description": "A lot of campaigns are run on gut feeling. Without a clear signal, without structure and without a testing plan. Then the budget gets spent on the wrong things, and results don't come.",
+      "beforeLabel": "Before Fulkrums",
+      "afterLabel": "After Fulkrums",
+      "before1": "Pixel exists but doesn't track correctly — optimization targets the wrong event",
+      "before2": "Everything in one campaign, no control, no clear test",
+      "before3": "Creative without a plan, same angle for months, no new variations",
+      "before4": "Low-quality leads — no questions, no verification, no filter",
+      "before5": "No results analysis, and if there is one, the success of the campaign isn't clear",
+      "after1": "Tracking and signal are locked down before spending budget",
+      "after2": "Clear structure: test, scale, retarget, catalog when needed",
+      "after3": "Creative built as a system: multiple angles, multiple variations, clear reason each ad exists",
+      "after4": "Lead quality protected through better form structure, questions and verification",
+      "after5": "Optimization is iteration, not panic — we know exactly what we're turning off and why",
+      "after6": "One clean workflow, fast changes and launch-ready files"
+    }
+  },
+  "graphicDesign": {
+    "smallLabel": "GRAPHIC DESIGN",
+    "secondaryLabel": "Graphic design for social media, print and branding",
+    "headline": "GRAPHIC DESIGN FOR SOCIAL MEDIA, PRINT AND BRANDING",
+    "hashtags": "#socialmediadesign #staticads #printdesign #branding",
+    "description": "Design isn't there to look nice. The message needs to be delivered fast, build the brand on pre-established guidelines, and bring your vision as close as possible to your audience.",
+    "stats": {
+      "stat1Label": "successful collaborations with clients worldwide",
+      "stat2Label": "years of experience in the industry",
+      "stat3Label": "visuals created"
+    },
+    "process": {
+      "subtitle": "HOW IT WORKS",
+      "title": "A clear process, no guessing and no decoration. We define what needs to be achieved first, then we design.",
+      "step1Title": "Schedule a Demo Call",
+      "step1Body": "We briefly go through the goal, audience and where the design will be used, so we set the direction and expectations right away.",
+      "step2Title": "Receive and fill in the questionnaire",
+      "step2Body": "You receive a questionnaire that gives us information about the brand philosophy, needs, offer and style — so we're not working blind.",
+      "step3Title": "Review the concept based on research",
+      "step3Body": "Based on our research we prepare a concept and direction, you review and confirm it before the final is made.",
+      "step4Title": "Design work",
+      "step4Body": "We begin creating the design and preparing formats for real-world use, in line with the agreed direction.",
+      "step5Title": "Revisions and design confirmation",
+      "step5Body": "We do revisions, lock the final and deliver ready-to-use files after confirmation."
+    }
   }
 }
