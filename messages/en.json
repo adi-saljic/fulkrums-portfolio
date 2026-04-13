@@ -42,7 +42,7 @@
       },
       {
         "title": "Performance Marketing",
-        "slug": "performance-marketing",
+        "slug": "digital-marketing",
         "desc": "Data-driven campaigns, not your \"cousin's advice\". Test plans, optimization, and reporting tied to real business goals, not \"engagement\" and \"trash traffic\".",
         "category": ["Research", "Plan", "Execution & Reporting"]
       },
@@ -452,5 +452,8 @@
       "step5Title": "Revisions and design confirmation",
       "step5Body": "We do revisions, lock the final and deliver ready-to-use files after confirmation."
     }
+  },
+  "studyCases": {
+    "resultsVideo": "Results Video"
   }
 }

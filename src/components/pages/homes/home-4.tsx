@@ -22,7 +22,6 @@ import { textInvert } from "@/utils/text-invert";
 import { fadeAnimation, revelAnimationOne } from "@/utils/title-animation";
 import { projectThreeAnimation } from "@/utils/project-anim";
 import { ctaAnimation } from "@/utils/cta-anim";
-import { generateLocalBusinessSchema, generateOrganizationSchema, generateWebSiteSchema } from "@/lib/seo/schemas";
 
 const HomeFourMain = () => {
   useScrollSmooth();
@@ -44,26 +43,8 @@ const HomeFourMain = () => {
     return () => clearTimeout(timer);
   });
 
-  // JSON-LD schemas for SEO
-  const localBusinessSchema = generateLocalBusinessSchema('bs');
-  const organizationSchema = generateOrganizationSchema('bs');
-  const websiteSchema = generateWebSiteSchema('bs');
-
   return (
     <Wrapper>
-      {/* JSON-LD Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
 
       {/* header area start */}
       <HeaderFour />

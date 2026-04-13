@@ -1,103 +1,54 @@
-"use client";
-import { gsap } from "gsap";
-import React from "react";
-import { useGSAP } from "@gsap/react";
-import { ScrollSmoother, ScrollTrigger, SplitText } from "@/plugins";
-import { notFound } from "next/navigation";
-gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother, SplitText);
+import { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+import { generatePageMetadata } from '@/lib/seo/metadata';
+import { getProjectData } from '@/data/project-data';
+import ProjectPageClient from './project-page-client';
 
-import HeaderFour from "@/layouts/headers/header-four";
-import FooterFour from "@/layouts/footers/footer-four";
-import ProjectDetailsArea from "@/components/portfolio/details/project-details-area";
-import ContactOne from "@/components/contact/contact-one";
-import { getProjectData } from "@/data/project-data";
-import { charAnimation, titleAnimation } from "@/utils/title-animation";
-import { hoverBtn } from "@/utils/hover-btn";
-import YouTubeIframeSlider from "@/components/youtube/youtube-iframe-slider";
-import { youtubeVideos } from "@/data/youtube-videos";
+type Props = { params: Promise<{ locale: string; slug: string }> };
 
-type IProps = {
-  params: Promise<{ slug: string }>;
-};
-
-export default function ProjectPage({ params }: IProps) {
-  const [slug, setSlug] = React.useState<string | null>(null);
-
-  React.useEffect(() => {
-    params.then((p) => setSlug(p.slug));
-  }, [params]);
-
-  useGSAP(() => {
-    const timer = setTimeout(() => {
-      charAnimation();
-      titleAnimation();
-      hoverBtn();
-    }, 100);
-    return () => clearTimeout(timer);
-  });
-
-  if (!slug) {
-    return null;
-  }
-
-  const project = getProjectData().find((p) => p.slug === slug);
-
-  if (!project) {
-    notFound();
-  }
-
-  // Check if this project has YouTube videos for study case
-  const slugToKey: Record<string, keyof typeof youtubeVideos> = {
-    "atleta": "atleta",
-    "quickie-liga": "quickieLiga",
-  };
-  const youtubeKey = slugToKey[slug];
-  const youtubeEntry = youtubeKey ? (youtubeVideos[youtubeKey] as { studyCase?: string[]; portfolio?: string[] }) : null;
-  const hasYouTubeVideos = !!(youtubeEntry?.studyCase);
-  const youtubeVideoEmbeds = youtubeEntry?.studyCase ?? null;
-
-  return (
-    <>
-      {/* header area start */}
-      <HeaderFour />
-      {/* header area end */}
-
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main>
-            {/* project details */}
-            <ProjectDetailsArea project={project} />
-            {/* project details */}
-
-            {/* YouTube Video Slider for Results - BOTTOM before contact */}
-            {hasYouTubeVideos && youtubeVideoEmbeds && (
-              <section className="study-case-youtube-section pt-120 pb-60">
-                <div className="container">
-                  <div className="row justify-content-center mb-60">
-                    <div className="col-xl-8 text-center">
-                      <h2 className="tp-section-title">Results Video</h2>
-                    </div>
-                  </div>
-                  <div className="row justify-content-center">
-                    <div className="col-xl-10">
-                      <YouTubeIframeSlider iframeEmbeds={youtubeVideoEmbeds} />
-                    </div>
-                  </div>
-                </div>
-              </section>
-            )}
-            {/* YouTube Video Slider end */}
-
-            {/* contact area */}
-            <ContactOne />
-            {/* contact area */}
-          </main>
-
-          {/* footer area */}
-          <FooterFour />
-          {/* footer area */}
-        </div>
-      </div>
-    </>
+export function generateStaticParams() {
+  return ['bs', 'en'].flatMap((locale) =>
+    getProjectData().map((item) => ({ locale, slug: item.slug }))
   );
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const item = getProjectData().find((p) => p.slug === slug);
+  if (!item) return {};
+
+  let projectTitle = item.titleKey;
+  let overview = '';
+  try {
+    const t = await getTranslations({ locale, namespace: 'projectData' });
+    const data = t.raw(item.titleKey) as { title?: string; overview?: string };
+    projectTitle = data.title || item.titleKey;
+    overview = data.overview || '';
+  } catch {
+    // use titleKey fallback
+  }
+
+  const title =
+    locale === 'bs'
+      ? `${projectTitle} - Rezultati & Case Study | Fulkrums Sarajevo`
+      : `${projectTitle} - Results & Case Study | Fulkrums Sarajevo`;
+
+  const description = overview
+    ? overview.slice(0, 160)
+    : locale === 'bs'
+    ? `Case study ${projectTitle} — performance marketing i video produkcija od Fulkrums agencije Sarajevo.`
+    : `Case study: ${projectTitle} — performance marketing and video production by Fulkrums agency Sarajevo.`;
+
+  return generatePageMetadata({
+    title,
+    description,
+    path: `/study-cases/${slug}`,
+    locale,
+    keywords: ['case study', 'results', projectTitle, 'Fulkrums', 'Sarajevo', 'performance marketing'],
+    image: item.heroImage || undefined,
+  });
+}
+
+export default function StudyCasePage({ params }: Props) {
+  return <ProjectPageClient params={params} />;
 }

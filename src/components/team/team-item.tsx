@@ -23,7 +23,7 @@ export default function TeamItem({ item, handleTeamModal }: IProps) {
   return (
     <div className="tp-team-item tp-hover-btn-wrapper marque fix mb-30">
       <div className="tp-hover-btn-item">
-        <Image style={{ width: "auto", height: "auto" }} src={item.image} alt="team-img" width={375} height={464} />
+        <Image style={{ width: "auto", height: "auto" }} src={item.image} alt={item.name} width={375} height={464} />
       </div>
       <div className="tp-team-content">
         <span>{getDesignation(item.designation)}</span>

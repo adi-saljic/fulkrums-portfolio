@@ -173,3 +173,88 @@ export const teamMetadata = {
     keywords: [...defaultKeywords, 'team', 'experts', 'professionals'],
   },
 };
+
+// Service page metadata
+export const serviceMetadata = {
+  'video-production': {
+    bs: {
+      title: 'Video Produkcija Sarajevo - Profesionalni Video Marketing | Fulkrums Bosna',
+      description: 'Profesionalna video produkcija i video marketing u Sarajevu. Od istraživanja i koncepta do finalne isporuke — video sadržaj koji gradi brend i donosi rezultate u Bosni i Hercegovini.',
+      keywords: [
+        ...defaultKeywords,
+        'video produkcija Sarajevo',
+        'video marketing Sarajevo',
+        'snimanje videozapisa Bosna',
+        'videography Sarajevo',
+        'video agencija Sarajevo',
+        'profesionalna video produkcija BiH',
+      ],
+    },
+    en: {
+      title: 'Video Production Sarajevo - Professional Video Marketing | Fulkrums Bosnia',
+      description: 'Professional video production and video marketing in Sarajevo. From research and concept to final delivery — video content that builds your brand and drives results across Bosnia and Herzegovina.',
+      keywords: [
+        ...defaultKeywords,
+        'video production Sarajevo',
+        'video marketing Bosnia',
+        'commercial video production BiH',
+        'videography agency Sarajevo',
+        'professional video production Balkans',
+      ],
+    },
+  },
+  'digital-marketing': {
+    bs: {
+      title: 'Digitalni Marketing Sarajevo - Meta Ads, Performance Kampanje | Fulkrums BiH',
+      description: 'Data-driven digitalni marketing i performance kampanje u Sarajevu. Meta Ads, tracking setup, kreativa i reporting koji se vežu na stvarne poslovne ciljeve u Bosni i Hercegovini.',
+      keywords: [
+        ...defaultKeywords,
+        'digitalni marketing Sarajevo',
+        'Meta Ads Bosna',
+        'performance marketing agencija BiH',
+        'Facebook oglasi Sarajevo',
+        'Instagram oglasi Bosna',
+        'lead generation Sarajevo',
+      ],
+    },
+    en: {
+      title: 'Digital Marketing Sarajevo - Meta Ads, Performance Campaigns | Fulkrums BiH',
+      description: 'Data-driven digital marketing and performance campaigns in Sarajevo. Meta Ads, tracking setup, creative, and reporting tied to real business goals across Bosnia and Herzegovina.',
+      keywords: [
+        ...defaultKeywords,
+        'digital marketing Sarajevo',
+        'Meta Ads Bosnia',
+        'performance marketing agency BiH',
+        'Facebook ads Sarajevo',
+        'Instagram ads Bosnia',
+        'lead generation Sarajevo',
+      ],
+    },
+  },
+  'graphic-design': {
+    bs: {
+      title: 'Grafički Dizajn Sarajevo - Brand Identity, Social Media Dizajn | Fulkrums BiH',
+      description: 'Strateški grafički dizajn u Sarajevu. Brand identity, vizualna komunikacija i social media dizajn koji rješava probleme za brendove u Bosni i Hercegovini.',
+      keywords: [
+        ...defaultKeywords,
+        'grafički dizajn Sarajevo',
+        'brand identity Bosna',
+        'social media dizajn BiH',
+        'logo dizajn Bosna',
+        'branding agencija BiH',
+      ],
+    },
+    en: {
+      title: 'Graphic Design Sarajevo - Brand Identity, Social Media Design | Fulkrums BiH',
+      description: 'Strategic graphic design in Sarajevo. Brand identity, visual communication, and social media design that communicates clearly for brands across Bosnia and Herzegovina.',
+      keywords: [
+        ...defaultKeywords,
+        'graphic design Sarajevo',
+        'brand identity Bosnia',
+        'social media design BiH',
+        'logo design Bosnia',
+        'branding agency BiH',
+      ],
+    },
+  },
+};

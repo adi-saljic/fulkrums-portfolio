@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import HomeFourPage from "./(homes)/home-4/page";
 import { generatePageMetadata, homeMetadata } from "@/lib/seo/metadata";
+import { generateLocalBusinessSchema, generateOrganizationSchema, generateWebSiteSchema } from "@/lib/seo/schemas";
 
 export async function generateMetadata({
   params,
@@ -19,9 +20,30 @@ export async function generateMetadata({
   });
 }
 
-export default function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const localBusinessSchema = generateLocalBusinessSchema(locale);
+  const organizationSchema = generateOrganizationSchema(locale);
+  const websiteSchema = generateWebSiteSchema(locale);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
       <HomeFourPage />
     </>
   );

@@ -477,7 +477,7 @@ export default function ProjectDetailsArea({ project }: IProps) {
                     <Image
                       data-speed=".8"
                       src={img}
-                      alt="details-thumb"
+                      alt={project.titleKey}
                       width={600}
                       height={450}
                       style={{

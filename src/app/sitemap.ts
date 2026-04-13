@@ -12,11 +12,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const locales = ['bs', 'en'];
 
   // Helper to create locale variants
-  const createLocaleUrls = (path: string, priority: number) => {
+  const createLocaleUrls = (
+    path: string,
+    priority: number,
+    changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never' = 'monthly'
+  ) => {
     return locales.map(locale => ({
       url: locale === 'bs' ? `${baseUrl}${path}` : `${baseUrl}/${locale}${path}`,
       lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
+      changeFrequency,
       priority,
       alternates: {
         languages: {
@@ -27,9 +31,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
   };
 
+  // Service slugs
+  const SERVICE_SLUGS = ['video-production', 'digital-marketing', 'graphic-design'];
+
   // Main pages
   const mainPages = [
-    ...createLocaleUrls('/', 1.0),
+    ...createLocaleUrls('/', 1.0, 'weekly'),
     ...createLocaleUrls('/portfolio', 0.9),
     ...createLocaleUrls('/study-cases', 0.9),
     ...createLocaleUrls('/our-team', 0.8),
@@ -45,9 +52,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     createLocaleUrls(`/study-cases/${item.slug}`, 0.7)
   );
 
+  // Service pages
+  const servicePages = SERVICE_SLUGS.flatMap(slug =>
+    createLocaleUrls(`/services/${slug}`, 0.8)
+  );
+
   return [
     ...mainPages,
     ...portfolioPages,
     ...studyCasePages,
+    ...servicePages,
   ];
 }

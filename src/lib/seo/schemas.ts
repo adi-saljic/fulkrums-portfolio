@@ -156,6 +156,7 @@ export function generateOrganizationSchema(locale: string = 'bs') {
       areaServed: ['BA', 'HR', 'RS', 'ME'],
       availableLanguage: ['Bosnian', 'English', 'Serbian', 'Croatian'],
     },
+    sameAs: [] as string[],
   };
 }
 

@@ -19,6 +19,22 @@ const nextConfig = {
     ],
     formats: ['image/webp'],
   },
+  async redirects() {
+    return [
+      // 301 redirect: performance-marketing → digital-marketing (bs locale, no prefix)
+      {
+        source: '/services/performance-marketing',
+        destination: '/services/digital-marketing',
+        permanent: true,
+      },
+      // 301 redirect: performance-marketing → digital-marketing (en locale)
+      {
+        source: '/en/services/performance-marketing',
+        destination: '/en/services/digital-marketing',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);

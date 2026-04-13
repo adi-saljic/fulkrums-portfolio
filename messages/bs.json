@@ -47,7 +47,7 @@
       },
       {
         "title": "Performance Marketing",
-        "slug": "performance-marketing",
+        "slug": "digital-marketing",
         "desc": "Kampanje koje se vode podacima, ne \"savjetu malog rođaka\". Test plan, optimizacija i reporting koji se vežu na stvarne ciljeve biznisa, ne na \"engagement\" i \"trash traffic\".",
         "category": ["Istraživanje", "Plan", "Realizacija i Reporting"]
       },
@@ -461,5 +461,8 @@
       "step5Title": "Revizije i potvrda dizajna",
       "step5Body": "Radimo revizije, zaključujemo final i isporučujemo spremne fajlove nakon potvrde."
     }
+  },
+  "studyCases": {
+    "resultsVideo": "Video Rezultati"
   }
 }

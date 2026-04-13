@@ -79,9 +79,8 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "google-site-verification-code",
-  },
+  // TODO: Add Google Search Console verification code here once account is set up
+  // verification: { google: "YOUR_VERIFICATION_CODE" },
 };
 
 export default function RootLayout({
