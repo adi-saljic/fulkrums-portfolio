@@ -24,13 +24,22 @@ function responsiveEmbed(embed: string): string {
 
 export default function VideoShowcaseSlider({ videos }: VideoShowcaseSliderProps) {
   const [activeEntry, setActiveEntry] = useState<string | null>(null);
+  const [isModalLoading, setIsModalLoading] = useState<boolean>(false);
   const modalVideoRef = useRef<HTMLVideoElement>(null);
 
   if (!videos || videos.length === 0) return null;
 
+  const open = (entry: string) => {
+    setActiveEntry(entry);
+    if (!isYouTubeEmbed(entry)) {
+      setIsModalLoading(true);
+    }
+  };
+
   const close = () => {
     if (modalVideoRef.current) modalVideoRef.current.pause();
     setActiveEntry(null);
+    setIsModalLoading(false);
   };
 
   return (
@@ -47,7 +56,7 @@ export default function VideoShowcaseSlider({ videos }: VideoShowcaseSliderProps
                     const ytId = isYT ? extractYouTubeId(entry) : null;
 
                     return (
-                      <div key={i} onClick={() => setActiveEntry(entry)}>
+                      <div key={i} onClick={() => open(entry)}>
                         <div
                           className="tp-gallery-item mr-30"
                           style={{
@@ -165,9 +174,25 @@ export default function VideoShowcaseSlider({ videos }: VideoShowcaseSliderProps
           </button>
 
           <div
-            style={{ width: "min(90vw, 420px)", aspectRatio: "9/16", maxHeight: "85vh" }}
+            style={{ position: "relative", width: "min(90vw, 420px)", aspectRatio: "9/16", maxHeight: "85vh" }}
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Spinner while video buffers */}
+            {isModalLoading && (
+              <div style={{
+                position: "absolute", inset: 0, display: "flex",
+                alignItems: "center", justifyContent: "center",
+                background: "rgba(0,0,0,0.85)", borderRadius: "8px", zIndex: 2,
+              }}>
+                <div style={{
+                  width: "44px", height: "44px",
+                  border: "3px solid rgba(255,255,255,0.15)",
+                  borderTopColor: "#fff", borderRadius: "50%",
+                  animation: "modal-spin 0.8s linear infinite",
+                }} />
+              </div>
+            )}
+
             {isYouTubeEmbed(activeEntry) ? (
               <div
                 style={{ width: "100%", height: "100%" }}
@@ -180,10 +205,15 @@ export default function VideoShowcaseSlider({ videos }: VideoShowcaseSliderProps
                 controls
                 autoPlay
                 playsInline
+                onCanPlay={() => setIsModalLoading(false)}
                 style={{ width: "100%", height: "100%", objectFit: "contain", borderRadius: "8px" }}
               />
             )}
           </div>
+
+          <style jsx>{`
+            @keyframes modal-spin { to { transform: rotate(360deg); } }
+          `}</style>
         </div>
       )}
     </div>

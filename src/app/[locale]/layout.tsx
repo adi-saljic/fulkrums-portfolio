@@ -29,6 +29,10 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning={true}>
+      <head>
+        <link rel="preconnect" href="https://d1hqd8vqu5a5q0.cloudfront.net" />
+        <link rel="dns-prefetch" href="https://d1hqd8vqu5a5q0.cloudfront.net" />
+      </head>
       <body
         id="body"
         suppressHydrationWarning={true}

@@ -49,6 +49,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 }
 
-export default function StudyCasePage({ params }: Props) {
-  return <ProjectPageClient params={params} />;
+export default async function StudyCasePage({ params }: Props) {
+  const { slug } = await params;
+  const item = getProjectData().find((p) => p.slug === slug);
+  return (
+    <>
+      {item?.heroImage && (
+        <link rel="preload" as="image" href={item.heroImage} />
+      )}
+      <ProjectPageClient params={params} />
+    </>
+  );
 }

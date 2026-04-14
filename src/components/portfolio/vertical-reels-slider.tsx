@@ -16,35 +16,27 @@ export default function VerticalReelsSlider({ videos }: Props) {
   const [unmutedVideo, setUnmutedVideo] = useState<number | null>(null);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const [activeSlide, setActiveSlide] = useState<number>(0);
-  const [videosReady, setVideosReady] = useState<Set<number>>(new Set());
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const swiperRef = useRef<any>(null);
   const [hasScrolled, setHasScrolled] = useState<boolean>(false);
 
-  // Mobile detection
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [showHint, setShowHint] = useState<boolean>(true);
 
-  // NEW: State for video dimensions and fullscreen
-  const [videoDimensions, setVideoDimensions] = useState<Map<number, {width: number, height: number}>>(new Map());
+  const [videoDimensions, setVideoDimensions] = useState<Map<number, { width: number; height: number }>>(new Map());
   const [isFullscreen, setIsFullscreen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // NEW: Detect aspect ratio of active video
   const activeVideoDimensions = videoDimensions.get(activeSlide);
   const isLandscape = activeVideoDimensions
-    ? (activeVideoDimensions.width / activeVideoDimensions.height) > 1
-    : true; // Default landscape since all videos are landscape
+    ? activeVideoDimensions.width / activeVideoDimensions.height > 1
+    : true;
 
-  // NEW: Handle video metadata loaded to get dimensions
   const handleVideoLoadedMetadata = (index: number, event: React.SyntheticEvent<HTMLVideoElement>) => {
     const video = event.currentTarget;
-    setVideoDimensions(prev => new Map(prev).set(index, {
-      width: video.videoWidth,
-      height: video.videoHeight
-    }));
+    setVideoDimensions((prev) => new Map(prev).set(index, { width: video.videoWidth, height: video.videoHeight }));
   };
 
-  // NEW: Fullscreen toggle
   const toggleFullscreen = () => {
     if (!document.fullscreenElement) {
       containerRef.current?.requestFullscreen();
@@ -55,32 +47,51 @@ export default function VerticalReelsSlider({ videos }: Props) {
     }
   };
 
-  // NEW: ESC key listener for fullscreen
   useEffect(() => {
-    const handleFullscreenChange = () => {
-      setIsFullscreen(!!document.fullscreenElement);
-    };
-    document.addEventListener('fullscreenchange', handleFullscreenChange);
-    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+    const handleFullscreenChange = () => setIsFullscreen(!!document.fullscreenElement);
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+    return () => document.removeEventListener("fullscreenchange", handleFullscreenChange);
   }, []);
 
-  // Mobile detection
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // Dismiss hint overlay
-  const dismissHint = () => {
-    setShowHint(false);
+  // When active slide changes: show spinner, pause others, play active
+  useEffect(() => {
+    setIsLoading(true);
+
+    videoRefs.current.forEach((video, index) => {
+      if (!video) return;
+      if (index !== activeSlide) {
+        video.pause();
+      }
+    });
+
+    // If the active video already has data buffered (e.g. revisiting a slide), play immediately
+    const activeVideo = videoRefs.current[activeSlide];
+    if (activeVideo && activeVideo.readyState >= 3) {
+      setIsLoading(false);
+      activeVideo.play().catch(() => {});
+    }
+  }, [activeSlide]);
+
+  const handleCanPlay = (index: number) => {
+    if (index === activeSlide) {
+      setIsLoading(false);
+      videoRefs.current[index]?.play().catch(() => {});
+    }
   };
+
+  const dismissHint = () => setShowHint(false);
 
   return (
     <div
       ref={containerRef}
-      className={`video-slider-container ${isLandscape ? 'landscape-mode' : 'portrait-mode'}`}
+      className={`video-slider-container ${isLandscape ? "landscape-mode" : "portrait-mode"}`}
     >
       {/* Fullscreen Button */}
       <button
@@ -169,16 +180,16 @@ export default function VerticalReelsSlider({ videos }: Props) {
         modules={[Navigation, EffectCreative]}
         spaceBetween={0}
         slidesPerView={1}
-        direction={isMobile ? 'horizontal' : 'vertical'}
-        effect={isMobile ? 'creative' : undefined}
-        creativeEffect={isMobile ? {
-          prev: {
-            translate: [0, '-100%', 0],
-          },
-          next: {
-            translate: [0, '100%', 0],
-          },
-        } : undefined}
+        direction={isMobile ? "horizontal" : "vertical"}
+        effect={isMobile ? "creative" : undefined}
+        creativeEffect={
+          isMobile
+            ? {
+                prev: { translate: [0, "-100%", 0] },
+                next: { translate: [0, "100%", 0] },
+              }
+            : undefined
+        }
         loop={true}
         mousewheel={!isMobile}
         onSlideChange={(swiper) => {
@@ -187,7 +198,6 @@ export default function VerticalReelsSlider({ videos }: Props) {
           if (unmutedVideo !== null) {
             setUnmutedVideo(newIndex);
           }
-          // Mark as scrolled if user changed from initial video
           if (newIndex !== 0) {
             setHasScrolled(true);
           }
@@ -213,78 +223,100 @@ export default function VerticalReelsSlider({ videos }: Props) {
                 borderRadius: "16px",
               }}
             >
+              {/* Loading spinner — shown while active video is buffering */}
+              {index === activeSlide && isLoading && (
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    background: "rgba(0,0,0,0.85)",
+                    zIndex: 5,
+                    borderRadius: "16px",
+                  }}
+                  aria-hidden="true"
+                >
+                  <div className="tp-video-spinner" />
+                </div>
+              )}
+
               <video
                 ref={(el) => {
                   videoRefs.current[index] = el;
-                  if (el) {
-                    // Auto-play when active
-                    if (index === activeSlide) {
-                      el.play().catch(() => {});
-                    }
-                    // Listen for when video can play through
-                    el.addEventListener('canplaythrough', () => {
-                      setVideosReady(prev => new Set(prev).add(index));
-                    }, { once: true });
-                  }
                 }}
-                src={video}
+                // Only set src on the active slide — all others stay unloaded
+                src={index === activeSlide ? video : undefined}
                 onLoadedMetadata={(e) => handleVideoLoadedMetadata(index, e)}
+                onCanPlay={() => handleCanPlay(index)}
                 muted={unmutedVideo !== index}
                 loop
                 playsInline
-                preload="auto"
-                autoPlay={index === activeSlide}
+                // metadata only for active, none for inactive
+                preload={index === activeSlide ? "metadata" : "none"}
                 style={{
                   position: "absolute",
                   top: "50%",
                   left: "50%",
                   transform: "translate(-50%, -50%)",
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'contain',
-                  opacity: videosReady.has(index) || index === activeSlide ? 1 : 0.5,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
                 }}
               />
-              <div style={{
-                position: "absolute",
-                bottom: 0,
-                left: 0,
-                right: 0,
-                height: "40%",
-                background: "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)",
-                pointerEvents: "none",
-                zIndex: 1,
-              }} />
-              {unmutedVideo !== index && (
-                <div style={{
+
+              {/* Gradient overlay */}
+              <div
+                style={{
                   position: "absolute",
-                  bottom: "20px",
-                  left: "20px",
-                  fontSize: "24px",
-                  color: "white",
-                  opacity: 1,
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  height: "40%",
+                  background: "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)",
                   pointerEvents: "none",
-                  transition: "all 0.3s",
-                  textShadow: "0 2px 8px rgba(0,0,0,0.8)",
-                  zIndex: 10,
+                  zIndex: 1,
+                }}
+              />
+
+              {/* Mute indicator */}
+              {unmutedVideo !== index && (
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "20px",
+                    left: "20px",
+                    fontSize: "24px",
+                    color: "white",
+                    pointerEvents: "none",
+                    textShadow: "0 2px 8px rgba(0,0,0,0.8)",
+                    zIndex: 10,
+                    background: "rgba(0,0,0,0.5)",
+                    padding: "6px 12px",
+                    borderRadius: "20px",
+                    backdropFilter: "blur(10px)",
+                  }}
+                >
+                  🔇
+                </div>
+              )}
+
+              {/* Video counter */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: "20px",
+                  right: "20px",
+                  color: "white",
+                  fontSize: "14px",
+                  fontWeight: "600",
                   background: "rgba(0,0,0,0.5)",
                   padding: "6px 12px",
                   borderRadius: "20px",
                   backdropFilter: "blur(10px)",
-                }}>🔇</div>
-              )}
-              <div style={{
-                position: "absolute",
-                top: "20px",
-                right: "20px",
-                color: "white",
-                fontSize: "14px",
-                fontWeight: "600",
-                background: "rgba(0,0,0,0.5)",
-                padding: "6px 12px",
-                borderRadius: "20px",
-                backdropFilter: "blur(10px)",
-              }}>
+                }}
+              >
                 {index + 1} / {videos.length}
               </div>
             </div>
@@ -292,93 +324,118 @@ export default function VerticalReelsSlider({ videos }: Props) {
         ))}
       </Swiper>
 
-      {/* Scroll to see more text - only show on desktop if user hasn't scrolled yet */}
+      {/* Scroll hint — desktop only, before first scroll */}
       {!hasScrolled && !isMobile && (
-        <div style={{
-          position: "absolute",
-          bottom: "20px",
-          left: "50%",
-          transform: "translateX(-50%)",
-          zIndex: 10,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "8px",
-          animation: "bounce 2s infinite",
-        }}>
-          <div style={{
-            fontSize: "13px",
-            fontWeight: 500,
-            color: "rgba(255, 255, 255, 0.9)",
-            letterSpacing: "1.5px",
-            textTransform: "uppercase",
-            fontFamily: "Syne, Syne Fallback, sans-serif",
-            textShadow: "0 2px 8px rgba(0,0,0,0.8)",
-            background: "rgba(0,0,0,0.5)",
-            padding: "8px 16px",
-            borderRadius: "20px",
-            backdropFilter: "blur(10px)",
-          }}>
+        <div
+          style={{
+            position: "absolute",
+            bottom: "20px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            zIndex: 10,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "8px",
+            animation: "bounce 2s infinite",
+          }}
+        >
+          <div
+            style={{
+              fontSize: "13px",
+              fontWeight: 500,
+              color: "rgba(255, 255, 255, 0.9)",
+              letterSpacing: "1.5px",
+              textTransform: "uppercase",
+              fontFamily: "Syne, Syne Fallback, sans-serif",
+              textShadow: "0 2px 8px rgba(0,0,0,0.8)",
+              background: "rgba(0,0,0,0.5)",
+              padding: "8px 16px",
+              borderRadius: "20px",
+              backdropFilter: "blur(10px)",
+            }}
+          >
             Scroll to see more
           </div>
-          <div style={{
-            fontSize: "20px",
-            color: "rgba(255,107,53,0.9)",
-            textShadow: "0 2px 8px rgba(0,0,0,0.8)",
-          }}>
+          <div
+            style={{
+              fontSize: "20px",
+              color: "rgba(255,107,53,0.9)",
+              textShadow: "0 2px 8px rgba(0,0,0,0.8)",
+            }}
+          >
             <i className="fa-regular fa-arrow-down"></i>
           </div>
         </div>
       )}
 
-      {/* First-time instructional overlay (mobile only) */}
+      {/* Mobile swipe hint */}
       {isMobile && showHint && (
         <div
           className="mobile-swipe-hint-overlay"
           onClick={dismissHint}
           style={{
-            position: 'absolute',
+            position: "absolute",
             inset: 0,
-            background: 'rgba(0,0,0,0.8)',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
+            background: "rgba(0,0,0,0.8)",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
             zIndex: 20,
-            gap: '20px',
-            backdropFilter: 'blur(5px)',
-            animation: 'fadeIn 0.3s ease',
+            gap: "20px",
+            backdropFilter: "blur(5px)",
+            animation: "fadeIn 0.3s ease",
           }}
         >
-          <div style={{ fontSize: '48px' }}>
-            <i className="fa-solid fa-hand-point-left" style={{ marginRight: '20px' }}></i>
+          <div style={{ fontSize: "48px" }}>
+            <i className="fa-solid fa-hand-point-left" style={{ marginRight: "20px" }}></i>
             <i className="fa-solid fa-hand-point-right"></i>
           </div>
-          <p style={{
-            color: 'white',
-            fontSize: '18px',
-            textAlign: 'center',
-            padding: '0 40px',
-            fontWeight: 600,
-          }}>
-            {tSlider('swipeInstruction')}
+          <p
+            style={{
+              color: "white",
+              fontSize: "18px",
+              textAlign: "center",
+              padding: "0 40px",
+              fontWeight: 600,
+            }}
+          >
+            {tSlider("swipeInstruction")}
           </p>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '16px' }}>
-            {tSlider('tapToContinue')}
-          </p>
+          <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "16px" }}>{tSlider("tapToContinue")}</p>
         </div>
       )}
 
       <style jsx>{`
+        .tp-video-spinner {
+          width: 44px;
+          height: 44px;
+          border: 3px solid rgba(255, 255, 255, 0.15);
+          border-top-color: #ffffff;
+          border-radius: 50%;
+          animation: tp-spin 0.8s linear infinite;
+        }
+
+        @keyframes tp-spin {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
         @keyframes bounce {
-          0%, 20%, 50%, 80%, 100% {
-            transform: translateY(0);
+          0%,
+          20%,
+          50%,
+          80%,
+          100% {
+            transform: translateX(-50%) translateY(0);
           }
           40% {
-            transform: translateY(-10px);
+            transform: translateX(-50%) translateY(-10px);
           }
           60% {
-            transform: translateY(-5px);
+            transform: translateX(-50%) translateY(-5px);
           }
         }
 

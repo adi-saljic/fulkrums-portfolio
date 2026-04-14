@@ -6,6 +6,7 @@ import { IProject } from "@/data/project-data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectCreative } from "swiper/modules";
 import "swiper/css/effect-creative";
+import VideoSlide from "@/components/common/VideoSlide";
 
 type IProps = {
   project: IProject;
@@ -17,10 +18,7 @@ export default function ProjectDetailsArea({ project }: IProps) {
   const tSlider = useTranslations("videoSlider");
   const projectData = t.raw(project.titleKey);
   const [unmutedVideo, setUnmutedVideo] = React.useState<number | null>(null);
-  const [fullscreenImage, setFullscreenImage] = React.useState<string | null>(
-    null
-  );
-  const videoRefs = React.useRef<(HTMLVideoElement | null)[]>([]);
+  const [fullscreenImage, setFullscreenImage] = React.useState<string | null>(null);
   const [activeSlide, setActiveSlide] = React.useState<number>(0);
 
   // Mobile detection
@@ -125,39 +123,10 @@ export default function ProjectDetailsArea({ project }: IProps) {
                       prevEl: ".video-slider-prev",
                     }}
                     onSlideChange={(swiper) => {
-                      // Pause all videos
-                      videoRefs.current.forEach((video) => {
-                        if (video && !video.paused) {
-                          video.pause();
-                        }
-                      });
-
-                      // Play active video after a short delay
-                      setTimeout(() => {
-                        const activeVideo = videoRefs.current[swiper.realIndex];
-                        if (activeVideo) {
-                          activeVideo.currentTime = 0;
-                          activeVideo.play().catch((error) => {
-                            console.log("Video play interrupted:", error);
-                          });
-                        }
-                      }, 50);
-
                       setActiveSlide(swiper.realIndex);
                       if (unmutedVideo !== null) {
                         setUnmutedVideo(swiper.realIndex);
                       }
-                    }}
-                    onSwiper={(swiper) => {
-                      // Play first video on mount
-                      setTimeout(() => {
-                        const firstVideo = videoRefs.current[0];
-                        if (firstVideo) {
-                          firstVideo.play().catch((error) => {
-                            console.log("Video play interrupted:", error);
-                          });
-                        }
-                      }, 100);
                     }}
                     style={{ height: "85vh" }}
                   >
@@ -165,11 +134,7 @@ export default function ProjectDetailsArea({ project }: IProps) {
                       <SwiperSlide key={index}>
                         <div
                           className="showcase-details-video"
-                          onClick={() =>
-                            setUnmutedVideo(
-                              unmutedVideo === index ? null : index
-                            )
-                          }
+                          onClick={() => setUnmutedVideo(unmutedVideo === index ? null : index)}
                           style={{
                             cursor: "pointer",
                             position: "relative",
@@ -180,28 +145,14 @@ export default function ProjectDetailsArea({ project }: IProps) {
                             borderRadius: "16px",
                           }}
                         >
-                          <video
-                            ref={(el) => {
-                              videoRefs.current[index] = el;
-                            }}
-                            muted={unmutedVideo !== index}
-                            loop
-                            playsInline
-                            style={{
-                              position: "absolute",
-                              top: "50%",
-                              left: "50%",
-                              transform: "translate(-50%, -50%)",
-                              width: "100%",
-                              height: "100%",
-                              objectFit: "cover",
-                            }}
-                          >
-                            <source src={video} type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
+                          <VideoSlide
+                            src={video}
+                            isActive={activeSlide === index}
+                            isMuted={unmutedVideo !== index}
+                            objectFit="cover"
+                          />
 
-                          {/* Gradient overlay for better text visibility */}
+                          {/* Gradient overlay */}
                           <div
                             style={{
                               position: "absolute",
@@ -209,14 +160,13 @@ export default function ProjectDetailsArea({ project }: IProps) {
                               left: 0,
                               right: 0,
                               height: "40%",
-                              background:
-                                "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)",
+                              background: "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)",
                               pointerEvents: "none",
-                              zIndex: 1,
+                              zIndex: 6,
                             }}
                           />
 
-                          {/* Mute icon - only show when muted */}
+                          {/* Mute indicator */}
                           {unmutedVideo !== index && (
                             <div
                               style={{
@@ -225,9 +175,7 @@ export default function ProjectDetailsArea({ project }: IProps) {
                                 left: "20px",
                                 fontSize: "24px",
                                 color: "white",
-                                opacity: 1,
                                 pointerEvents: "none",
-                                transition: "all 0.3s",
                                 textShadow: "0 2px 8px rgba(0,0,0,0.8)",
                                 zIndex: 10,
                                 background: "rgba(0,0,0,0.5)",
@@ -253,6 +201,7 @@ export default function ProjectDetailsArea({ project }: IProps) {
                               padding: "6px 12px",
                               borderRadius: "20px",
                               backdropFilter: "blur(10px)",
+                              zIndex: 10,
                             }}
                           >
                             {index + 1} / {project.detailVideos?.length || 0}

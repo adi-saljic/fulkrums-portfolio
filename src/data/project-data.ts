@@ -21,9 +21,7 @@ const project_data: IProject[] = [
     category: "",
     heroImage: "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/QUICKIE-LIGA.png",
     detailImages: [],
-    detailVideos: [
-      "/assets/videos/quickieLiga/QUICKIENAJAVA.mp4",
-    ],
+    detailVideos: [],
   },
   {
     id: 7,
@@ -41,10 +39,7 @@ const project_data: IProject[] = [
     category: "",
     heroImage: "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/IT-WORKS.png",
     detailImages: [],
-    detailVideos: [
-      "/assets/videos/itWorks/Video1.mp4",
-      "/assets/videos/itWorks/Video2.mp4",
-    ],
+    detailVideos: [],
   },
   {
     id: 4,
@@ -53,11 +48,7 @@ const project_data: IProject[] = [
     category: "",
     heroImage: "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/ATLETSKA-KONDICIJA.png",
     detailImages: [],
-    detailVideos: [
-      "/assets/videos/atleta/fin.mp4",
-      "/assets/videos/atleta/finRlls.mp4",
-      "/assets/videos/atleta/Sequence03.mp4",
-    ],
+    detailVideos: [],
   },
   {
     id: 5,
@@ -74,11 +65,7 @@ const project_data: IProject[] = [
     category: "",
     heroImage: "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/THBMLS/SOMMERHAGENE.png",
     detailImages: [],
-    detailVideos: [
-      "/assets/videos/sommerhagen/1.mp4",
-      "/assets/videos/sommerhagen/Sequence1.mp4",
-      "/assets/videos/sommerhagen/Sequence3.mp4",
-    ],
+    detailVideos: [],
     detailPdf: "",
   },
   {
@@ -158,11 +145,7 @@ export const portfolio_data: IPortfolio[] = [
     category: "",
     heroImage: "",
     detailImages: [],
-    detailVideos: [
-      "/assets/videos/portfolio/atleta/CopyfATHLETICALPHABET.mp4",
-      "/assets/videos/portfolio/atleta/CopyfSequence06.mp4",
-      "/assets/videos/portfolio/atleta/CopyofELJEZNIČAR.mp4",
-    ],
+    detailVideos: [],
   },
   {
     id: 2,
@@ -171,10 +154,7 @@ export const portfolio_data: IPortfolio[] = [
     category: "",
     heroImage: "",
     detailImages: [],
-    detailVideos: [
-      "/assets/videos/portfolio/atraktiv/CopyofATRAKTIV.mp4",
-      "/assets/videos/portfolio/atraktiv/CopyfTRAKTIVMAGACIN.mp4",
-    ],
+    detailVideos: [],
   },
 ];
 

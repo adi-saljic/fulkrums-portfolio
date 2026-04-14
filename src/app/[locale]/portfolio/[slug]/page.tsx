@@ -33,6 +33,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 }
 
-export default function PortfolioDetailPage({ params }: Props) {
-  return <PortfolioDetailClient params={params} />;
+export default async function PortfolioDetailPage({ params }: Props) {
+  const { slug } = await params;
+  const item = getPortfolioData().find((p) => p.slug === slug);
+  return (
+    <>
+      {item?.heroImage && (
+        <link rel="preload" as="image" href={item.heroImage} />
+      )}
+      <PortfolioDetailClient params={params} />
+    </>
+  );
 }
