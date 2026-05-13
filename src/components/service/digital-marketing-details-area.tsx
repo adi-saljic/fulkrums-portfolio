@@ -53,7 +53,7 @@ export default function DigitalMarketingDetailsArea() {
       </div>
 
       {/* Image showcase slider */}
-      <div className="container-fluid">
+      {/* <div className="container-fluid">
         <div className="row">
           <div className="col-xl-12">
             <div className="service-details__tab-wrapper text-center mb-120">
@@ -61,7 +61,7 @@ export default function DigitalMarketingDetailsArea() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Stats section */}
       <DigitalMarketingStats />

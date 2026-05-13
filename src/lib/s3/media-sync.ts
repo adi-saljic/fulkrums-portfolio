@@ -478,6 +478,42 @@ export async function syncHomepageThumbnails(): Promise<HomepageThumbnailsMap> {
 }
 
 /**
+ * Sync graphic design showcase images from S3
+ * Lists `graphicDesign/graphicDesign/` prefix and returns sorted CloudFront image URLs.
+ */
+export async function syncGraphicDesignImages(): Promise<string[]> {
+  const config = getS3Config();
+
+  if (!config.accessKeyId || !config.secretAccessKey) {
+    return [];
+  }
+
+  const client = createS3Client(config);
+
+  try {
+    const objects = await listS3Objects(
+      client,
+      config.bucket,
+      'graphicDesign/graphicDesign/'
+    );
+
+    return objects
+      .filter((obj) => {
+        if (!obj.Key || obj.Key.endsWith('/')) return false;
+        return /\.(jpg|jpeg|png|webp|avif|gif)$/i.test(obj.Key);
+      })
+      .map((obj) => generateCloudFrontUrl(obj.Key!, config))
+      .sort();
+  } catch (error) {
+    console.warn(
+      '⚠️  Failed to sync graphic design images, falling back to static list:',
+      error instanceof Error ? error.message : error
+    );
+    return [];
+  }
+}
+
+/**
  * Sync all media from S3 (portfolios + projects/study cases + homepage thumbnails)
  */
 export async function syncAllMedia(): Promise<{

@@ -17,11 +17,12 @@ import { charAnimation, titleAnimation } from "@/utils/title-animation";
 
 type IProps = {
   params: Promise<{ slug: string }>;
+  graphicDesignImages?: string[];
 };
 
 const SUPPORTED_SLUGS = ["video-production", "digital-marketing", "graphic-design"];
 
-export default function ServicePageClient({ params }: IProps) {
+export default function ServicePageClient({ params, graphicDesignImages }: IProps) {
   const [slug, setSlug] = React.useState<string | null>(null);
 
   React.useEffect(() => {
@@ -51,7 +52,7 @@ export default function ServicePageClient({ params }: IProps) {
             {/* service details area */}
             {slug === "video-production" && <ServiceDetailsArea />}
             {slug === "digital-marketing" && <DigitalMarketingDetailsArea />}
-            {slug === "graphic-design" && <GraphicDesignDetailsArea />}
+            {slug === "graphic-design" && <GraphicDesignDetailsArea images={graphicDesignImages} />}
             {/* service details area */}
           </main>
 

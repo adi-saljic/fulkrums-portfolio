@@ -17,27 +17,8 @@ const useStickyHeader = (offset = 20) => {
     }
   }, []);
 
-  function adjustMenuBackground() {
-    const headerArea = document.querySelector<HTMLElement>(".tp-header-3-area");
-    if (headerArea) {
-      const menuBox = headerArea.querySelector<HTMLElement>(".tp-header-3-menu-box");
-      const menuBg = headerArea.querySelector<HTMLElement>(".menu-bg");
-
-      if (menuBox && menuBg) {
-        // Use offsetWidth/Height which are zoom-independent
-        const width = menuBox.offsetWidth;
-        const height = menuBox.offsetHeight;
-
-        // Use relative positioning instead of absolute left
-        menuBg.style.width = `${width}px`;
-        menuBg.style.height = `${height}px`;
-        menuBg.style.left = `0`;
-        menuBg.style.right = `0`;
-        menuBg.style.margin = `0 auto`;
-      }
-    }
-  }
-
+  // Kept for backwards compatibility with other headers that import this; no-op now.
+  function adjustMenuBackground() {}
   function headerFullWidth() {
     const menuElements = document.querySelectorAll(".tp-menu-fullwidth");
     menuElements.forEach((element: Element) => {
@@ -52,10 +33,7 @@ const useStickyHeader = (offset = 20) => {
     const handleScroll = () => {
       setIsSticky(window.scrollY > offset);
     };
-
-    // Initial check
     handleScroll();
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [offset]);

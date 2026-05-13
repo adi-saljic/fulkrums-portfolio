@@ -7,8 +7,13 @@ import GraphicDesignProcess from "./graphic-design-process";
 import ContactOne from "@/components/contact/contact-one";
 import { serviceImages } from "@/data/service-images";
 
-export default function GraphicDesignDetailsArea() {
+type Props = {
+  images?: string[];
+};
+
+export default function GraphicDesignDetailsArea({ images }: Props) {
   const t = useTranslations("graphicDesign");
+  const showcaseImages = images && images.length > 0 ? images : serviceImages.graphicDesign;
 
   return (
     <div className="service-details__area pb-120">
@@ -56,7 +61,7 @@ export default function GraphicDesignDetailsArea() {
         <div className="row">
           <div className="col-xl-12">
             <div className="service-details__tab-wrapper text-center mb-120">
-              <ImageShowcaseSlider images={serviceImages.graphicDesign} />
+              <ImageShowcaseSlider images={showcaseImages} />
             </div>
           </div>
         </div>

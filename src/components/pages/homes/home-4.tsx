@@ -14,7 +14,7 @@ import GalleryOne from "@/components/gallery/gallery-one";
 import AboutThree from "@/components/about/about-three";
 import BrandThree from "@/components/brand/brand-three";
 import ProjectFour from "@/components/project/project-four";
-// import VideoThree from "@/components/video/video-three";
+import VideoThree from "@/components/video/video-three";
 import ServiceFour from "@/components/service/service-four";
 import ContactOne from "@/components/contact/contact-one";
 import FooterFour from "@/layouts/footers/footer-four";
@@ -75,13 +75,13 @@ const HomeFourMain = () => {
             <ProjectFour />
             {/* project area end */}
 
-            {/* video area start */}
-            {/* <VideoThree /> */}
-            {/* video area end */}
-
             {/* service area start */}
             <ServiceFour />
             {/* service area end */}
+
+            {/* video area start */}
+            <VideoThree />
+            {/* video area end */}
 
             {/* contact area start */}
             <ContactOne />

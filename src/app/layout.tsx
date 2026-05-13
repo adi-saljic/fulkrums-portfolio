@@ -14,8 +14,8 @@ export const metadata: Metadata = {
     template: "%s | Fulkrums Digital Agency Sarajevo",
   },
   icons: {
-    icon: '/assets/img/logo/logo-transparent.png',
-    apple: '/assets/img/logo/logo-transparent.png',
+    icon: 'https://d1hqd8vqu5a5q0.cloudfront.net/homepage/faviconFulkrums.png',
+    apple: 'https://d1hqd8vqu5a5q0.cloudfront.net/homepage/faviconFulkrums.png',
   },
   description: "Expert video production and marketing agency in Sarajevo. We create high-performance video content, run data-driven campaigns, and design compelling visuals for brands across Bosnia, Herzegovina, and the Balkans.",
   keywords: [

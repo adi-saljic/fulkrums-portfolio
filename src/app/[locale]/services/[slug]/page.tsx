@@ -1,11 +1,19 @@
 import { Metadata } from 'next';
+import { unstable_cache } from 'next/cache';
 import { generatePageMetadata, serviceMetadata } from '@/lib/seo/metadata';
+import { syncGraphicDesignImages } from '@/lib/s3/media-sync';
 import ServicePageClient from './service-page-client';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
 const SERVICE_SLUGS = ['video-production', 'digital-marketing', 'graphic-design'] as const;
 type ServiceSlug = (typeof SERVICE_SLUGS)[number];
+
+const getGraphicDesignImages = unstable_cache(
+  () => syncGraphicDesignImages(),
+  ['graphic-design-showcase-images'],
+  { revalidate: 3600, tags: ['graphic-design-showcase-images'] }
+);
 
 export function generateStaticParams() {
   return ['bs', 'en'].flatMap((locale) =>
@@ -28,6 +36,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 }
 
-export default function ServicePage({ params }: Props) {
-  return <ServicePageClient params={params} />;
+export default async function ServicePage({ params }: Props) {
+  const { slug } = await params;
+  const graphicDesignImages =
+    slug === 'graphic-design' ? await getGraphicDesignImages() : undefined;
+
+  return (
+    <ServicePageClient
+      params={params}
+      graphicDesignImages={graphicDesignImages}
+    />
+  );
 }

@@ -53,7 +53,7 @@ export default function ServiceDetailsArea() {
       </div>
 
       {/* Video showcase slider — replaces static hero image */}
-      <div className="container-fluid">
+      {/* <div className="container-fluid">
         <div className="row">
           <div className="col-xl-12">
             <div className="service-details__tab-wrapper text-center mb-120">
@@ -61,7 +61,7 @@ export default function ServiceDetailsArea() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Stats section — replaces left/right content columns */}
       <VideoProductionStats />
