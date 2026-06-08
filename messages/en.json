@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "portfolio": "Portfolio",
+    "services": "Services",
     "studyCases": "Results",
     "ourTeam": "Our Team",
     "contact": "Contact"
@@ -11,10 +12,10 @@
   },
   "hero": {
     "title": {
-      "line1": "Digital Marketing &",
-      "line2": "Video Production Agency in Sarajevo"
+      "line1": "Video Production and Meta Ads",
+      "line2": "Agency in Sarajevo"
     },
-    "services": "video production / performance marketing / graphic design"
+    "services": "video production / meta ads and performance marketing / graphic design"
   },
   "about": {
     "subtitle": "What we do",
@@ -217,6 +218,8 @@
     }
   },
   "portfolio": {
+    "listingTitle": "Portfolio Projects",
+    "listingIntro": "A selection of our work for brands in Bosnia and abroad. Video production, Meta Ads campaigns and graphic design for clients who measure results, not just what is visible.",
     "atleta": {
       "description": "Atleta entrusted us with complete social media and ads management. Since 2024, we've been building a consistent visual system through video, statics, and print design, aligned with goals and performance.",
       "client": "Atleta",
@@ -372,7 +375,7 @@
   "digitalMarketing": {
     "smallLabel": "DIGITAL MARKETING",
     "secondaryLabel": "Meta Ads management for Facebook, Instagram + TikTok, Google, App campaigns",
-    "headline": "DIGITAL MARKETING CAMPAIGNS",
+    "headline": "Meta Ads and Performance Marketing Sarajevo",
     "hashtags": "#leads #sales #campaigns #metaads",
     "description": "We don't reduce marketing to just running ads. We first build the system through tracking, market research, campaign structure and creative as one connected unit — then we invest the budget. The goal is clear: more sales or more quality leads.",
     "stats": {
@@ -454,6 +457,8 @@
     }
   },
   "studyCases": {
-    "resultsVideo": "Results Video"
+    "resultsVideo": "Results Video",
+    "listingTitle": "Case Studies & Results",
+    "listingIntro": "A detailed look at campaigns with real numbers. What the goal was, which platforms the campaign used, and the final result. No generalizations."
   }
 }

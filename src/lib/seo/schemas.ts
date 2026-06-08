@@ -10,7 +10,7 @@ export function generateLocalBusinessSchema(locale: string = 'bs') {
 
   return {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': ['LocalBusiness', 'ProfessionalService'],
     '@id': `${baseUrl}/#organization`,
     name,
     description,
@@ -236,6 +236,36 @@ export function generateCreativeWorkSchema(
     },
     image: images.map((img) => (img.startsWith('http') ? img : `${baseUrl}${img}`)),
     inLanguage: locale,
+  };
+}
+
+// Article Schema for Case Studies
+export function generateArticleSchema({
+  headline,
+  description,
+  url,
+  image,
+  locale = 'bs',
+}: {
+  headline: string;
+  description: string;
+  url: string;
+  image?: string;
+  locale?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline,
+    description,
+    ...(image ? { image: image.startsWith('http') ? image : `${baseUrl}${image}` } : {}),
+    inLanguage: locale,
+    author: { '@id': `${baseUrl}/#organization` },
+    publisher: { '@id': `${baseUrl}/#organization` },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${baseUrl}${url}`,
+    },
   };
 }
 

@@ -39,7 +39,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...createLocaleUrls('/', 1.0, 'weekly'),
     ...createLocaleUrls('/portfolio', 0.9),
     ...createLocaleUrls('/study-cases', 0.9),
-    ...createLocaleUrls('/our-team', 0.8),
+    // Team page parked for now — not shown in nav, kept out of sitemap.
+    // ...createLocaleUrls('/our-team', 0.8),
   ];
 
   // Portfolio detail pages

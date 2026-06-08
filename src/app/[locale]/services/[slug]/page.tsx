@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { unstable_cache } from 'next/cache';
 import { generatePageMetadata, serviceMetadata } from '@/lib/seo/metadata';
+import { generateServiceSchema, generateBreadcrumbSchema } from '@/lib/seo/schemas';
 import { syncGraphicDesignImages } from '@/lib/s3/media-sync';
 import ServicePageClient from './service-page-client';
 
@@ -37,14 +38,45 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ServicePage({ params }: Props) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const graphicDesignImages =
     slug === 'graphic-design' ? await getGraphicDesignImages() : undefined;
 
+  // Structured data (SEO audit 8.1): Service + breadcrumb, referencing the
+  // Organization @id rendered on the homepage.
+  const localeKey = locale === 'en' ? 'en' : 'bs';
+  const content = SERVICE_SLUGS.includes(slug as ServiceSlug)
+    ? serviceMetadata[slug as ServiceSlug][localeKey]
+    : undefined;
+  const prefix = locale === 'bs' ? '' : `/${locale}`;
+  const serviceName = content?.title.split(' | ')[0];
+  const serviceSchema =
+    content && serviceName
+      ? generateServiceSchema(serviceName, content.description, slug, localeKey)
+      : null;
+  const breadcrumbSchema =
+    content && serviceName
+      ? generateBreadcrumbSchema([
+          { name: locale === 'bs' ? 'Početna' : 'Home', url: `${prefix}/` },
+          { name: serviceName, url: `${prefix}/services/${slug}` },
+        ])
+      : null;
+
   return (
-    <ServicePageClient
-      params={params}
-      graphicDesignImages={graphicDesignImages}
-    />
+    <>
+      {serviceSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        />
+      )}
+      {breadcrumbSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+      )}
+      <ServicePageClient slug={slug} graphicDesignImages={graphicDesignImages} />
+    </>
   );
 }

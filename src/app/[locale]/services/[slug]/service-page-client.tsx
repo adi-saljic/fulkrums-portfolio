@@ -1,6 +1,5 @@
 "use client";
 import { gsap } from "gsap";
-import React from "react";
 import { useGSAP } from "@gsap/react";
 import { ScrollSmoother, ScrollTrigger, SplitText } from "@/plugins";
 import { notFound } from "next/navigation";
@@ -16,19 +15,16 @@ import FooterFour from "@/layouts/footers/footer-four";
 import { charAnimation, titleAnimation } from "@/utils/title-animation";
 
 type IProps = {
-  params: Promise<{ slug: string }>;
+  slug: string;
   graphicDesignImages?: string[];
 };
 
 const SUPPORTED_SLUGS = ["video-production", "digital-marketing", "graphic-design"];
 
-export default function ServicePageClient({ params, graphicDesignImages }: IProps) {
-  const [slug, setSlug] = React.useState<string | null>(null);
-
-  React.useEffect(() => {
-    params.then((p) => setSlug(p.slug));
-  }, [params]);
-
+// `slug` is resolved server-side and passed in as a plain string so the page body
+// is server-rendered (was previously gated behind a client-only useEffect, which
+// left crawlers with an empty <body> — see SEO audit "title-only content").
+export default function ServicePageClient({ slug, graphicDesignImages }: IProps) {
   useGSAP(() => {
     const timer = setTimeout(() => {
       charAnimation();
@@ -37,7 +33,6 @@ export default function ServicePageClient({ params, graphicDesignImages }: IProp
     return () => clearTimeout(timer);
   });
 
-  if (!slug) return null;
   if (!SUPPORTED_SLUGS.includes(slug)) notFound();
 
   return (

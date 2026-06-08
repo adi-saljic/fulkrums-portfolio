@@ -5,6 +5,7 @@ import { Link } from "@/i18n/routing";
 import "slick-carousel/slick/slick.css";
 import { getProjectData } from "@/data/project-data";
 import { useTranslations } from 'next-intl';
+import { visuallyHidden } from "@/utils/visually-hidden";
 
 // slider setting one - will be created with disabled state
 const getSliderSettingOne = (isDisabled: boolean) => ({
@@ -168,6 +169,11 @@ export default function PortfolioSliderHomeTen() {
                   >
                     {t(`${project.titleKey}.title`)}
                   </h3>
+                  {/* Concrete result/metric per case study — visually hidden, kept in
+                      DOM for crawlers (handoff data; hidden per design preference). */}
+                  {t.has(`${project.titleKey}.result`) && (
+                    <p style={visuallyHidden}>{t(`${project.titleKey}.result`)}</p>
+                  )}
                 </div>
               </div>
             </div>

@@ -1,22 +1,35 @@
 "use client";
 import React from "react";
-import { Link } from "@/i18n/routing";
+import { Link, useRouter } from "@/i18n/routing";
 import { useTranslations } from 'next-intl';
 import project_data from '@/data/project-data';
 import { useContactModal } from '@/context/contact-modal-context';
+import { scrollToServices } from '@/utils/scroll-to-services';
 
 export default function MobileMenus() {
   const t = useTranslations('nav');
   const tProjects = useTranslations('projectData');
   const [portfolioOpen, setPortfolioOpen] = React.useState(false);
   const { openModal } = useContactModal();
+  const router = useRouter();
+
+  const closeMobileMenu = () => {
+    const closeBtn = document.querySelector('.tp-offcanvas-close-btn') as HTMLButtonElement;
+    if (closeBtn) closeBtn.click();
+  };
 
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     openModal();
     // Close mobile menu
-    const closeBtn = document.querySelector('.tp-offcanvas-close-btn') as HTMLButtonElement;
-    if (closeBtn) closeBtn.click();
+    closeMobileMenu();
+  };
+
+  const handleServicesClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    closeMobileMenu();
+    // Defer one tick so the offcanvas-close layout change settles before we scroll.
+    setTimeout(() => scrollToServices(router), 0);
   };
 
   return (
@@ -25,6 +38,9 @@ export default function MobileMenus() {
         <ul>
           <li>
             <Link href="/">{t('home')}</Link>
+          </li>
+          <li>
+            <a href="#services" onClick={handleServicesClick}>{t('services')}</a>
           </li>
           <li>
             <Link href="/portfolio">{t('portfolio')}</Link>

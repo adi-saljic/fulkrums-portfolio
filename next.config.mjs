@@ -35,6 +35,23 @@ const nextConfig = {
       },
     ];
   },
+  // Security headers (SEO audit 5.6). Intentionally no strict CSP — the site uses
+  // GSAP, inline JSON-LD and third-party embeds (YouTube), so a tight CSP would
+  // need its own dedicated pass.
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+        ],
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);

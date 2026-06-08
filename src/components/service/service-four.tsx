@@ -11,6 +11,7 @@ export default function ServiceFour() {
   const tCommon = useTranslations('common');
   return (
     <div
+      id="services"
       className="tp-service-3-area pt-130 pb-130"
       style={{
         paddingTop: 'clamp(15px, 3vw, 130px)',

@@ -1,9 +1,13 @@
 "use client";
 import React, { useEffect } from "react";
+import { useTranslations } from "next-intl";
 import HeaderFour from "@/layouts/headers/header-four";
 import PortfolioSliderPortfolioPage from "@/components/portfolio/slider/portfolio-slider-portfolio-page";
+import { visuallyHidden } from "@/utils/visually-hidden";
 
 export default function PortfolioPageClient() {
+  const t = useTranslations("portfolio");
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
 
@@ -53,6 +57,13 @@ export default function PortfolioPageClient() {
       {/* header area end */}
 
       <main style={{ position: "relative", zIndex: 1 }}>
+        {/* SEO heading + intro — visually hidden, kept in DOM for crawlers.
+            Listing is a full-screen slider with no room for a visible heading. */}
+        <div style={visuallyHidden}>
+          <h1>{t("listingTitle")}</h1>
+          <p>{t("listingIntro")}</p>
+        </div>
+
         {/* portfolio slider start */}
         <PortfolioSliderPortfolioPage />
         {/* portfolio slider end */}

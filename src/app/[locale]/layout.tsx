@@ -5,6 +5,7 @@ import { getMessages } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { notFound } from 'next/navigation';
 import { ContactModalProvider } from '@/context/contact-modal-context';
+import ScrollToTopOnNavigate from '@/components/scroll-to-top-on-navigate';
 import { gallery, aladin, syne_body, syne_heading, syne_p, syne, marcellus } from '../fonts';
 
 export async function generateStaticParams() {
@@ -42,6 +43,7 @@ export default async function LocaleLayout({
           <ThemeProvider defaultTheme="dark">
             <VideoProvider>
               <ContactModalProvider>
+                <ScrollToTopOnNavigate />
                 {children}
               </ContactModalProvider>
             </VideoProvider>

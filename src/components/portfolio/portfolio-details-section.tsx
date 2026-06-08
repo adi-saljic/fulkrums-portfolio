@@ -47,9 +47,9 @@ export default function PortfolioDetailsSection({
                   <span className="project-details-1-subtitle">
                     {project.category}
                   </span>
-                  <h4 className="project-details-1-title">
+                  <h1 className="project-details-1-title">
                     {project.titleKey}
-                  </h4>
+                  </h1>
                   <p>{t(`${project.slug}.description`)}</p>
                 </div>
 

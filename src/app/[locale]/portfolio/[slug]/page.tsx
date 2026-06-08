@@ -41,7 +41,7 @@ export default async function PortfolioDetailPage({ params }: Props) {
       {item?.heroImage && (
         <link rel="preload" as="image" href={item.heroImage} />
       )}
-      <PortfolioDetailClient params={params} />
+      <PortfolioDetailClient slug={slug} />
     </>
   );
 }

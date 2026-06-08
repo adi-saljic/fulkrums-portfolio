@@ -1,6 +1,5 @@
 "use client";
 import { gsap } from "gsap";
-import React from "react";
 import { useGSAP } from "@gsap/react";
 import { ScrollSmoother, ScrollTrigger, SplitText } from "@/plugins";
 import { notFound } from "next/navigation";
@@ -18,16 +17,12 @@ import YouTubeIframeSlider from "@/components/youtube/youtube-iframe-slider";
 import { youtubeVideos } from "@/data/youtube-videos";
 
 type IProps = {
-  params: Promise<{ slug: string }>;
+  slug: string;
 };
 
-export default function PortfolioDetailClient({ params }: IProps) {
-  const [slug, setSlug] = React.useState<string | null>(null);
-
-  React.useEffect(() => {
-    params.then((p) => setSlug(p.slug));
-  }, [params]);
-
+// `slug` resolved server-side and passed as a string so the page body renders in
+// the initial HTML (was gated behind a client-only useEffect — SEO audit fix).
+export default function PortfolioDetailClient({ slug }: IProps) {
   useGSAP(() => {
     const timer = setTimeout(() => {
       charAnimation();
@@ -36,10 +31,6 @@ export default function PortfolioDetailClient({ params }: IProps) {
     }, 100);
     return () => clearTimeout(timer);
   });
-
-  if (!slug) {
-    return null;
-  }
 
   const portfolio_data = getPortfolioData();
   const portfolioItem = portfolio_data.find((p) => p.slug === slug);

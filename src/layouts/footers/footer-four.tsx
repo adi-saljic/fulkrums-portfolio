@@ -44,21 +44,6 @@ export default function FooterFour() {
                     </Link>
                   </span>
                 </div>
-                <div className="tp-footer-3-social d-flex justify-content-center justify-content-md-end gap-4 align-items-end">
-                  <div className="d-flex flex-column align-items-center">
-                    <span style={{ fontSize: "12px", marginBottom: "8px", color: "#ff6b35" }}>
-                      {t('social.marketing')}
-                    </span>
-                    <Link
-                      href="https://www.linkedin.com/in/zlatan-saljic-54334126a/"
-                      target="_blank"
-                      title="Marketing Team"
-                      className="linkedin-marketing"
-                    >
-                      <i className="fa-brands fa-linkedin-in"></i>
-                    </Link>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

@@ -50,7 +50,7 @@ export default function PortfolioDetailsSimple({ project, hasVideos = false }: I
                   >
                     {project.category}
                   </span>
-                  <h4
+                  <h1
                     className="port-showcase-slider-title"
                     style={{
                       textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8), -2px -2px 4px rgba(0, 0, 0, 0.8), 2px -2px 4px rgba(0, 0, 0, 0.8), -2px 2px 4px rgba(0, 0, 0, 0.8)",
@@ -61,7 +61,7 @@ export default function PortfolioDetailsSimple({ project, hasVideos = false }: I
                     }}
                   >
                     {project.titleKey}
-                  </h4>
+                  </h1>
                 </div>
               </div>
             </div>

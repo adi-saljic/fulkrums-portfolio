@@ -78,7 +78,7 @@ export default function ProjectDetailsArea({ project }: IProps) {
                   >
                     {project.category}
                   </span>
-                  <h4
+                  <h1
                     className="port-showcase-slider-title tp-char-animation"
                     style={{
                       textShadow:
@@ -86,7 +86,7 @@ export default function ProjectDetailsArea({ project }: IProps) {
                     }}
                   >
                     {projectData.title}
-                  </h4>
+                  </h1>
                 </div>
               </div>
             </div>

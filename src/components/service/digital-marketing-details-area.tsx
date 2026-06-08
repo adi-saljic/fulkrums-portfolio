@@ -28,9 +28,9 @@ export default function DigitalMarketingDetailsArea() {
               }}>
                 {t("secondaryLabel")}
               </p>
-              <h4 className="sv-hero-title tp-char-animation">
+              <h1 className="sv-hero-title tp-char-animation">
                 {t("headline")}
-              </h4>
+              </h1>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "12px", marginTop: "20px" }}>
                 {t("hashtags").split(" ").filter(Boolean).map((tag) => (
                   <span key={tag} style={{ color: "rgba(255,255,255,0.4)", fontSize: "clamp(11px, 1vw, 13px)", letterSpacing: "0.05em" }}>

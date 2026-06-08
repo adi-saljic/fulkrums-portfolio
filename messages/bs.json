@@ -2,6 +2,7 @@
   "nav": {
     "home": "Početna",
     "portfolio": "Portfolio",
+    "services": "Usluge",
     "studyCases": "Rezultati",
     "ourTeam": "Naš tim",
     "contact": "Kontakt"
@@ -14,7 +15,7 @@
       "line1": "Agencija za digitalni marketing",
       "line2": "i video produkciju u Sarajevu"
     },
-    "services": "video produkcija / performance marketing / graphic design"
+    "services": "video produkcija / meta ads i performance marketing / graphic design"
   },
   "about": {
     "subtitle": "Šta radimo",
@@ -226,6 +227,8 @@
     }
   },
   "portfolio": {
+    "listingTitle": "Portfolio Projekata",
+    "listingIntro": "Izbor iz našeg rada za brendove u BiH i inostranstvu. Video produkcija, Meta Ads kampanje i grafički dizajn za klijente koji mjere rezultat, ne samo ono što se vidi.",
     "atleta": {
       "description": "Atleta nam je povjerila kompletan social media i ads management. Od 2024. gradimo konzistentan vizuelni sistem kroz video, statics i print dizajn, usklađen sa ciljevima i performansom.",
       "client": "Atleta",
@@ -381,7 +384,7 @@
   "digitalMarketing": {
     "smallLabel": "DIGITAL MARKETING",
     "secondaryLabel": "Meta Ads management za Facebook, Instagram + TikTok, Google, App campaigns",
-    "headline": "DIGITAL MARKETING KAMPANJE",
+    "headline": "Meta Ads i Performance Marketing Sarajevo",
     "hashtags": "#leads #sales #kampanja #metaads",
     "description": "Ne svodimo marketing na samo puštanje oglasa. Prvo postavljamo sistem kroz tracking, istraživanje tržišta, strukturu kampanja i kreativu kao jednu povezanu cjelinu, a tek onda ulažemo budžet. Cilj je jasan: više prodaja ili više kvalitetnih upita.",
     "stats": {
@@ -463,6 +466,8 @@
     }
   },
   "studyCases": {
-    "resultsVideo": "Video Rezultati"
+    "resultsVideo": "Video Rezultati",
+    "listingTitle": "Case Studies i Rezultati",
+    "listingIntro": "Detaljni prikaz kampanja sa stvarnim brojkama. Šta je bio cilj, koje je platforme koristila kampanja i kakav je bio konačni rezultat. Bez generalizacija."
   }
 }

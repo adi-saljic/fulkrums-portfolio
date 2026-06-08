@@ -1,6 +1,5 @@
 "use client";
 import { gsap } from "gsap";
-import React from "react";
 import { useGSAP } from "@gsap/react";
 import { ScrollSmoother, ScrollTrigger, SplitText } from "@/plugins";
 import { notFound } from "next/navigation";
@@ -18,16 +17,13 @@ import { youtubeVideos } from "@/data/youtube-videos";
 import { useTranslations } from "next-intl";
 
 type IProps = {
-  params: Promise<{ slug: string }>;
+  slug: string;
 };
 
-export default function ProjectPageClient({ params }: IProps) {
+// `slug` resolved server-side and passed as a string so the case-study body renders
+// in the initial HTML (was gated behind a client-only useEffect — SEO audit fix).
+export default function ProjectPageClient({ slug }: IProps) {
   const tStudyCases = useTranslations('studyCases');
-  const [slug, setSlug] = React.useState<string | null>(null);
-
-  React.useEffect(() => {
-    params.then((p) => setSlug(p.slug));
-  }, [params]);
 
   useGSAP(() => {
     const timer = setTimeout(() => {
@@ -37,10 +33,6 @@ export default function ProjectPageClient({ params }: IProps) {
     }, 100);
     return () => clearTimeout(timer);
   });
-
-  if (!slug) {
-    return null;
-  }
 
   const project = getProjectData().find((p) => p.slug === slug);
 

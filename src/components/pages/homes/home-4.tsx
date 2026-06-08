@@ -2,6 +2,7 @@
 import { gsap } from "gsap";
 import React, { useEffect } from "react";
 import useScrollSmooth from "@/hooks/use-scroll-smooth";
+import useServicesScrollIntent from "@/hooks/use-services-scroll-intent";
 import { ScrollSmoother, ScrollTrigger, SplitText } from "@/plugins";
 import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother, SplitText);
@@ -25,6 +26,7 @@ import { ctaAnimation } from "@/utils/cta-anim";
 
 const HomeFourMain = () => {
   useScrollSmooth();
+  useServicesScrollIntent();
   useEffect(() => {
     document.body.classList.add("tp-smooth-scroll");
     return () => {
