@@ -1,0 +1,604 @@
+{
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Atleta/ATHLETIC-ALPHABET.mp4": {
+    "assetId": "bnMF8ljO6gYdgRo6f8zpdlL99rXt8qRyPF7xbvgV02y4",
+    "playbackId": "rMUkCNaWziGb02wBinOO7x8MQoPiCdt8QE8iiNO4U3hE",
+    "status": "ready",
+    "key": "Portfolio/Atleta/ATHLETIC-ALPHABET.mp4",
+    "duration": 50.826733
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Atleta/ATHLETIC-MEETING.mp4": {
+    "assetId": "cychdwGgKOZjR4bFXI201znN009veEgV00EXuVT7JUeHb8",
+    "playbackId": "bnYgNv40101kzApDHkbYBdRQTrPrDgYaU02dkAbNFL3MrQ",
+    "status": "ready",
+    "key": "Portfolio/Atleta/ATHLETIC-MEETING.mp4",
+    "duration": 109.943167
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Atleta/NOVOGRADSKI-DANI-MITING.mp4": {
+    "assetId": "4vG6r92mAilNLIdORv9IAYlnuDPU2mWt25kejNBluvg",
+    "playbackId": "gj47J02EI63osW01IL4t02Gz29MlEWV7HmxBn3afSxxL6Y",
+    "status": "ready",
+    "key": "Portfolio/Atleta/NOVOGRADSKI-DANI-MITING.mp4",
+    "duration": 124.390933
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Atleta/Sequence-06.mp4": {
+    "assetId": "wsTiO02i20097iCwQUppUNeMj5TzAYju02Wn2zuuY9CRM4",
+    "playbackId": "01m4wPjLfe2KCfLc6mXyqR02HoY01vFpR025vZ3JPl3jOic",
+    "status": "ready",
+    "key": "Portfolio/Atleta/Sequence-06.mp4",
+    "duration": 26.693333
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Atleta/ZELJEZNICAR.mp4": {
+    "assetId": "ZNg4Q8QhREw1ImDQa1IgiCYY8gxgMsYKlPaE1tbNhFw",
+    "playbackId": "kCHgrDE01sroQl4GEnGuSvACJ5SYlyDHelW6cDJJU46c",
+    "status": "ready",
+    "key": "Portfolio/Atleta/ZELJEZNICAR.mp4",
+    "duration": 50.050044
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Atleta/novo/Atletska-kondicija-trening.mp4": {
+    "assetId": "bviTbVB3qGI7wVbF3019Y7LJQXPW6wnghXS4G8IGMGcM",
+    "playbackId": "ovlwwy31xT6n4exP4OyXnYakPo8av402h9aKSosJqOZs",
+    "status": "ready",
+    "key": "Portfolio/Atleta/novo/Atletska-kondicija-trening.mp4",
+    "duration": 30.28
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Atleta/novo/FINAL-3.mp4": {
+    "assetId": "U02010100ywC702yB6b3o87bjOgXSF00xQtCuj00B002rZnEEzQ",
+    "playbackId": "NEu4Omb027FJMTy8mEjdHivgh7yLu302TEmRYyxTeTew00",
+    "status": "ready",
+    "key": "Portfolio/Atleta/novo/FINAL-3.mp4",
+    "duration": 69.1358
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Atleta/novo/Masa---Trening---Atleta--captions.mp4": {
+    "assetId": "Pf3nneBHfz00J7MTU8ucXLXJO1p8rkxfrWDCweynuJP4",
+    "playbackId": "h8A6LlhZYzP5017BX4MSQbjUb5WjWkR2tCb9fXP6QefQ",
+    "status": "ready",
+    "key": "Portfolio/Atleta/novo/Masa---Trening---Atleta--captions.mp4",
+    "duration": 32.0413
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Atraktiv/ATRAKTIV-MAGACIN.mp4": {
+    "assetId": "MxkgMa3jdpA5P1eSxUHN602oeGtyLjAce0000mR8Q01ZntM",
+    "playbackId": "xLM5NeESnj018sVqRCjknYxxOBh701cRUQF3ZT2O02IrNA",
+    "status": "ready",
+    "key": "Portfolio/Atraktiv/ATRAKTIV-MAGACIN.mp4",
+    "duration": 25.668267
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Atraktiv/ATRAKTIV.mp4": {
+    "assetId": "SwMeYqZsUG4h7ufe201J1DjD6loHdDxaWxyY1YmVDWhc",
+    "playbackId": "gc8WzsjyR3AFJBZFXwKMKqkN3XnxSJ4jVVfF3wd2HUs",
+    "status": "ready",
+    "key": "Portfolio/Atraktiv/ATRAKTIV.mp4",
+    "duration": 30.666667
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/BestDrive/BESTDRIVE-AND-GARAGEPULSE.mp4": {
+    "assetId": "LyENohvX5z1hJvymjflYpypXo5fdSCFWh8TQfjyxYHA",
+    "playbackId": "BUe2MftMRAfYK1ulfCuA2l006mzUpDwQ7Zg2U5b8ljwE",
+    "status": "ready",
+    "key": "Portfolio/BestDrive/BESTDRIVE-AND-GARAGEPULSE.mp4",
+    "duration": 57.490767
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/BestDrive/fin.mp4": {
+    "assetId": "CYWHUAva800dJiuT02nspFlejSwWeSfSYEmUNDSnFbNZ00",
+    "playbackId": "78sZqf49eKWcveq6ZejBt19DtkMmJsNU01FAGC9SoTQg",
+    "status": "ready",
+    "key": "Portfolio/BestDrive/fin.mp4",
+    "duration": 38.681267
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/CHEYF/CheyfxNomad.mp4": {
+    "assetId": "C7bcT01RbTOFfTRHK6xEnvopGqwn8K5eyWLEqanNpO008",
+    "playbackId": "tPZOBOAA3rmfrWSPDNN01yKvLcYps02SYRrpdoThNmJSQ",
+    "status": "ready",
+    "key": "Portfolio/CHEYF/CheyfxNomad.mp4",
+    "duration": 24.867467
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/CHEYF/Sequence-01.mp4": {
+    "assetId": "00L4MVBk18wJ5ZXal9wkrGRFYZ2yJU2u4ohK3cGdni3I",
+    "playbackId": "GEmy2Cfuw4lU9nG02SoFb200b79W3wK1xAA7kWoXRf00oc",
+    "status": "ready",
+    "key": "Portfolio/CHEYF/Sequence-01.mp4",
+    "duration": 26.068667
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/CHEYF/Sequence-02.mp4": {
+    "assetId": "WA4OV4AQc17zety01b00Bsm25iBY6tzqh4we9jMXm02Z64",
+    "playbackId": "mhN00sgmJnt13C01GroE2x00mzlGXTqC025iaOFJsAzNxFY",
+    "status": "ready",
+    "key": "Portfolio/CHEYF/Sequence-02.mp4",
+    "duration": 168.935433
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/CHEYF/UrbanHikeReels.mp4": {
+    "assetId": "urHQPLuhWjxQl9Z38SBwMaYbRTtop6HNVRyQ02UcU8Wc",
+    "playbackId": "YSCvqwj02SDRCbwmV7PvO2YIV95ltJ01Q4uus6idbkMMI",
+    "status": "ready",
+    "key": "Portfolio/CHEYF/UrbanHikeReels.mp4",
+    "duration": 39.515433
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/CHEYF/sff-preparation.mp4": {
+    "assetId": "h8Mao02pZ02e00JFktta7okOgWQ02s5yP5uu00bjQ5V3u029k",
+    "playbackId": "gBk00OxpaVamus00FiBpgXSrxChsQ9XvT4ERjkAiNYOS8",
+    "status": "ready",
+    "key": "Portfolio/CHEYF/sff-preparation.mp4",
+    "duration": 24.9342
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/CHEYF/wtd-w-cc.mp4": {
+    "assetId": "VQm02qKej00T7gJswqI2cfJIJq6bTMQRGuFHjl02q02sUBs",
+    "playbackId": "GygseIl2G75pWANuMxxFwQC5JwNZwk88cTnTBXmJHPM",
+    "status": "ready",
+    "key": "Portfolio/CHEYF/wtd-w-cc.mp4",
+    "duration": 27.4367
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Cheyf-Accomodations/REAL-ESTATE-CHEYF-ACC.mp4": {
+    "assetId": "oc5Pk5Ir01tzCb6iFX9Dt008Y2QRifjVHCv3mjUnnmBHY",
+    "playbackId": "KTPPRSX02xIgJiuRq02bMBGM3u3tZQZhNFfDyPOuBdcXI",
+    "status": "ready",
+    "key": "Portfolio/Cheyf-Accomodations/REAL-ESTATE-CHEYF-ACC.mp4",
+    "duration": 18.794733
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Cheyf-Accomodations/REAL-ESTATE.mp4": {
+    "assetId": "Ibh5bNLRUxmvVLz3SMOiquKELpVxK2C1toc2vgj7SrI",
+    "playbackId": "oJM6Xw00k01dXr01V0202Mt4VnidUYpiEh00wq1YYGEOi7fn00",
+    "status": "ready",
+    "key": "Portfolio/Cheyf-Accomodations/REAL-ESTATE.mp4",
+    "duration": 22.076
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Cheyf-Accomodations/Sequence-01.mp4": {
+    "assetId": "00hqIkBkNVfbO7Xe023oaeU53gGv3DQLbJMx5lflm9yqA",
+    "playbackId": "BGjRWhApF1P01yms14zY7eozubq00oe00aFZ02XDFFIILNs",
+    "status": "ready",
+    "key": "Portfolio/Cheyf-Accomodations/Sequence-01.mp4",
+    "duration": 22.3316
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/GreenConcept/Prije-zidanja-probaj-prefab.mp4": {
+    "assetId": "dxS1003EsXwesrRoaEYwzuPzFn7dN01s01lw4SzSeqEKuA",
+    "playbackId": "j7xcfScKQTwVkef5Iof2DARF3K4n501v00IHxFN3cvPPg",
+    "status": "ready",
+    "key": "Portfolio/GreenConcept/Prije-zidanja-probaj-prefab.mp4",
+    "duration": 22.732
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/GreenConcept/Termowood-paneli-promo.mp4": {
+    "assetId": "4RnZ00VwzEOyQlLlM5aK6xK3CaIV17VaGb99RmtAKXP4",
+    "playbackId": "R87c174uVo5ysO2nd6vpR34seEnKpUQtxEGtWrhfV4U",
+    "status": "ready",
+    "key": "Portfolio/GreenConcept/Termowood-paneli-promo.mp4",
+    "duration": 27.122667
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/GreenConcept/Timelapse-kuca.mp4": {
+    "assetId": "YI6hWUHwvIbpXvV300cYPJJn1bZeIPon4pnGDQVWWdIA",
+    "playbackId": "bSW39L5GucpP16XKWFY1vBjg02j8hRT7pZDo7sCfkrRQ",
+    "status": "ready",
+    "key": "Portfolio/GreenConcept/Timelapse-kuca.mp4",
+    "duration": 16.092033
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/GreenConcept/volio-bih-da-sam-znao.mp4": {
+    "assetId": "XuV02KrNTOyU5zZnOsUwBhuwxLdhe3troBzNyvkbasUo",
+    "playbackId": "1oUxRwkhfIJB0002oPeC66m69eQknzg7iIvJ8rn4JpSHE",
+    "status": "ready",
+    "key": "Portfolio/GreenConcept/volio-bih-da-sam-znao.mp4",
+    "duration": 32.0413
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/IGNY/Sequence-01.mp4": {
+    "assetId": "Jc5t49Ij93NNQ9KGmD9YCj4bxLLXOJgOAJDfO2zv00Y4",
+    "playbackId": "lAiYiWVVdMC101LOAA01AlqYNEFU6L3esqO7DyY7VTNCY",
+    "status": "ready",
+    "key": "Portfolio/IGNY/Sequence-01.mp4",
+    "duration": 22.6319
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/IGNY/final.mp4": {
+    "assetId": "f3FbcufqHys0287gGEywkARL00HqjMfcsdQ7sR3e01YAjk",
+    "playbackId": "vHZWthKJ1RBnt34qhvd1v8iSzuckUx9usZNmZGiaoJY",
+    "status": "ready",
+    "key": "Portfolio/IGNY/final.mp4",
+    "duration": 19.3193
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/O'Plant/Bijele-Stijene-Final.mp4": {
+    "assetId": "wyyox2IHlCFF02B02jHwymwhtL7kknD3Kkaw2hKz7HjfI",
+    "playbackId": "K8YmYGq8un6TL1FNfI1d4rN5V94Mp2vxF2tFD5yMC01o",
+    "status": "ready",
+    "key": "Portfolio/O'Plant/Bijele-Stijene-Final.mp4",
+    "duration": 188.7979
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/O'Plant/PODRAVKA-LUKOMIR.mp4": {
+    "assetId": "qY6lPjmBdqBL1lv8r02qBnrCzxvRNuatWMFzeTfQGfcg",
+    "playbackId": "C9Y29wsV7n02bqB9grfc84yzKj8eZBninwXRnYoaTJkY",
+    "status": "ready",
+    "key": "Portfolio/O'Plant/PODRAVKA-LUKOMIR.mp4",
+    "duration": 185.127567
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/O'Plant/PODRAVKA-O'PLANT.mp4": {
+    "assetId": "6jMnHs01B4huM1Ma6lvgMTB01N9p02MEo4GYvKJkVSNspQ",
+    "playbackId": "CBSXFs200z00zncxcBHT1ccDPfWdJFPkyvpnYb9jN2Xz00",
+    "status": "ready",
+    "key": "Portfolio/O'Plant/PODRAVKA-O'PLANT.mp4",
+    "duration": 185.628067
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/O'Plant/PODRAVKA-PROKOSKO.mp4": {
+    "assetId": "w02btuLawKGuxxEgLuct2C5hWACWzWIGH00K02MzlsPFyI",
+    "playbackId": "Yg4VZlUscfdcpQHL3iaoJRmSwyFPAv3R5z8yahJ5trA",
+    "status": "ready",
+    "key": "Portfolio/O'Plant/PODRAVKA-PROKOSKO.mp4",
+    "duration": 201.8109
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/O'Plant/Trnovacko-jezero.mp4": {
+    "assetId": "JuwLbEyc6tuGjRxpAdbYve1lt2Rgl02RTLlob4CWJPMw",
+    "playbackId": "dFGM702cDrl01w4VeWRBsRLXoGpqOsMAJ01LLyCfDfYDF00",
+    "status": "ready",
+    "key": "Portfolio/O'Plant/Trnovacko-jezero.mp4",
+    "duration": 179.121567
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Sommerhagene/CanueSafari.mp4": {
+    "assetId": "PRHbv6jrYb8XOrrSU1JRyvbqOuTrJzdMGvx00w8UD9JY",
+    "playbackId": "6XDdyAMgADJukVmt6hRv200aX4BVNd6Bxu00Er02pdEM02Q",
+    "status": "ready",
+    "key": "Portfolio/Sommerhagene/CanueSafari.mp4",
+    "duration": 42.985567
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Sommerhagene/Fall-Sommerhagene.mp4": {
+    "assetId": "z00LhH9lQZqnwmrU7fEblYsJz02o1XPSRTfywuFUKLCbI",
+    "playbackId": "LpZpIRBEPD8Dm01FyaLE8OpY902PbAnH00aCCuEzqjZUTk",
+    "status": "ready",
+    "key": "Portfolio/Sommerhagene/Fall-Sommerhagene.mp4",
+    "duration": 40.3496
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Sommerhagene/Herzegovina-vibes.mp4": {
+    "assetId": "lKeiQhitfOipqgxIWOMyDARDxcCET33cEFEGj00GE400o",
+    "playbackId": "F6yFM1PldKbINijn8iHz1BEK3iPyX6Q01lAZ4ZPiiQH00",
+    "status": "ready",
+    "key": "Portfolio/Sommerhagene/Herzegovina-vibes.mp4",
+    "duration": 57.3666
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Sommerhagene/Secret-Spots.mp4": {
+    "assetId": "EFiaJOarn6xlMQPDPs7s9zpW8qD00aV3EAMHS5NlAq6U",
+    "playbackId": "JndcREsY25uJ02300QuljzBAyDoVYMr02LZJlSjW7pd7yo",
+    "status": "ready",
+    "key": "Portfolio/Sommerhagene/Secret-Spots.mp4",
+    "duration": 21.497433
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Sommerhagene/hutovo.mp4": {
+    "assetId": "JRRtBNVdGEK92eNYVzLAvN21Aw461NhgBY00sRZVPNYQ",
+    "playbackId": "9XzjWPvt0200BTwrOb9xR97A9p00sk01MAYQhobdTKUiSdI",
+    "status": "ready",
+    "key": "Portfolio/Sommerhagene/hutovo.mp4",
+    "duration": 30.706633
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Sommerhagene/smokvee.mp4": {
+    "assetId": "Mxj01RzaUXmXt025ddR00Qa1kPl01sw89sqOUukQxQ7PpGM",
+    "playbackId": "KNXQGop3DLakS3LT9HbR012twVSpW8jrN9rPcI02dOIVk",
+    "status": "ready",
+    "key": "Portfolio/Sommerhagene/smokvee.mp4",
+    "duration": 34.8441
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Zamzam-Project/First-One-(-Seq-18).mp4": {
+    "assetId": "d8IwVB7peXhdOCCZNu1tfVC1IDAsji1QWvCzUtNYhQE",
+    "playbackId": "GYbA800SOW2k4zXOJDtAqjJn00jvrp02or02DR6CA8gb5lM",
+    "status": "ready",
+    "key": "Portfolio/Zamzam-Project/First-One-(-Seq-18).mp4",
+    "duration": 72.1721
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Zamzam-Project/Sequence-22_1.mp4": {
+    "assetId": "uRwaSjvqGt6tXfp5tfXIvA49sltOvAPbWwXoFolzBGg",
+    "playbackId": "Xe7xZVwuxWq1LJWZmRuh1bfAGpC9Toj6UXlIAMkJfpw",
+    "status": "ready",
+    "key": "Portfolio/Zamzam-Project/Sequence-22_1.mp4",
+    "duration": 70.0793
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/Zamzam-Project/Sequence-23.mp4": {
+    "assetId": "QuBWXOsy4IDPyq754b02vRdbH9PMSNWmYwiGYq00qnlzk",
+    "playbackId": "Pwa5FCc9wPQdIvOiy1006JdgkmS9b4DBgPrNuNFyYDnc",
+    "status": "ready",
+    "key": "Portfolio/Zamzam-Project/Sequence-23.mp4",
+    "duration": 40.2402
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Atletska-kondicija/Sequence-03.mp4": {
+    "assetId": "MU1JkG37GIUR2qIJARvS7fjMx5016i2aB3etDmlFZgRQ",
+    "playbackId": "HP01dsiPkal4MmJ01om21VoUYsAoVUPnKX4qWOxrTv00PY",
+    "status": "ready",
+    "key": "Pr.-Rezultati/Atletska-kondicija/Sequence-03.mp4",
+    "duration": 25.558867
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Atletska-kondicija/fin-rlls.mp4": {
+    "assetId": "JWBjPidSE8LivI01XA33NViNiyo5Z2QV9kw8H4pGZq02U",
+    "playbackId": "e8YmWkXhpRcXQvK00MfLmWH0100CnvaV01L02JL1Emp80272c",
+    "status": "ready",
+    "key": "Pr.-Rezultati/Atletska-kondicija/fin-rlls.mp4",
+    "duration": 21.88
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Atletska-kondicija/fin.mp4": {
+    "assetId": "54guYIniEnmYz01dhOmO1WhPY6Hg00dGjjz7pVsFhrDx4",
+    "playbackId": "hZt00a4GOusQmFYHaqttk00u51g8JBf9sNC9pb9ADoaAs",
+    "status": "ready",
+    "key": "Pr.-Rezultati/Atletska-kondicija/fin.mp4",
+    "duration": 43.88
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/It-Works/Video-1---Month-2.mp4": {
+    "assetId": "ASg9Jrf006p01BI7kZRAPjm01AFbHhIHf318Hnw02LtfI02E",
+    "playbackId": "F6eM53YfD1ZDb3ira53LqVwsntKmsD9KEXuCnMum9IM",
+    "status": "ready",
+    "key": "Pr.-Rezultati/It-Works/Video-1---Month-2.mp4",
+    "duration": 33.166667
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/It-Works/Video-2---Month-1.mp4": {
+    "assetId": "KU6P01xmHnWdF02oijAjXtRHKzrP5C6ivsidV7xDyafTs",
+    "playbackId": "01Smbp6ZkbN00UvyR8QC38e67jDd43006Ny01oyyUgD87PE",
+    "status": "ready",
+    "key": "Pr.-Rezultati/It-Works/Video-2---Month-1.mp4",
+    "duration": 49.666667
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Quickie-liga/QUICKIE-NAJAVA.mp4": {
+    "assetId": "IeHOUGLXO00aWchZWgDteGPAaRTRgRzUYyW29rKnu1k00",
+    "playbackId": "Xik2F01Hw8L9i4lRBZ9DDsLo002lSzHonVHkR8WziTJ9w",
+    "status": "ready",
+    "key": "Pr.-Rezultati/Quickie-liga/QUICKIE-NAJAVA.mp4",
+    "duration": 34.410333
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Quickie-liga/quickie-event-recap.mp4": {
+    "assetId": "BFrN58m96PCNa01Jq7fXCPMNwbrhvTvDPr7Ns402Ix00CY",
+    "playbackId": "TKp65sieiBtQmHrPb744TxE5xr8q2y1u91g02ucvpTbA",
+    "status": "ready",
+    "key": "Pr.-Rezultati/Quickie-liga/quickie-event-recap.mp4",
+    "duration": 134.467667
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Quickie-liga/quickie-event-video.mp4": {
+    "assetId": "YkMExB1K02AQc2jEUx9FowGvIZekPqWgWghuDVCbUpD4",
+    "playbackId": "9YwN16VWe1sxNekYo4gA98Fw5gPkt02W5eENjHkaohRk",
+    "status": "ready",
+    "key": "Pr.-Rezultati/Quickie-liga/quickie-event-video.mp4",
+    "duration": 100.976833
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Quickie-liga/quickie-promo-video.mp4": {
+    "assetId": "ZXdBXkX9CxflLlSCmAMS01JmnQ41WZCf01EB8Dfds1RmQ",
+    "playbackId": "8NrO2AdqtY9pChNytZ1Z82CIjoO01EPgCXY7ywZmHeb4",
+    "status": "ready",
+    "key": "Pr.-Rezultati/Quickie-liga/quickie-promo-video.mp4",
+    "duration": 33.375967
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Sommerhagene/1.mp4": {
+    "assetId": "FmLpuDhhSMmRAV67boyn98KVYkm00uXtghCx02THJa00H8",
+    "playbackId": "kcI00hfL4U4N3foHH56G02dZhCVbJ8hPxvR4JsFHr3N7U",
+    "status": "ready",
+    "key": "Pr.-Rezultati/Sommerhagene/1.mp4",
+    "duration": 17.159767
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Sommerhagene/CanueSafari.mp4": {
+    "assetId": "2U02LGRw4ebintpQcrRWQRY67c02xJxpvYoFYL02i01cw7E",
+    "playbackId": "6Zm02eQzeoyImIVc5QF4fcsileFkrDetWhRP6ArIqWZM",
+    "status": "ready",
+    "key": "Pr.-Rezultati/Sommerhagene/CanueSafari.mp4",
+    "duration": 42.985567
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Sommerhagene/Fall-Sommerhagene.mp4": {
+    "assetId": "XA6l02DUylJaSKmqLEEKQN02AV9Mp01ED2pg6p019H6DxBc",
+    "playbackId": "pT02vvdupfLqciByNEqJLb01RQG013MfWT01zkRkm02BAnZg",
+    "status": "ready",
+    "key": "Pr.-Rezultati/Sommerhagene/Fall-Sommerhagene.mp4",
+    "duration": 40.3496
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Sommerhagene/Final-video.mp4": {
+    "assetId": "7GXNAqVgsY01xfRicDJNzTdKpcPGx01IziZ5DWikh2Sgg",
+    "playbackId": "uW9agmI9TfJRRZryPGQQyJPJFotMulD2EytKT2nLZ004",
+    "status": "ready",
+    "key": "Pr.-Rezultati/Sommerhagene/Final-video.mp4",
+    "duration": 57.099667
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Sommerhagene/Herzegovina-vibes.mp4": {
+    "assetId": "Qb4AXG3fYWsrrANOrQnyenDAn5QL1oNtdTsj5YN00aVI",
+    "playbackId": "LpQGzHKp01Q4nnv01qBH7FNguqxpgAT9u3mp00glc1o8h00",
+    "status": "ready",
+    "key": "Pr.-Rezultati/Sommerhagene/Herzegovina-vibes.mp4",
+    "duration": 57.3666
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Sommerhagene/Pitch-Video-AlbaUniprom-and-Green-Concept-Houses.mp4": {
+    "assetId": "fuqfQiS00b1fHyPsL0000blr4yBtJBczjcbWBm00t5VdPN4",
+    "playbackId": "2LNw6pYIUgZGyLzFF5m4yIGhEQVfWJ94AN3iw1qWk8Q",
+    "status": "ready",
+    "key": "Pr.-Rezultati/Sommerhagene/Pitch-Video-AlbaUniprom-and-Green-Concept-Houses.mp4",
+    "duration": 99.575433
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Sommerhagene/Sequence-01.mp4": {
+    "assetId": "S9PT02NwIbGFxOBfAje502pN97pRelMe5Qn64nAXX4vvY",
+    "playbackId": "zJ2rs01iBNjQwgE01yQ00Op4Wq02N5fDhYIAR8r01wAJttiA",
+    "status": "ready",
+    "key": "Pr.-Rezultati/Sommerhagene/Sequence-01.mp4",
+    "duration": 28.6379
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Sommerhagene/Sequence-03.mp4": {
+    "assetId": "fZQ7adGkhxwY101m11HFjNROPVUpMfyWv01k5nL2uCv6k",
+    "playbackId": "JwHrOYwEU00T00SelXtPB00NfM2T020201PrAcZ7iTgoSsA78",
+    "status": "ready",
+    "key": "Pr.-Rezultati/Sommerhagene/Sequence-03.mp4",
+    "duration": 16.5258
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Pr.-Rezultati/Wonderflle/REEL-2.mp4": {
+    "assetId": "hAiq01Pbrc2hO16NZ3HoijD02RE94iYTt7XQhKyLhuEfc",
+    "playbackId": "HxPknIhGHUch8ZO4IjxBjVef4754IhLXTU2HHaQ02J3o",
+    "status": "ready",
+    "key": "Pr.-Rezultati/Wonderflle/REEL-2.mp4",
+    "duration": 37.023222
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/videoProdukcija/cheyf_stays_promo.mp4": {
+    "assetId": "QDB38yjevcD41Rj01U023Js01dMBmQiiD1EKVekNZwp6pA",
+    "playbackId": "9ZuWrTi1QRuD9xuB1NPcNvPv1zthVYLFdpAApHDDScI",
+    "status": "ready",
+    "key": "videoProdukcija/cheyf_stays_promo.mp4",
+    "duration": 22.3316
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/videoProdukcija/greenconcepthouses_promo_video.mp4": {
+    "assetId": "nAhAHZFrTB4CJk5zX02X029jrtkouiwEJyyrtvjWTPymw",
+    "playbackId": "xdtRi02UpXV01Gwkqsu1bFh5jduW9H1SXU01oG8UMqa2JU",
+    "status": "ready",
+    "key": "videoProdukcija/greenconcepthouses_promo_video.mp4",
+    "duration": 55.562667
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/videoProdukcija/greenconcepthouses_rohbau_vs_kljuc_uruke.mp4": {
+    "assetId": "yw01fnG02iJiubcdESL0000GyB00502TZJ01jYZlpzpmH02eafg",
+    "playbackId": "UhCG3qnlgp1oa3jieYxSsO015yCJylttvJMpVkUJZsIM",
+    "status": "ready",
+    "key": "videoProdukcija/greenconcepthouses_rohbau_vs_kljuc_uruke.mp4",
+    "duration": 52.528433
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/videoProdukcija/maxdent_meetthedoctor.mp4": {
+    "assetId": "AqfLT1WDHVD01wNO5bgPyEh9GgJmH6vD7YxbbmPot4zg",
+    "playbackId": "02YLuk4h1vVs8Nft7v4lqQKkxJJaQviioq7dMK02Ty98U",
+    "status": "ready",
+    "key": "videoProdukcija/maxdent_meetthedoctor.mp4",
+    "duration": 49.08
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/videoProdukcija/maxdent_process.mp4": {
+    "assetId": "vVjx1qOQfPlK7sEYFzOXVasmK01rHijYXAOW3Nbnh2aA",
+    "playbackId": "Z4yZX2hhxHyRnhtXgstgQropcJy1PqJffCUY01sXRrSY",
+    "status": "ready",
+    "key": "videoProdukcija/maxdent_process.mp4",
+    "duration": 52.152156
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/videoProdukcija/podravka_oplant_lukomir.mp4": {
+    "assetId": "INB13BsqImKKj8k02XLO9OSYaFUnGR01rEPCflOhhpR8E",
+    "playbackId": "00wOSYOa3kRIGYU4jCFR4ogQquiEmKn4YGyea9qG8701Y",
+    "status": "ready",
+    "key": "videoProdukcija/podravka_oplant_lukomir.mp4",
+    "duration": 53.2532
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/videoProdukcija/podravka_oplant_prokoskojezero.mp4": {
+    "assetId": "dugm009GlmfyZ3ZQ1qjfJrVMZ6ZqCRsndE602UnHIMgXE",
+    "playbackId": "Rm8ipkP2N4XV9rx3poAM8q8XjKR8wB35IFW01uUP01c18",
+    "status": "ready",
+    "key": "videoProdukcija/podravka_oplant_prokoskojezero.mp4",
+    "duration": 200.8006
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/videoProdukcija/sensei_anketa.mp4": {
+    "assetId": "16E48hKac1kCEws2cFycEdizUwV1PLIfcy8n2Ke00GVE",
+    "playbackId": "nzShxqPauud7b4YgSw4xLVNLeVWz02KnwoLYrilGWklM",
+    "status": "ready",
+    "key": "videoProdukcija/sensei_anketa.mp4",
+    "duration": 66.6759
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/videoProdukcija/sensei_promo_video.mp4": {
+    "assetId": "fUUpz1FrQpgw02Yet5uGqfU02MxJvDDVaEgIO4F4eYiY4",
+    "playbackId": "wYCjTtXbRIDLu9X7USytZDbDpFm3z013w6JTVZYrmkRI",
+    "status": "ready",
+    "key": "videoProdukcija/sensei_promo_video.mp4",
+    "duration": 32.007933
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/videoProdukcija/cheyf_how_to_drink_coffee.mp4": {
+    "assetId": "wQfqpEtvIuhd96PfVlmywzQCCuj6sbw5Qxyw24RSbBI",
+    "playbackId": "01ZxymM145JFbp1n7erOP5LiKm7kDraTOwOhMjHpXwpM",
+    "status": "ready",
+    "key": "videoProdukcija/cheyf_how_to_drink_coffee.mp4",
+    "duration": 61.68
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/videoProdukcija/cheyf_lukomir_vibes.mp4": {
+    "assetId": "UfNGBIwFZ7z8ow1lCkJa1d4E3pjrDlctTNWcQV8qMnU",
+    "playbackId": "LS6RvBwDzuV6yxEP024OJ00YEQad8OUnbWyuUZOQvIYek",
+    "status": "ready",
+    "key": "videoProdukcija/cheyf_lukomir_vibes.mp4",
+    "duration": 25.267867
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/videoProdukcija/cheyf_stays_pehlivanusa.mp4": {
+    "assetId": "iIl7ZGkvNldXBuP00UIuPDc5wKf9ouQSc7yqI02fCzoFw",
+    "playbackId": "p9201wiAQrJqdkknd1loFc00egV1aE3lIvMxsX6PzLWKc",
+    "status": "ready",
+    "key": "videoProdukcija/cheyf_stays_pehlivanusa.mp4",
+    "duration": 22.076
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/videoProdukcija/greenconcepthouses_zidana_vs_prefab.mp4": {
+    "assetId": "P8mOzaUKHJxyiSOSzrW97v3560001pqhYy02ozMGivTKRE",
+    "playbackId": "01z5grMrClDMZU00mtsUqbn6wto7StlEwbnWg5xFUFlFM",
+    "status": "ready",
+    "key": "videoProdukcija/greenconcepthouses_zidana_vs_prefab.mp4",
+    "duration": 49.875
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/videoProdukcija/maxdent_izbjeljivanje_zuba.mp4": {
+    "assetId": "og345xVwkMhWKVlsr3tPu027d011OsU5V2q1fb6jJy8lM",
+    "playbackId": "ww23t2TVuh2YHLEb7iL24wH2011kM2ZT3Mf6enUWvppI",
+    "status": "ready",
+    "key": "videoProdukcija/maxdent_izbjeljivanje_zuba.mp4",
+    "duration": 50.650656
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/GreenConcept/greenconcept_promo_video.mp4": {
+    "assetId": "NsmM9gtwlpQwGUYHuN72Aas8YRn5EC8LrPni02yTFtiQ",
+    "playbackId": "ixGFxUCukoK7byfdfkLI6HJTGT9A1VjHc02clrmqU00fc",
+    "status": "ready",
+    "key": "Portfolio/GreenConcept/greenconcept_promo_video.mp4",
+    "duration": 55.562667
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/GreenConcept/greenconcepthouses_predrasude_gradnje.mp4": {
+    "assetId": "IHK5bQzG5rKOjR5d8ODQkePVL34lngk8jq1sHMKuJd8",
+    "playbackId": "MkONMxy1ZzSwsxOrIEsLFRYPeTiDwdkpokM016WdoF6Y",
+    "status": "ready",
+    "key": "Portfolio/GreenConcept/greenconcepthouses_predrasude_gradnje.mp4",
+    "duration": 60.260256
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/GreenConcept/greenconcepthouses_rohbau_vs_kljuc_uruke.mp4": {
+    "assetId": "01XgXxOP8WGD7LZ01KvVFjy3sZKLlf02gxUoxrrbxyn7eg",
+    "playbackId": "vkoKKgUlGMyjkA1au7NVlOD5zWIWW024VJBvrlkh4dv8",
+    "status": "ready",
+    "key": "Portfolio/GreenConcept/greenconcepthouses_rohbau_vs_kljuc_uruke.mp4",
+    "duration": 52.528433
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/GreenConcept/greenconcepthouses_zidana_vs_prefab.mp4": {
+    "assetId": "f9umXiU9lvI1355hr2QaPKXW00sg8bTV3eZzPjqruwys",
+    "playbackId": "tFP7uP46nwPoAcpJa5LOAbX8lTunStOocjL01zp6igWo",
+    "status": "ready",
+    "key": "Portfolio/GreenConcept/greenconcepthouses_zidana_vs_prefab.mp4",
+    "duration": 49.875
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/MAXDENT/maxdent_process.mp4": {
+    "assetId": "FeatskiRLOVgUVMGhp01Rk702qk00acKLg81GQppF7SlE8",
+    "playbackId": "bf1wRruHAzR8VtSMclKeXUezVi26po1dNUWVNygN8Cw",
+    "status": "ready",
+    "key": "Portfolio/MAXDENT/maxdent_process.mp4",
+    "duration": 52.152156
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/MAXDENT/maxdent_izbjeljivanje_zuba.mp4": {
+    "assetId": "cxZtEmBUjVjWUPipHI01pDImNZyMHKiTtc01xi01Ofdb1I",
+    "playbackId": "4v6ROvmgqoHnqYgmcMEagG01oun7duCyvAI013KfxekBQ",
+    "status": "ready",
+    "key": "Portfolio/MAXDENT/maxdent_izbjeljivanje_zuba.mp4",
+    "duration": 50.650656
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/MAXDENT/maxdent_loszadah.mp4": {
+    "assetId": "kja6HqjsSw8y36gyul1lD2bRn8wWpdXFFajUXE401vkY",
+    "playbackId": "JPsPbTETiOf37jVCEhjmePezPkoTtIcp00XVt9vJd00TI",
+    "status": "ready",
+    "key": "Portfolio/MAXDENT/maxdent_loszadah.mp4",
+    "duration": 55.555556
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/MAXDENT/maxdent_meetthedoctor.mp4": {
+    "assetId": "k02ffvqeoc00lkBmROqj7sXtcTPelliGimu01lNP1A10001o",
+    "playbackId": "ud8sRfRvJV02n7QgeSy4LTooOr8bss1wO00H179mVqEQM",
+    "status": "ready",
+    "key": "Portfolio/MAXDENT/maxdent_meetthedoctor.mp4",
+    "duration": 49.08
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/MAXDENT/maxdent_strahodstomatologa.mp4": {
+    "assetId": "YPNjkAcCC8Q38CfXnNtmKdcxDHAs5Yh9dWbghhhOc5g",
+    "playbackId": "SX01MbRr9qV0000Tf01ijRgFKVHkRKZyKW8eeEZUFQJYr3I",
+    "status": "ready",
+    "key": "Portfolio/MAXDENT/maxdent_strahodstomatologa.mp4",
+    "duration": 67.1338
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/SENSEI/sensei_anketa.mp4": {
+    "assetId": "9V6ImQMfLKYPR5LK01dIo6AYqFp6n01HOeXiAXWsPVlJ00",
+    "playbackId": "HdvfLO9fXrqX8riccoR0000ECQAqlED9U800XKmU00Tg4AA",
+    "status": "ready",
+    "key": "Portfolio/SENSEI/sensei_anketa.mp4",
+    "duration": 66.6759
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/SENSEI/sensei_karatevrtic.mp4": {
+    "assetId": "CH2TZouHE01wVOrdCqwoLdn00jFEfKhpnfYhLxBwSj6dE",
+    "playbackId": "00fjryik01wgyLlWgmI575Pp9s3rH31CdVkLAqNzVAnic",
+    "status": "ready",
+    "key": "Portfolio/SENSEI/sensei_karatevrtic.mp4",
+    "duration": 32.3
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/SENSEI/sensei_prijave_najmladji.mp4": {
+    "assetId": "Xgj13v7EiaQSNBju7pWU6UJJdrPQDbEE52mKkMQFCt8",
+    "playbackId": "GW001Od8tD6ijMSN2M6le4IRlwi2hZ3z01KVkJOXKp1kA",
+    "status": "ready",
+    "key": "Portfolio/SENSEI/sensei_prijave_najmladji.mp4",
+    "duration": 37.747
+  },
+  "https://d1hqd8vqu5a5q0.cloudfront.net/Portfolio/SENSEI/sensei_promo.mp4": {
+    "assetId": "Hcm1fzzg02wk4DBhyZ7k7O7nFNiezLhdj4a8RHKl3HvM",
+    "playbackId": "CMJEh01DA000253VUajC1mCGG86tdlhre02ycG87VDxFPp8",
+    "status": "ready",
+    "key": "Portfolio/SENSEI/sensei_promo.mp4",
+    "duration": 32.007933
+  }
+}

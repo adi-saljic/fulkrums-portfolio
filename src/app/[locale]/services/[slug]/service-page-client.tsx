@@ -17,6 +17,7 @@ import { charAnimation, titleAnimation } from "@/utils/title-animation";
 type IProps = {
   slug: string;
   graphicDesignImages?: string[];
+  videoProductionVideos?: string[];
 };
 
 const SUPPORTED_SLUGS = ["video-production", "digital-marketing", "graphic-design"];
@@ -24,7 +25,7 @@ const SUPPORTED_SLUGS = ["video-production", "digital-marketing", "graphic-desig
 // `slug` is resolved server-side and passed in as a plain string so the page body
 // is server-rendered (was previously gated behind a client-only useEffect, which
 // left crawlers with an empty <body> — see SEO audit "title-only content").
-export default function ServicePageClient({ slug, graphicDesignImages }: IProps) {
+export default function ServicePageClient({ slug, graphicDesignImages, videoProductionVideos }: IProps) {
   useGSAP(() => {
     const timer = setTimeout(() => {
       charAnimation();
@@ -45,7 +46,7 @@ export default function ServicePageClient({ slug, graphicDesignImages }: IProps)
         <div id="smooth-content">
           <main>
             {/* service details area */}
-            {slug === "video-production" && <ServiceDetailsArea />}
+            {slug === "video-production" && <ServiceDetailsArea videos={videoProductionVideos} />}
             {slug === "digital-marketing" && <DigitalMarketingDetailsArea />}
             {slug === "graphic-design" && <GraphicDesignDetailsArea images={graphicDesignImages} />}
             {/* service details area */}

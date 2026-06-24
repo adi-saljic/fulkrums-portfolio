@@ -39,24 +39,41 @@
         "title": "Video Production",
         "slug": "video-production",
         "desc": "From market research and concept development to complete production planning and execution. We don't base our strategy on fleeting trends and sketches, but on clear messaging and brand identity to ensure content is authentic, long-term usable, and result-oriented.",
-        "category": ["Research", "Video Scripts", "Videography", "Video Production"]
+        "category": [
+          "Research",
+          "Video Scripts",
+          "Videography",
+          "Video Production"
+        ]
       },
       {
         "title": "Performance Marketing",
         "slug": "digital-marketing",
         "desc": "Data-driven campaigns, not your \"cousin's advice\". Test plans, optimization, and reporting tied to real business goals, not \"engagement\" and \"trash traffic\".",
-        "category": ["Research", "Plan", "Execution & Reporting"]
+        "category": [
+          "Research",
+          "Plan",
+          "Execution & Reporting"
+        ]
       },
       {
         "title": "Graphic Design",
         "slug": "graphic-design",
         "desc": "We don't do decoration and \"prettifying\". Every design has its \"why\" - driven by the psychology of attention, readability, and decision-making. Design isn't meant to be complicated, but to solve problems and clearly convey the message.",
-        "category": ["Brand Identity", "Visual Communication", "Psychology-Driven"]
+        "category": [
+          "Brand Identity",
+          "Visual Communication",
+          "Psychology-Driven"
+        ]
       },
       {
         "title": "Video & Marketing Strategy",
         "desc": "We don't give opinions off the cuff. We audit the current state, define priorities, and create a clear execution plan. You get concrete recommendations, creative direction, and a measurement system your team can implement immediately.",
-        "category": ["Creative Direction", "Campaign Planning", "Execution Plan"]
+        "category": [
+          "Creative Direction",
+          "Campaign Planning",
+          "Execution Plan"
+        ]
       }
     ]
   },
@@ -309,6 +326,18 @@
       "client": "Zamzam Project",
       "services": "Video Production",
       "deliverables": "Long-form Series (30 Episodes), Trailer"
+    },
+    "maxdent": {
+      "description": "MaxDent entrusted us with complete social media and ads management. From the start of our collaboration we have built a consistent visual system through video and static content, aimed at increasing brand awareness and generating qualified leads.",
+      "client": "MaxDent",
+      "services": "Social Media + Ads Management",
+      "deliverables": "Video, Statics, Meta Ads"
+    },
+    "sensei": {
+      "description": "Sensei Karate Club entrusted us with creating video and static content tailored to a younger audience. Through Reels and graphic materials we targeted parents of children aged 4 to 13 and directly contributed to enrolling new members in the club.",
+      "client": "Sensei Karate Club",
+      "services": "Social Media Content Production",
+      "deliverables": "Video (Reels), Statics"
     }
   },
   "common": {

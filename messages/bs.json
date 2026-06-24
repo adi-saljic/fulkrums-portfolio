@@ -50,7 +50,11 @@
         "title": "Performance Marketing",
         "slug": "digital-marketing",
         "desc": "Kampanje koje se vode podacima, ne \"savjetu malog rođaka\". Test plan, optimizacija i reporting koji se vežu na stvarne ciljeve biznisa, ne na \"engagement\" i \"trash traffic\".",
-        "category": ["Istraživanje", "Plan", "Realizacija i Reporting"]
+        "category": [
+          "Istraživanje",
+          "Plan",
+          "Realizacija i Reporting"
+        ]
       },
       {
         "title": "Graphic Design",
@@ -65,7 +69,11 @@
       {
         "title": "Video & Marketing Strategija",
         "desc": "Ne dajemo mišljenja napamet. Radimo audit postojećeg stanja, definišemo prioritete i jasan plan izvedbe. Dobijaš konkretne preporuke, creative direction i sistem mjerenja koji tim može odmah provesti.",
-        "category": ["Creative Direction", "Plan Kampanje", "Execution Plan"]
+        "category": [
+          "Creative Direction",
+          "Plan Kampanje",
+          "Execution Plan"
+        ]
       }
     ]
   },
@@ -318,6 +326,18 @@
       "client": "Zamzam Projekat",
       "services": "Video Produkcija",
       "deliverables": "Long-form Serijal (30 Epizoda), Trailer"
+    },
+    "maxdent": {
+      "description": "MaxDentu smo povjerili kompletan social media i ads management. Od početka saradnje gradimo konzistentan vizuelni sistem kroz video i statični sadržaj, usmjeren na povećanje brand awarenessa i generiranje kvalificiranih leadova.",
+      "client": "MaxDent",
+      "services": "Social Media + Ads Management",
+      "deliverables": "Video, Statics, Meta Ads"
+    },
+    "sensei": {
+      "description": "Sensei karate klubu povjerili su nam kreiranje video i statičnog sadržaja prilagođenog mlađoj publici. Kroz Reelse i grafičke materijale ciljali smo roditelje djece uzrasta 4 do 13 godina i direktno doprinijeli upisu novih polaznika u klub.",
+      "client": "Sensei Karate Klub",
+      "services": "Social Media Content Production",
+      "deliverables": "Video (Reels), Statics"
     }
   },
   "common": {

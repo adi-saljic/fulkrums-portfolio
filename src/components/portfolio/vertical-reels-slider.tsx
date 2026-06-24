@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectCreative } from "swiper/modules";
 import { useTranslations } from "next-intl";
+import HlsVideo from "@/components/common/HlsVideo";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-creative";
@@ -242,19 +243,18 @@ export default function VerticalReelsSlider({ videos }: Props) {
                 </div>
               )}
 
-              <video
+              <HlsVideo
                 ref={(el) => {
                   videoRefs.current[index] = el;
                 }}
-                // Only set src on the active slide — all others stay unloaded
-                src={index === activeSlide ? video : undefined}
+                // Mux HLS streams only on the active slide; others show poster only
+                src={video}
+                active={index === activeSlide}
                 onLoadedMetadata={(e) => handleVideoLoadedMetadata(index, e)}
                 onCanPlay={() => handleCanPlay(index)}
                 muted={unmutedVideo !== index}
                 loop
                 playsInline
-                // metadata only for active, none for inactive
-                preload={index === activeSlide ? "metadata" : "none"}
                 style={{
                   position: "absolute",
                   top: "50%",

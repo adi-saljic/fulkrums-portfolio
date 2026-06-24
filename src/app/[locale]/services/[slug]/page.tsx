@@ -3,6 +3,7 @@ import { unstable_cache } from 'next/cache';
 import { generatePageMetadata, serviceMetadata } from '@/lib/seo/metadata';
 import { generateServiceSchema, generateBreadcrumbSchema } from '@/lib/seo/schemas';
 import { syncGraphicDesignImages } from '@/lib/s3/media-sync';
+import { getVideoProductionVideos } from '@/data/video-production-videos';
 import ServicePageClient from './service-page-client';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -41,6 +42,8 @@ export default async function ServicePage({ params }: Props) {
   const { locale, slug } = await params;
   const graphicDesignImages =
     slug === 'graphic-design' ? await getGraphicDesignImages() : undefined;
+  const videoProductionVideos =
+    slug === 'video-production' ? getVideoProductionVideos() : undefined;
 
   // Structured data (SEO audit 8.1): Service + breadcrumb, referencing the
   // Organization @id rendered on the homepage.
@@ -76,7 +79,11 @@ export default async function ServicePage({ params }: Props) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
       )}
-      <ServicePageClient slug={slug} graphicDesignImages={graphicDesignImages} />
+      <ServicePageClient
+        slug={slug}
+        graphicDesignImages={graphicDesignImages}
+        videoProductionVideos={videoProductionVideos}
+      />
     </>
   );
 }

@@ -1,14 +1,17 @@
 "use client";
 import React from "react";
 import { useTranslations } from "next-intl";
-import VideoShowcaseSlider from "./video-production-slider";
+import VideoShowcaseSlider from "./video-showcase-slider";
 import VideoProductionStats from "./video-production-stats";
 import VideoProductionProcess from "./video-production-process";
 import VideoProductionComparison from "./video-production-comparison";
 import ContactOne from "@/components/contact/contact-one";
-import { serviceVideos } from "@/data/service-videos";
 
-export default function ServiceDetailsArea() {
+type Props = {
+  videos?: string[];
+};
+
+export default function ServiceDetailsArea({ videos }: Props) {
   const t = useTranslations("videoProduction");
 
   return (
@@ -52,16 +55,18 @@ export default function ServiceDetailsArea() {
         </div>
       </div>
 
-      {/* Video showcase slider — replaces static hero image */}
-      {/* <div className="container-fluid">
-        <div className="row">
-          <div className="col-xl-12">
-            <div className="service-details__tab-wrapper text-center mb-120">
-              <VideoShowcaseSlider videos={serviceVideos.videoProduction} />
+      {/* Video showcase slider — videoProdukcija videos, served from Mux */}
+      {videos && videos.length > 0 && (
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-xl-12">
+              <div className="service-details__tab-wrapper text-center mb-120">
+                <VideoShowcaseSlider videos={videos} />
+              </div>
             </div>
           </div>
         </div>
-      </div> */}
+      )}
 
       {/* Stats section — replaces left/right content columns */}
       <VideoProductionStats />

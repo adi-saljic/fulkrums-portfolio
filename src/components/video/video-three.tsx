@@ -1,11 +1,20 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+import { muxHls, muxPoster, muxPlaybackIdFor } from "@/lib/mux";
+import { useHls } from "@/hooks/useHls";
+
+const HERO_URL = "https://d1hqd8vqu5a5q0.cloudfront.net/homepage/HeroVideo.mp4";
 
 export default function VideoThree() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [ready, setReady] = useState(false);
   const [progress, setProgress] = useState(0);
   const [muted, setMuted] = useState(true);
+
+  // Use Mux adaptive HLS if this video has been migrated; otherwise fall back to the raw mp4.
+  const playbackId = muxPlaybackIdFor(HERO_URL);
+  const hlsSrc = playbackId ? muxHls(playbackId) : null;
+  useHls(videoRef, hlsSrc);
 
   const startPlayback = () => {
     const v = videoRef.current;
@@ -20,7 +29,6 @@ export default function VideoThree() {
     const end = v.buffered.end(v.buffered.length - 1);
     const pct = (end / v.duration) * 100;
     setProgress(pct);
-    if (pct >= 99.5) startPlayback();
   };
 
   useEffect(() => {
@@ -49,18 +57,18 @@ export default function VideoThree() {
           loop
           muted
           playsInline
-          preload="auto"
+          preload="metadata"
+          poster={playbackId ? muxPoster(playbackId, { time: 0 }) : undefined}
           onProgress={handleProgress}
-          onCanPlayThrough={startPlayback}
+          onCanPlay={startPlayback}
+          onLoadedData={startPlayback}
           style={{
             opacity: ready ? 1 : 0,
             transition: "opacity 400ms ease",
           }}
         >
-          <source
-            src="https://d1hqd8vqu5a5q0.cloudfront.net/homepage/HeroVideo.mp4"
-            type="video/mp4"
-          />
+          {/* Fallback to raw mp4 only when not yet migrated to Mux (HLS set via useHls) */}
+          {!hlsSrc && <source src={HERO_URL} type="video/mp4" />}
         </video>
 
         {!ready && (

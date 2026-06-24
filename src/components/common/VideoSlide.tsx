@@ -1,5 +1,7 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
+import { muxHls, muxPoster, muxPlaybackIdFor } from "@/lib/mux";
+import { useHls } from "@/hooks/useHls";
 
 interface VideoSlideProps {
   src: string;
@@ -22,6 +24,10 @@ export default function VideoSlide({
 }: VideoSlideProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isLoading, setIsLoading] = useState(false);
+
+  // Stream adaptive HLS from Mux when migrated; only while this slide is active.
+  const playbackId = muxPlaybackIdFor(src);
+  useHls(videoRef, playbackId && isActive ? muxHls(playbackId) : null);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -89,8 +95,9 @@ export default function VideoSlide({
       <video
         ref={videoRef}
         className={className}
-        // Only load src when this slide is active
-        src={isActive ? src : undefined}
+        // Mux (HLS) is attached via useHls; only fall back to the raw file when not migrated.
+        src={isActive && !playbackId ? src : undefined}
+        poster={playbackId ? muxPoster(playbackId, { time: 0 }) : undefined}
         preload={isActive ? "metadata" : "none"}
         onCanPlay={handleCanPlay}
         muted={isMuted}
